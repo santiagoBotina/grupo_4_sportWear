@@ -1,4 +1,4 @@
-Título del Proyecto
+Título del Proyecto.
 Sport Wear es un sitio de venta de indumentaria deportiva especializada en las marcas Nike y Adidas.
 
 Comenzando 🚀
