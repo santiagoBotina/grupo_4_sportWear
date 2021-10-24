@@ -12,15 +12,26 @@ Ejecutando las pruebas ⚙️
 
 Construido con 🛠️
 
-•	Figma - El wireframe web usado
-•	PDF – para subir los wireframe a GIT HUB
+• Wireframe.cc - El wireframe web usado
+• PDF – para subir los wireframe a GIT HUB
 
 Autores ✒️
-•	Santiago Bottina
-•	Maximiliano Rocca
-•	Lucas Robba
-•	Estanislao Coloma
+• Santiago Botina⭐:
+
+Hola soy Santiago Botina, soy de COlombia y tengo 19 años. Actualmente trabajo en un call center en inglés, me gustan los videojuegos, la música y la programación con sus ramas como Machine learning e inteligencia artificial. Me gusta mucho la cultura japonesa, su música, comida y costumbres. Me ha gustado mucho más la programación con este curso y me gustaría seguir aprendiendo muchas otras tecnologías, lenguajes, métodos, etc.
+
+• Maximiliano Rocca⭐
+• Lucas Robba⭐
+• Estanislao Coloma⭐
 
 Expresiones de Gratitud 🎁
-•	Juampi Badino 📢
-•	Rodrigo Ponce
+• Juampi Badino 📢
+• Rodrigo Ponce 📢
+
+Sección de Design
+
+Nuestra paleta de colores: https://colorhunt.co/palette/0913539d84b7d5d5d5b2f9fc
+
+Nuestra tipografía: Escogimos Roboto por su neutralidad, su capacidad de ser modificada y que quede bien en todos los diseños y por sus características en el posicionamiento SEO, ya que Google utiliza esta fuente y está bien optimizada en su motor de búsqueda por lo que todas estas cosas nos dan puntos a favor al tratarse de un e-commerce, más gente lo puede encontrar y su accesibilidad es muy buena.
+
+Logo: En la carpeta DESIGN
