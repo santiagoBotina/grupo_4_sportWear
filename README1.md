@@ -18,10 +18,20 @@ Construido con 🛠️
 ###Autores ✒️###
 • **Santiago Botina**⭐:
 
-Hola soy Santiago Botina, soy de COlombia y tengo 19 años. Actualmente trabajo en un call center en inglés, me gustan los videojuegos, la música y la programación con sus ramas como Machine learning e inteligencia artificial. Me gusta mucho la cultura japonesa, su música, comida y costumbres. Me ha gustado mucho más la programación con este curso y me gustaría seguir aprendiendo muchas otras tecnologías, lenguajes, métodos, etc.
+Hola soy Santiago Botina, soy de Colombia y tengo 19 años. Actualmente trabajo en un call center en inglés, me gustan los videojuegos, la música y la programación con sus ramas como Machine learning e inteligencia artificial. Me gusta mucho la cultura japonesa, su música, comida y costumbres. Me ha gustado mucho más la programación con este curso y me gustaría seguir aprendiendo muchas otras tecnologías, lenguajes, métodos, etc.
 
 • **Maximiliano Rocca**⭐
+
+
+
 • **Lucas Robba**⭐
+
+Hola Soy Lucas, vivo en Mendoza, con 41 años y contando. 
+Desde hace más de 10 años que soy project manager en distintos sectores productivos, pero especialmente en el sector de generación de energía renovable.
+He comenzado este año a transitar este camino de la programación.
+Empecé tratando de estudiar solo, pero estaba muy cuesta arriba, por eso me anoté en DH. Estoy muy entusiasmado con el curso y espero poder aprender estas herramientas y habilidades!!!
+
+
 • **Estanislao Coloma**⭐:
 
 Hola soy Estanislao Coloma, pero me dicen Lao, para que sera mas sencillo y mas corto. Soy fanático del rugby, antes me despertaba a la madrugada para ver partidos de Oceanía, ahora estoy un poco mas moderado y no miro tanto. Escucho podcast de humor, de historia y psicología. De música escucho casi todo, lo que mas escucho es Rock, folklore (incluso de varios países), musica brasilera. Soy Lic en Administación de Empresas y trabajo como gerente de Administración en una empresa que brinda servicios de TV por cable, Internet y telefonía IP, en varias ciudades y pueblos del anterior. Me fue interesando la programación y terminé buscando referencias de Digital House y me pareció serio y bien planteado. Obviamente nunca vi nada del tema, eso hace que sea un gran desafio, pero me gusta y me atrae mucho.
