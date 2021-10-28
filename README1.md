@@ -22,7 +22,7 @@ Hola soy Santiago Botina, soy de Colombia y tengo 19 años. Actualmente trabajo 
 
 • **Maximiliano Rocca**⭐
 
-
+Hola soy Maximiliano Rocca, soy de Argentina y tengo 22 años. Actualmente ademas de este curso estoy haciendo la carreria de ingenieria en informatica en la uba. Me apasiona mucho la programacion y me gusta estar aprendiendo nuevas herramientas relacionadas con el tema, suelo pasar bastante tiempo en la compu ya sea estudiando o jugando algun que otro juego. Al terminar el curso me gustaria poder estar trabajando de algo relacionado al tema.
 
 • **Lucas Robba**⭐
 
