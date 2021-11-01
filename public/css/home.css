@@ -44,77 +44,77 @@ a {
     color: white;
     font-size: 2rem;
   }
-}
 
-main {
-  background-color: #091353;
-  padding: 5% 0 0;
-}
+  main {
+    background-color: #091353;
+    padding: 5% 0 0;
+  }
 
-.carousel {
-  width: 100%;
-  height: 25vh;
-  background-color: #d5d5d5;
-  text-align: center;
-}
+  .carousel {
+    width: 100%;
+    height: 25vh;
+    background-color: #d5d5d5;
+    text-align: center;
+  }
 
-.section-products {
-  background-color: #9d84b7;
-  padding: 5% 15%;
-}
-.section-products h2 {
-  color: white;
-  text-align: center;
-}
+  .section-products {
+    background-color: #9d84b7;
+    padding: 5% 15%;
+  }
+  .section-products h2 {
+    color: white;
+    text-align: center;
+  }
 
-.product {
-  width: 100%;
-  height: 250px;
-  background-color: #d5d5d5;
-  margin: 10px;
-  text-align: center;
-  border-radius: 15px;
-}
+  .product {
+    width: 100%;
+    height: 250px;
+    background-color: #d5d5d5;
+    margin: 10px;
+    text-align: center;
+    border-radius: 15px;
+  }
 
-.our-products {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
+  .our-products {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 
-.promo-message {
-  text-align: center;
-  width: 100%;
-  height: 15vh;
-  background-color: rgb(255, 84, 53);
-  color: white;
-  padding-top: 10%;
-}
+  .promo-message {
+    text-align: center;
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(255, 84, 53);
+    color: white;
+    padding-top: 10%;
+  }
 
-footer {
-  background-color: #091353;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: white;
-  padding: 20% 15%;
-  flex-wrap: wrap;
-}
+  footer {
+    background-color: #091353;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 20% 15%;
+    flex-wrap: wrap;
+  }
 
-.footer-info {
-  font-size: 0.9em;
-  margin-left: 20px;
-}
+  .footer-info {
+    font-size: 0.9em;
+    margin-left: 20px;
+  }
 
-.logo-footer {
-  width: 50%;
-}
+  .logo-footer {
+    width: 50%;
+  }
 
-.phrase {
-  margin-top: 50px;
-}
+  .phrase {
+    margin-top: 50px;
+  }
 
-.copyright {
-  font-size: 0.8em;
-  margin-top: 20px;
+  .copyright {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }
 }
