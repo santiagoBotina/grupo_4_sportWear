@@ -13,13 +13,13 @@ app.get('/', (req, res)=>{
 });  
 */
 
-/*
+
 app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/views/detalle_del_producto.html');
 });
-*/
 
-app.get('/', (req, res)=>{
+
+/*app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/views/carrito.html');
 });
-
+*/
