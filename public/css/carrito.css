@@ -1,125 +1,119 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
 
 header {
-    background-color: #091353;
-    width: 100%;
+  background-color: #091353;
+  width: 100%;
 }
 
 .top-header {
-    display: flex;
-    justify-content: space-around;
-    
+  display: flex;
+  justify-content: space-around;
 }
 
 .logo-header {
-    width: 50%;
+  width: 50%;
 }
 
 .fa-shopping-cart {
-    color: white;
-    font-size: 20px; 
-    align-self: center;
-    
+  color: white;
+  font-size: 20px;
+  align-self: center;
 }
 
 main {
-    background-color: #9D84B7;
-    padding-top: 25px;
-    padding-bottom: 25px;
+  background-color: #9d84b7;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 h2 {
-    padding: 10px 0 0 50px;
-    font-size: 40px;
+  padding: 10px 0 0 50px;
+  font-size: 40px;
 }
 
 .price-buy {
-    padding: 10px 20px 0 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+  padding: 10px 20px 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .price {
-    width: 35%;
-    font-size: 22px;
+  width: 35%;
+  font-size: 22px;
 }
 
 .pay {
-    border-radius: 15px;
-    background-color: #D5D5D5;
-    padding: 7px;
+  border-radius: 15px;
+  background-color: #d5d5d5;
+  padding: 7px;
 }
 
 .products {
-    display: flex;
-    border: 1px solid black;
-    width:70%;
-    margin: 15px 0 0 40px;
+  display: flex;
+  border: 1px solid black;
+  width: 70%;
+  margin: 15px 0 0 40px;
 }
 
 .img-product {
-    width: 50%;
+  width: 50%;
 }
 
 .product-info {
-    width: 50%;
-    align-self: stretch;
-    background-color: #D5D5D5; 
+  width: 50%;
+  align-self: stretch;
+  background-color: #d5d5d5;
 }
 
 .summary {
-    display: block;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 40px 10px 10px;
-    background-color: #D5D5D5; 
-    padding-bottom: 15px;
-    
+  display: block;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 40px 10px 10px;
+  background-color: #d5d5d5;
+  padding-bottom: 15px;
 }
 
 .summary-title {
-    padding: 6% 0 6% 6%;
-    font-size: 30px;
+  padding: 6% 0 6% 6%;
+  font-size: 30px;
 }
 
 .summary-description {
-    padding: 0 0 4% 6%;
+  padding: 0 0 4% 6%;
 }
 
 .summary-price {
-    padding: 5% 0 15% 6%;
-    font-size: 22px;  
+  padding: 5% 0 15% 6%;
+  font-size: 22px;
 }
 
 .pay-bottom {
-    display: block;
-    margin: auto;
-    padding: 3%;
-    border-radius: 15%;
-    background-color: #B2F9FC;
-    
+  display: block;
+  margin: auto;
+  padding: 3%;
+  border-radius: 15%;
+  background-color: #b2f9fc;
 }
 
 footer {
-    background-color: #B2F9FC;
-    padding:15px 10px 15px 10px
+  background-color: #b2f9fc;
+  padding: 15px 10px 15px 10px;
 }
 
 .logo-footer {
-    
-    width: 40%;
+  width: 40%;
 }
 
 .top-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
