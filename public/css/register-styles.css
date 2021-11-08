@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    list-style: none;
+    text-decoration: none;
+    /* color: white; */
+    /* background-color: #4353bb;*/
+}
+
+header {
+    list-style: none;
+    background-color: #091353;
+    text-align: center;
+}
+
+
+main{
+    text-align: center;
+    background-color: #9D84B7;
+}
+
+.text-margin{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap ;
+    flex-direction: column;
+}
+
+.text-margin-enviar{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+footer{
+    text-align: center;
+}

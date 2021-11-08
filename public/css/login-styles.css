@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto" ;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+   /* background-color: #4353bb; */
+}
+
+header {
+    list-style: none;
+    background-color: #091353;
+    text-align: center;
+}
+
+main{
+    text-align: center;
+    background-color: #9d84b7;
+    
+}
+footer{
+    text-align: center;
+    background-color: #091353;
+
+}
