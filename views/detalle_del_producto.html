@@ -19,7 +19,7 @@
     </header>
 
     <section>
-        <div>
+        <div class="imagen-producto">
         <img class="ver-producto" src="images/nike-revolution-5-a.webp" alt="nike revolution 5">
         </div>
             <div class="text-producto">
@@ -27,41 +27,55 @@
             <article class="precio">Precio</article>
         </div>
 
-        <form>
+        <form method="POST" action="/">
+            
             <label for="talles" class="talles">Talle</label>
-            <input type="radio" name="talles" value="40" class="talle">40
-            <input type="radio" name="talles" value="41" class="talle">41
-            <input type="radio" name="talles" value="42" class="talle">42
-            <input type="radio" name="talles" value="43" class="talle">43
+            
+            <div class="div-input">
+            <input type="radio" name="talles" value="40" class="talle">
+            <label for="talles">40</label>
+            <input type="radio" name="talles" value="41" class="talle">
+            <label for="talles">41</label>
+            <input type="radio" name="talles" value="42" class="talle">
+            <label for="talles">42</label>
+            <input type="radio" name="talles" value="43" class="talle">
+            <label for="talles">43</label>
+            </div>
         </form>
 
         <div class="buttons">
-            <button class="boton">Añadir al Carrito</button>
-            <button class="boton">Comprar Producto</button>
+            <button type="submit" name="añadir" class="boton-agregar"><a href="/">Añadir al Carrito</a></button>
+            <button type="submit" name="comprar"class="boton-comprar"><a href="/cart">Comprar Producto</a></button>
         </div>
 
-        <div>
-            <p class="descripcion">
-                Descripción del producto: 
+        <div class="div-descripcion">
+            <h3 class="descripcion">
+                Descripción del producto:  
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, animi veniam. Modi ex eaque veritatis at facere dolores delectus, molestias commodi, magni expedita consectetur, perspiciatis ipsam enim. Atque, omnis eius.
             </p>
+
+
         </div>
 
     </section>
 
-    <div>
-    <img src="/images/logo-sportwear-a.png" alt="logo-sportwear" 
-    class="logo-footer" />
-    </div>
-
-  <div class="footer-info">
-    <p>About us.</p>
-    <p>Contact.</p>
-    <p>Products.</p>
-    <p>Shipping policie.</p>
-  </div>
-  <h4 class="phrase">Made with ⚡ by group 4</h4>
-  <h4 class="copyright">Copyright © 2022 SportWear S.R.L.</h4>
-</footer>
+    <footer>
+        <img
+          src="/images/logo-sportwear-a.png"
+          alt="logo-sportwear"
+          class="logo-footer"
+        />
+        <div class="footer-info">
+          <p>About us.</p>
+          <p>Contact.</p>
+          <p>Products.</p>
+          <p>Shipping policie.</p>
+        </div>
+        <h4 class="phrase">Made with ⚡ by group 4</h4>
+        <h4 class="copyright">Copyright © 2022 SportWear S.R.L.</h4>
+      </footer>
 
     
 </body>
