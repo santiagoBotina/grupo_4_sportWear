@@ -22,65 +22,59 @@ a {
   width: 100%;
 }
 
-@media (max-width: 767px) {
-  header {
-    list-style: none;
-    background-color: #091353;
-    padding: 2% 15%;
-  }
-  /*Navbar*/
-
+@media only screen and (min-width: 1024px) {
   #check {
     display: none;
   }
 
-  ul {
-    font-weight: bold;
+  header nav {
+    padding: 2%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: -100%;
-    top: 21%;
-    width: 100%;
-    height: 80vh;
-    background: linear-gradient(#091353, #4353bb);
-    transition: all 0.5s;
-  }
-  ul li {
-    display: block;
-    font-size: 2rem;
-    margin: 2% 0;
-  }
-
-  #check:checked ~ ul {
-    left: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .mobile-nav {
-    justify-content: center;
-    align-items: center;
+    width: 50%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30px;
   }
+
   .mobile-nav input {
+    margin-top: 50px;
+    width: 100%;
     border: none;
-    padding: 3%;
-    background-color: #b2f9fc;
-    border-radius: 20px;
+    padding: 15px;
+    border-radius: 30px;
   }
 
-  .mobile-nav button {
-    background-color: #091353;
-    border: none;
-    margin-left: 10px;
+  .mobile-nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: bold;
   }
+
+  li a {
+    transition: all 0.3s ease;
+  }
+
+  li a:hover {
+    color: #b2f9fc;
+  }
+
+  .logo-home {
+    width: 50%;
+  }
+
   .fa-bars {
-    color: white;
-    font-size: 2rem;
+    display: none;
   }
 
-  /*Products section*/
+  /*Product section*/
 
   main {
     background-color: #091353;
@@ -89,34 +83,41 @@ a {
 
   .carousel {
     width: 100%;
-    height: 25vh;
+    height: 65vh;
     background-color: #d5d5d5;
     text-align: center;
   }
 
   .section-products {
     background-color: #9d84b7;
-    padding: 5% 15%;
+    padding: 5%;
   }
   .section-products h2 {
     color: white;
     text-align: center;
-  }
-
-  .product {
-    width: 100%;
-    height: 250px;
-    background-color: #d5d5d5;
-    margin: 10px;
-    text-align: center;
-    border-radius: 15px;
+    margin-bottom: 30px;
   }
 
   .our-products {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: space-between;
   }
+  .product {
+    width: 20%;
+    height: 250px;
+    background-color: #d5d5d5;
+    margin: 10px;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+  }
+
+  .product:hover {
+    box-shadow: 3px 3px 10px #000000, -3px -3px 10px #a7a7a7;
+  }
+
+  /*Promo message*/
 
   .promo-message {
     text-align: center;
@@ -124,7 +125,8 @@ a {
     height: 15vh;
     background-color: rgb(115, 233, 111);
     color: white;
-    padding-top: 10%;
+    padding: 2%;
+    font-size: 1.5rem;
   }
 
   .text-info {
@@ -143,13 +145,14 @@ a {
     align-items: center;
     display: flex;
     color: white;
-    padding: 20% 15%;
+    padding: 10%;
     flex-wrap: wrap;
   }
 
   .footer-info {
     font-size: 0.9em;
     margin-left: 20px;
+    width: 40%;
   }
 
   .logo-footer {
@@ -157,7 +160,8 @@ a {
   }
 
   .phrase {
-    margin-top: 50px;
+    width: 100%;
+    text-align: center;
   }
 
   .copyright {
@@ -166,7 +170,7 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 1023px) {
   #check {
     display: none;
   }
@@ -309,59 +313,65 @@ a {
   }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (max-width: 767px) {
+  header {
+    list-style: none;
+    background-color: #091353;
+    padding: 2% 15%;
+  }
+  /*Navbar*/
+
   #check {
     display: none;
   }
 
-  header nav {
-    padding: 2%;
+  ul {
+    font-weight: bold;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -100%;
+    top: 21%;
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(#091353, #4353bb);
+    transition: all 0.5s;
+  }
+  ul li {
+    display: block;
+    font-size: 2rem;
+    margin: 2% 0;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
   }
 
   .mobile-nav {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding-right: 30px;
-  }
-
-  .mobile-nav input {
-    margin-top: 50px;
-    width: 100%;
-    border: none;
-    padding: 15px;
-    border-radius: 30px;
-  }
-
-  .mobile-nav ul {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    font-weight: bold;
+  }
+  .mobile-nav input {
+    border: none;
+    padding: 3%;
+    background-color: #b2f9fc;
+    border-radius: 20px;
   }
 
-  li a {
-    transition: all 0.3s ease;
+  .mobile-nav button {
+    background-color: #091353;
+    border: none;
+    margin-left: 10px;
   }
-
-  li a:hover {
-    color: #b2f9fc;
-  }
-
-  .logo-home {
-    width: 50%;
-  }
-
   .fa-bars {
-    display: none;
+    color: white;
+    font-size: 2rem;
   }
 
-  /*Product section*/
+  /*Products section*/
 
   main {
     background-color: #091353;
@@ -370,41 +380,34 @@ a {
 
   .carousel {
     width: 100%;
-    height: 65vh;
+    height: 25vh;
     background-color: #d5d5d5;
     text-align: center;
   }
 
   .section-products {
     background-color: #9d84b7;
-    padding: 5%;
+    padding: 5% 15%;
   }
   .section-products h2 {
     color: white;
     text-align: center;
-    margin-bottom: 30px;
   }
 
-  .our-products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
   .product {
-    width: 20%;
+    width: 100%;
     height: 250px;
     background-color: #d5d5d5;
     margin: 10px;
     text-align: center;
     border-radius: 15px;
-    transition: all 0.3s ease;
   }
 
-  .product:hover {
-    box-shadow: 3px 3px 10px #000000, -3px -3px 10px #a7a7a7;
+  .our-products {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
-
-  /*Promo message*/
 
   .promo-message {
     text-align: center;
@@ -412,8 +415,7 @@ a {
     height: 15vh;
     background-color: rgb(115, 233, 111);
     color: white;
-    padding: 2%;
-    font-size: 1.5rem;
+    padding-top: 10%;
   }
 
   .text-info {
@@ -432,14 +434,13 @@ a {
     align-items: center;
     display: flex;
     color: white;
-    padding: 10%;
+    padding: 20% 15%;
     flex-wrap: wrap;
   }
 
   .footer-info {
     font-size: 0.9em;
     margin-left: 20px;
-    width: 40%;
   }
 
   .logo-footer {
@@ -447,8 +448,7 @@ a {
   }
 
   .phrase {
-    width: 100%;
-    text-align: center;
+    margin-top: 50px;
   }
 
   .copyright {
