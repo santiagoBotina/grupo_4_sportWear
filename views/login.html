@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SportWear</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -17,76 +20,67 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/login-styles.css" />
-    <title>SportWear</title>
-  </head>
+    <link rel="stylesheet" href="/css/login-styles.css" />    
+</head>
 <body>
-    <header>
-        <nav>
-          <img
+  <header>
+    <nav>    
+      <img
             src="/images/logo-sportwear-a.png"
             alt="logo-sportwear"
             class="logo-home"
-          />
-          <div class="mobile-nav">
-            <input type="text" placeholder="Search products..." />
-            <input type="checkbox" id="check"></input>
-            <label for="check"><i class="fas fa-bars"></i></label>
-            <ul>
-              <li><a href="/productdetail">Our products</a></li>
-              <li><a href="/cart">Shopping Cart</a></li>
-              <li><a href="/login">Login</a></li>
-              <li><a href="/register">Sign Up</a></li>
-            </ul>
-          </div>
-          
-          
-        </nav>
-      </header>
-
-      <main>
-        <h2>Bienvenido nuevamente!</h2>
-        <h3>Login</h3>
-        <form action="register" method="POST">
-            
+      />
+      <div class="mobile-nav">      
+        <input type="text" placeholder="Search products..." />
+        <input type="checkbox" id="check"></input>
+        <label for="check"><i class="fas fa-bars"></i></label>
+        <ul>          
+          <li><a href="/productdetail">Our products</a></li>
+          <li><a href="/cart">Shopping Cart</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Sign Up</a></li>
+        </ul>
+      </div>         
+    </nav>
+  </header>
+  <main>
+        <h2 class="titulo-bienvenida">Bienvenidos!</h2>
+        <div class="foto-login">
+          <img src="/images/images-home/home-stretching.jpg" alt="">
+        </div>        
+        <h3 class="titulo-login">Iniciar sesión</h3>
+        <div class="contenedor-form">
+          <form action="register" method="POST">            
             <div>
-                <label for="email">Email</label>  
-                <input type="email" name="email" id="email">
-            </div>
-
+                  <label for="email">Correo electrónico</label>  
+                  <input type="email" name="email" id="email">
+            </div>            
             <div>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password">  
+                  <label for="password">Contraseña</label>
+                  <input type="password" name="password" id="password">  
             </div>
-
-            <div>Te olvidaste tu contraseña?</div>
-            <div>
-                <label for="submit">Login</label>
-                <input type="submit" name="submit" id="submit">
-            </div>
-
-            
-            
-            
-        </form>
-        <h3>Ya tenÃ©s cuenta? IngresÃ¡ con tu usuario </h3>
-    </main>
-
-
-      <footer>
-        <img
-          src="/images/logo-sportwear-a.png"
-          alt="logo-sportwear"
-          class="logo-footer"
-        />
-        <div class="footer-info">
-          <p>About us.</p>
-          <p>Contact.</p>
-          <p>Products.</p>
-          <p>Shipping policie.</p>
-        </div>
-        <h4 class="phrase">Made with ? by group 4</h4>
-        <h4 class="copyright">Copyright © 2022 SportWear S.R.L.</h4>
-      </footer>    
+            <div class="olvidado"><a href="#">Has olvidado tu contraseña?</a></div>
+            <div class="boton">
+                  <label for="submit"></label>
+                  <input type="submit" name="submit" id="submit">
+            </div>           
+          </form>
+        </div>                
+  </main>
+  <footer>
+    <img
+      src="/images/logo-sportwear-a.png"
+      alt="logo-sportwear"
+      class="logo-footer"
+    />
+    <div class="footer-info">
+      <p>About us.</p>
+      <p>Contact.</p>
+      <p>Products.</p>
+      <p>Shipping policie.</p>
+    </div>
+    <h4 class="phrase">Made with ⚡ by group 4</h4>
+    <h4 class="copyright">Copyright © 2022 SportWear S.R.L.</h4>
+  </footer>   
 </body>
 </html>
