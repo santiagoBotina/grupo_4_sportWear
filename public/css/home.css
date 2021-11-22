@@ -175,7 +175,6 @@ a {
   .promo-message p {
     font-size: 2rem;
   }
-
   .text-info {
     background-color: black;
     color: white;
@@ -326,54 +325,123 @@ a {
 
   .carousel {
     width: 100%;
-    height: 25vh;
-    background-color: #d5d5d5;
+    height: 52vh;
+    background-color: white;
     text-align: center;
   }
 
   .section-products {
-    background-color: #9d84b7;
-    padding: 5% 15%;
+    background-color: black;
+    padding: 5%;
   }
   .section-products h2 {
     color: white;
     text-align: center;
+    margin-bottom: 35px;
+    font-size: 2rem;
   }
 
   .our-products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  .product {
-    width: 40%;
-    height: 250px;
-    background-color: #d5d5d5;
-    margin: 10px;
-    text-align: center;
-    border-radius: 15px;
+    align-content: center;
   }
 
-  /*Promo message*/
+  .our-products article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+  }
+
+  .our-products article button {
+    width: 100%;
+  }
+
+  .product {
+    width: 45%;
+    height: 140px;
+    background-color: none;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .product img {
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .product img:hover {
+    transform: scale(1.1);
+  }
+
+  .fa-arrow-right {
+    position: relative;
+    left: 20px;
+  }
+
+  .product button {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 300px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+  }
 
   .promo-message {
     text-align: center;
     width: 100%;
-    height: 15vh;
-    background-color: rgb(115, 233, 111);
+    height: 35vh;
+    background-image: url("../images/images-home/home-promo-background.jpg");
+    background-position: center;
+    background-size: 100%;
     color: white;
-    padding: 2%;
+    padding: 5%;
+  }
+
+  .promo-message h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+
+  .promo-message p {
     font-size: 1.5rem;
   }
 
   .text-info {
     background-color: black;
     color: white;
+    padding: 7%;
   }
 
-  .more-info {
-    background-color: #091353;
-    width: 100%;
+  .more-info-left,
+  .more-info-right {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+  }
+
+  .more-info-left img,
+  .more-info-right img {
+    width: 50%;
+    height: 50%;
+  }
+
+  .more-info-left p,
+  .more-info-right p {
+    width: 50%;
+    font-size: 1.8rem;
+  }
+
+  .more-info-left p,
+  .more-info-right p {
+    text-align: center;
   }
 
   footer {
@@ -480,46 +548,119 @@ a {
   }
 
   .section-products {
-    background-color: #9d84b7;
-    padding: 5% 15%;
+    background-color: black;
+    padding: 5%;
   }
   .section-products h2 {
     color: white;
     text-align: center;
-  }
-
-  .product {
-    width: 100%;
-    height: 250px;
-    background-color: #d5d5d5;
-    margin: 10px;
-    text-align: center;
-    border-radius: 15px;
+    margin-bottom: 35px;
+    font-size: 2rem;
   }
 
   .our-products {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .our-products article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+  }
+
+  .our-products article button {
+    width: 100%;
+  }
+
+  .product {
+    width: 80%;
+    height: 140px;
+    background-color: none;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .product img {
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .product img:hover {
+    transform: scale(1.1);
+  }
+
+  .fa-arrow-right {
+    position: relative;
+    left: 20px;
+  }
+
+  .product button {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 300px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
   }
 
   .promo-message {
     text-align: center;
     width: 100%;
-    height: 15vh;
-    background-color: rgb(115, 233, 111);
+    height: 35vh;
+    background-image: url("../images/images-home/home-promo-background.jpg");
+    background-position: center;
+    background-size: 100%;
     color: white;
-    padding-top: 10%;
+    padding: 5%;
+  }
+
+  .promo-message h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+
+  .promo-message p {
+    font-size: 1.5rem;
+  }
+
+  .text-info img {
+    width: 100%;
+    padding: 5%;
   }
 
   .text-info {
     background-color: black;
     color: white;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
-  .more-info {
-    background-color: #091353;
+  .more-info-left,
+  .more-info-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .more-info-left p,
+  .more-info-right p {
+    text-align: center;
     width: 100%;
+  }
+
+  .more-info-right {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   footer {
