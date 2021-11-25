@@ -15,6 +15,9 @@ Construido con 🛠️
 • Wireframe.cc - El wireframe web usado
 • PDF – para subir los wireframe a GIT HUB
 
+
+Herramientas de planificación: tablero de trabajo https://trello.com/b/0Hp3vmIv/sportwear 
+
 ###Autores ✒️###
 • **Santiago Botina**⭐:
 
