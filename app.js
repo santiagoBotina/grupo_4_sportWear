@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+const router = express.Router();
+
+app.set('view engine', 'ejs');
 
 app.use(express.static("public"));
 
@@ -8,7 +11,7 @@ app.listen(5000, () => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
+  res.render("index");
 });
 
 app.get("/productdetail", (req, res) => {
