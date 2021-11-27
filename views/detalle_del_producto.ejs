@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('partials/head.ejs') %>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="css/detalle-del-producto.css" rel="stylesheet">
-
-    <title>Sport Wear</title>
-</head>
-
-<body>
-    <header>
-        <div>
-        <a href="/"><img class="logo" src="images/logo-sportwear-a.png" alt="logo del sitio"></a>
-        </div>
-    </header>
+  <body>
+    
+<%- include('partials/header.ejs') %>
 
     <section>
         <div class="imagen-producto">
@@ -64,21 +50,7 @@
 
     </section>
 
-    <footer>
-        <img
-          src="/images/logo-sportwear-a.png"
-          alt="logo-sportwear"
-          class="logo-footer"
-        />
-        <div class="footer-info">
-          <p>About us.</p>
-          <p>Contact.</p>
-          <p>Products.</p>
-          <p>Shipping policie.</p>
-        </div>
-        <h4 class="phrase">Made with ⚡ by group 4</h4>
-        <h4 class="copyright">Copyright © 2022 SportWear S.R.L.</h4>
-      </footer>
+    <%- include('partials/footer') %>
 
     
 </body>

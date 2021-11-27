@@ -1,48 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<%- include('partials/head.ejs') %>
 
-    <title>SportWear</title>
+  <body>
+    
+<%- include('partials/header.ejs') %>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/login-styles.css" />    
-</head>
-<body>
-  <header>
-    <nav>    
-      <img
-            src="/images/logo-sportwear-a.png"
-            alt="logo-sportwear"
-            class="logo-home"
-      />
-      <div class="mobile-nav">      
-        <input type="text" placeholder="Search products..." />
-        <input type="checkbox" id="check"></input>
-        <label for="check"><i class="fas fa-bars"></i></label>
-        <ul>          
-          <li><a href="/productdetail">Our products</a></li>
-          <li><a href="/cart">Shopping Cart</a></li>
-          <li><a href="/login">Login</a></li>
-          <li><a href="/register">Sign Up</a></li>
-        </ul>
-      </div>         
-    </nav>
-  </header>
   <main>
         <h2 class="titulo-bienvenida">Bienvenidos!</h2>
         <div class="foto-login">
@@ -67,20 +28,8 @@
           </form>
         </div>                
   </main>
-  <footer>
-    <img
-      src="/images/logo-sportwear-a.png"
-      alt="logo-sportwear"
-      class="logo-footer"
-    />
-    <div class="footer-info">
-      <p>About us.</p>
-      <p>Contact.</p>
-      <p>Products.</p>
-      <p>Shipping policie.</p>
-    </div>
-    <h4 class="phrase">Made with ⚡ by group 4</h4>
-    <h4 class="copyright">Copyright © 2022 SportWear S.R.L.</h4>
-  </footer>   
+  
+  <%- include('partials/footer') %>
+
 </body>
 </html>
