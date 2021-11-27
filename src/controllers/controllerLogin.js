@@ -1,3 +1,7 @@
-const express = require("express");
-const router = express.Router();
+const loginController = {
+    loginRoute: function(req, res){
+        res.render("login")
+    }
+}
 
+module.exports=loginController
