@@ -1,0 +1,48 @@
+<%- include('partials/head.ejs') %>
+<head>
+  <link rel="stylesheet" href="/css/formProduct.css" />
+</head>
+<body>
+  <%- include('partials/header.ejs') %>
+  <main>
+    <h1>AÑADIR PRODUCTO</h1>
+    <form action="/views/formProduct.ejs" method="post" class="flex-container">
+      <input type="text" placeholder="Product's name" class="input-text" />
+      <input type="text" placeholder="Description" class="input-text" />
+      <input type="file" name="image" id="" />
+      <label for="categoria">Categoría</label>
+      <div class="categoria-checkbox">
+        <label for="1">categoria 1</label>
+        <input type="checkbox" name="categoria" id="1" />
+        <label for="1">categoria 2</label>
+        <input type="checkbox" name="categoria" id="2" />
+        <label for="1">categoria 3</label>
+        <input type="checkbox" name="categoria" id="3" />
+        <label for="1">categoria 4</label>
+        <input type="checkbox" name="categoria" id="4" />
+      </div>
+
+      <label for="talla">Talla</label>
+      <select name="talla" id="talla">
+        <% for (let i = 35; i <= 42; i++) { %>
+        <option value="<%= i %> "><%= i %></option>
+        <% } %>
+      </select>
+      <label for="precio">Precio</label>
+      <input type="number" name="precio" id="precio" class="input-text" />
+    </form>
+    <div class="item-existe">
+      <h3>Editar item existente</h3>
+      <form action="/products/editar" method="GET">
+        <input
+          type="number"
+          name="itemId"
+          id="id"
+          placeholder="Item's ID"
+          class="input-text"
+        />
+        <button type="submit" class="editar-button">Ir a editar</button>
+      </form>
+    </div>
+  </main>
+</body>
