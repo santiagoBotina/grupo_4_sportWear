@@ -7,19 +7,25 @@
 <%- include('partials/header.ejs') %>
 
     <section>
+        <div class="nombre-del-producto">
+        <h3 class="nombre-del-producto">Nombre del Producto</h3>
+        </div>
         <div class="imagen-producto">
         <img class="ver-producto" src="images/nike-revolution-5-a.webp" alt="nike revolution 5">
         </div>
-            <div class="text-producto">
-            <article class="nombre-del-producto">Nombre del Producto</article>
+            <div class="precio">
             <article class="precio">Precio</article>
         </div>
 
         <form method="POST" action="/">
             
-            <label for="talles" class="talles">Talle</label>
+            <label for="talles" class="talles">Selecciona el Talle</label>
             
             <div class="div-input">
+                <button class="seleccion-talle">
+            <input type="radio" name="talles" value="39" class="talle">
+            <label for="talles">39</label>
+                </button>
             <input type="radio" name="talles" value="40" class="talle">
             <label for="talles">40</label>
             <input type="radio" name="talles" value="41" class="talle">
@@ -28,6 +34,10 @@
             <label for="talles">42</label>
             <input type="radio" name="talles" value="43" class="talle">
             <label for="talles">43</label>
+            <input type="radio" name="talles" value="43" class="talle">
+            <label for="talles">44</label>
+            <input type="radio" name="talles" value="43" class="talle">
+            <label for="talles">45</label>
             </div>
         </form>
 
@@ -43,12 +53,14 @@
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, animi veniam. Modi ex eaque veritatis at facere dolores delectus, molestias commodi, magni expedita consectetur, perspiciatis ipsam enim. Atque, omnis eius.
             </p>
-            <video width="320" height="480" controls>
+        </div>
+   
+        <video width="320" height="480" autoplay controls class=video-detalle-producto>
                 <source src= "/video/pexels-mart-production-7876926.mp4" type="video/mp4">
 
-            </video>
+        </video>
 
-        </div>
+        
 
     </section>
 
