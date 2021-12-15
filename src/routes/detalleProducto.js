@@ -5,5 +5,6 @@ const router = express.Router();
 
 router.get("/", detalleProductoController.detalleProducto)
 
+
 module.exports=router
 
