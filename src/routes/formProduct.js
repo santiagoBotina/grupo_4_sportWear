@@ -3,9 +3,10 @@ const controllerFormProduct = require("../controllers/controllerFormProduct");
 const router = express.Router();
 
 router.get("/crear", controllerFormProduct.crear);
-router.post("/", controllerFormProduct.procesaFormulario);
+router.post("/crear", controllerFormProduct.procesaFormulario);
 //router.post("/", detalleProductoController.procesaFormulario);
 
-router.get("/editar", controllerFormProduct.editar);
+router.get("/editar/:idProduct", controllerFormProduct.editar);
+router.put("/editar", controllerFormProduct.desplazar)
 
 module.exports = router;

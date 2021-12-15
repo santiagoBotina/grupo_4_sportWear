@@ -12,11 +12,11 @@ const formProductController = {
     let newProduct = {
       id: products.length + 1,
       name: req.body.name,
-      price: req.body.price,
+      price: req.body.precio,
       description: req.body.description,
-      category: req.body.category,
-      //talla: req.body.talla,
-      //image:
+      category: req.body.categoria,
+      talla: req.body.talla,
+      image: null,
     };
     console.log(req.body.description);
 
@@ -27,7 +27,28 @@ const formProductController = {
   },
 
   editar: (req, res) => {
-    res.render("editProduct");
+    let idProduct =req.params.idProduct
+
+    let product = [
+      {id: 1, name: "nike 1"},
+      {id: 2, name: "nike 2"},
+      {id: 3, name: "nike 3"},
+      {id: 4, name: "nike 4"},
+    ]
+
+    let productToEdit = product[idProduct]
+
+
+
+    res.render("editProduct", {productToEdit: productToEdit})
+
+
+
+    //res.render("editProduct");
+    
+  },
+  desplazar: (req,res) => {
+    res.send("Cambio guardado")
   },
 };
 

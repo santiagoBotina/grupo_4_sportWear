@@ -7,10 +7,10 @@
   <main>
     <h1>CREAR PRODUCTO</h1>
     <form
-      action="/ProductsLista"
+      action="/products/crear"
       method="post"
-      enctype="multipart/form-data"
-      class="flex-container"
+      
+       
     >
       <input
         type="text"
@@ -18,13 +18,17 @@
         name="name"
         class="input-text"
       />
+      <br>
       <input
         type="text"
         placeholder="Description"
         name="description"
         class="input-text"
       />
+      <br>
+      
       <input type="file" name="image" id="" />
+      <br>
       <label for="categoria">Categoría</label>
       <div class="categoria-checkbox">
         <label for="1">categoria 1</label>
@@ -36,16 +40,22 @@
         <label for="1">categoria 4</label>
         <input type="checkbox" name="categoria" id="4" />
       </div>
-
+      <br>
       <label for="talla">Talla</label>
       <select name="talla" id="talla">
         <% for (let i = 35; i <= 42; i++) { %>
         <option value="<%= i %> "><%= i %></option>
         <% } %>
       </select>
+      <br>
       <label for="precio">Precio</label>
       <input type="number" name="precio" id="precio" class="input-text" />
-    </form>
+      <br>
+      
+      
+      <input type="submit" value="Crear">
+      <br>
+    </form>    
     <div class="item-existe">
       <h3>Editar item existente</h3>
       <form action="/products/" method="POST">
