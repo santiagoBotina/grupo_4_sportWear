@@ -15,28 +15,16 @@
     <section class="section-products">
       <h2>NUESTOS PRODUCTOS</h2>
       <div class="our-products">
-        <article class="product">
-          <img src="\images\our_products\adidas-ranning-Ultraboost-celeste-a.jpg" alt="producto1"  >
-          <button>IR A VERLO<i class="fas fa-arrow-right"></i></button>
-        </article>
-        <article class="product">
-          <img src="\images\our_products\adidas-ranning-Ultraboost-Naranja-a.jpg" alt="producto2">
-          <button>IR A VERLO<i class="fas fa-arrow-right"></i></button>
-        </article>
-        <article class="product">
-          <img src="\images\our_products\adidas-ranning-Ultraboost-Negro-a.jpg" alt="producto3">
-          <button>IR A VERLO<i class="fas fa-arrow-right"></i></button>
-        </article>
-        <article class="product">
-          <img src="\images\our_products\adidas-red-Negro.jpg" alt="producto4">
-          <button>IR A VERLO<i class="fas fa-arrow-right"></i></button>
-          <article class="product">
-            <a href="/our_products" img src="\images\our_products\adidas-red-Negro.jpg" alt="producto4">
-            </a>
-            </article>            
-
-
-
+        <% for (let i = 0; i < products.length; i++) { %>
+          <a href="/products/<% products[i].id %>">
+             <article class="product">
+            <img src="\images\our_products\<%= products[i].image %> " alt="producto1"  >
+              <button><a href="/products/<% products[i].id %>"> IR A VERLO<i class="fas fa-arrow-right"></i></a></button>
+            
+          </article>
+        </a>
+        <% } %> 
+           
         <!-- Agregar todas las imagenes de productos y hacer que la imagen ser un boton, eliminar el boton -->
         
         

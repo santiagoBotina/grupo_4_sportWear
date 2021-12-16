@@ -6,29 +6,24 @@
   <%- include('partials/header.ejs') %>
   <main>
     <h1>CREAR PRODUCTO</h1>
-    <form
-      action="/products/crear"
-      method="post"
-      
-       
-    >
+    <form action="/products/crear" method="post">
       <input
         type="text"
         placeholder="Products name"
         name="name"
         class="input-text"
       />
-      <br>
+      <br />
       <input
         type="text"
         placeholder="Description"
         name="description"
         class="input-text"
       />
-      <br>
-      
+      <br />
+
       <input type="file" name="image" id="" />
-      <br>
+      <br />
       <label for="categoria">Categoría</label>
       <div class="categoria-checkbox">
         <label for="1">categoria 1</label>
@@ -40,33 +35,27 @@
         <label for="1">categoria 4</label>
         <input type="checkbox" name="categoria" id="4" />
       </div>
-      <br>
+      <br />
       <label for="talla">Talla</label>
       <select name="talla" id="talla">
         <% for (let i = 35; i <= 42; i++) { %>
         <option value="<%= i %> "><%= i %></option>
         <% } %>
       </select>
-      <br>
+      <br />
       <label for="precio">Precio</label>
       <input type="number" name="precio" id="precio" class="input-text" />
-      <br>
-      
-      
-      <input type="submit" value="Crear">
-      <br>
-    </form>    
+      <br />
+
+      <input type="submit" value="Crear" />
+      <br />
+    </form>
     <div class="item-existe">
-      <h3>Editar item existente</h3>
-      <form action="/products/" method="POST">
-        <input
-          type="number"
-          name="itemId"
-          id="id"
-          placeholder="Item's ID"
-          class="input-text"
-        />
-        <button type="submit" class="editar-button">Agregar Producto</button>
+      <h3>Editar item existente?</h3>
+      <form action="/products/" method="GET">
+        <button href="/products" type="submit" class="editar-button">
+          Ir a todos los productos
+        </button>
       </form>
     </div>
   </main>

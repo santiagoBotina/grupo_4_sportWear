@@ -5,9 +5,13 @@
 <body>
   <%- include('partials/header.ejs') %>
   <main>
-    <h1>EDITAR PRODUCTO</h1>
-    <form action="/products/editar?_method=PUT" method="post" class="flex-container">
-      <input type="text" value="<%= productToEdit.name %>" class="input-text" />
+    <h1>EDITANDO <%= products[productId].name %></h1>
+    <form
+      action="/products/editar?_method=PUT"
+      method="post"
+      class="flex-container"
+    >
+      <input type="text" value="" class="input-text" />
       <input type="text" placeholder="Description" class="input-text" />
       <input type="file" name="image" id="" />
       <label for="categoria">Categoría</label>
@@ -28,9 +32,9 @@
         <option value="<%= i %> "><%= i %></option>
         <% } %>
       </select>
-      <label for="precio">Precio</label>
+      <label for="precio">$<%= products[productId] %> </label>
       <input type="number" name="precio" id="precio" class="input-text" />
-      <input type="submit" value="Editar">
+      <input type="submit" value="Editar" />
     </form>
     <div class="item-existe">
       <h3>Editar item existente</h3>

@@ -1,45 +1,41 @@
 [
- {
-  "id": 1,
-  "name": "Nike 5",
-  "description": "vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis",
-  "price": 2969.8,
-  "discount": 38,
-  "category": "zapatillas",
-  "image": null,
-  "type": "nuevo"
- },
- {
-  "id": 2,
-  "name": "Adidas 5",
-  "description": "orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed",
-  "price": 2549,
-  "discount": 20,
-  "category": "zapatillas",
-  "image": null,
-  "type": "mas-vendido"
- },
- {
-  "id": 3,
-  "name": "puma 1",
-  "description": "linda zapas"
- },
- {
-  "id": 4,
-  "name": "puma 1",
-  "price": "10000",
-  "description": "linda zapas",
-  "category": "on",
-  "talla": "39 ",
-  "image": null
- },
- {
-  "id": 5,
-  "name": "Topper 1",
-  "price": "10000",
-  "description": "Zapatilla azul",
-  "category": "on",
-  "talla": "40 ",
-  "image": null
- }
+  {
+    "id": 1,
+    "name": "Nike 5",
+    "description": "vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis",
+    "price": 2969.8,
+    "discount": 38,
+    "category": "zapatillas",
+    "image": "adidas-ranning-Ultraboost-celeste-a.jpg",
+    "type": "nuevo"
+  },
+  {
+    "id": 2,
+    "name": "Adidas 5",
+    "description": "orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed",
+    "price": 2549,
+    "discount": 20,
+    "category": "zapatillas",
+    "image": "adidas-ranning-Ultraboost-celeste-a.jpg",
+    "type": "mas-vendido"
+  },
+  {
+    "id": 3,
+    "name": "Puma 1",
+    "description": "orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed",
+    "price": 2549,
+    "discount": 20,
+    "category": "zapatillas",
+    "image": "adidas-ranning-Ultraboost-Naranja-a.jpg",
+    "type": "mas-vendido"
+  },
+  {
+    "id": 4,
+    "name": "puma 1",
+    "price": "10000",
+    "description": "linda zapas",
+    "category": "on",
+    "talla": "39 ",
+    "image": "adidas-ranning-Ultraboost-Negro-a.jpg"
+  }
 ]

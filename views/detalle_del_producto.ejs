@@ -5,64 +5,59 @@
   <body>
     
 <%- include('partials/header.ejs') %>
-
-    <section>
-        <div class="nombre-del-producto">
-        <h3 class="nombre-del-producto">Nombre del Producto</h3>
-        </div>
-        <div class="imagen-producto">
-        <img class="ver-producto" src="images/nike-revolution-5-a.webp" alt="nike revolution 5">
-        </div>
-            <div class="precio">
-            <article class="precio">Precio</article>
-        </div>
-
-        <form method="POST" action="/">
-            
-            <label for="talles" class="talles">Selecciona el Talle</label>
-            
-            <div class="div-input">
-                <button class="seleccion-talle">
-            <input type="radio" name="talles" value="39" class="talle">
-            <label for="talles">39</label>
-                </button>
-            <input type="radio" name="talles" value="40" class="talle">
-            <label for="talles">40</label>
-            <input type="radio" name="talles" value="41" class="talle">
-            <label for="talles">41</label>
-            <input type="radio" name="talles" value="42" class="talle">
-            <label for="talles">42</label>
-            <input type="radio" name="talles" value="43" class="talle">
-            <label for="talles">43</label>
-            <input type="radio" name="talles" value="43" class="talle">
-            <label for="talles">44</label>
-            <input type="radio" name="talles" value="43" class="talle">
-            <label for="talles">45</label>
+        <section>
+            <div class="nombre-del-producto">
+            <h3 class="nombre-del-producto"><%= products[productId].name %> </h3>
             </div>
-        </form>
-
-        <div class="buttons">
-            <button type="submit" name="añadir" class="boton-agregar"><a href="/">Añadir al Carrito</a></button>
-            <button type="submit" name="comprar"class="boton-comprar"><a href="/cart">Comprar Producto</a></button>
-        </div>
-
-        <div class="div-descripcion">
-            <h3 class="descripcion">
-                Descripción del producto:  
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, animi veniam. Modi ex eaque veritatis at facere dolores delectus, molestias commodi, magni expedita consectetur, perspiciatis ipsam enim. Atque, omnis eius.
-            </p>
-        </div>
-   
-        <video width="320" height="480" autoplay controls class=video-detalle-producto>
-                <source src= "/video/pexels-mart-production-7876926.mp4" type="video/mp4">
-
-        </video>
-
-        
-
-    </section>
+            <div class="imagen-producto">
+            <img class="ver-producto" src="/images/our_products/<%= products[productId].image %> " alt="product-image">
+            </div>
+                <div class="precio">
+                <article class="precio">$<%= products[productId].price %></article>
+            </div>
+    
+            <form method="POST" action="/">
+                
+                <label for="talles" class="talles">Selecciona el Talle</label>
+                
+                <div class="div-input">
+                    <button class="seleccion-talle">
+                <input type="radio" name="talles" value="39" class="talle">
+                <label for="talles">39</label>
+                    </button>
+                <input type="radio" name="talles" value="40" class="talle">
+                <label for="talles">40</label>
+                <input type="radio" name="talles" value="41" class="talle">
+                <label for="talles">41</label>
+                <input type="radio" name="talles" value="42" class="talle">
+                <label for="talles">42</label>
+                <input type="radio" name="talles" value="43" class="talle">
+                <label for="talles">43</label>
+                <input type="radio" name="talles" value="43" class="talle">
+                <label for="talles">44</label>
+                <input type="radio" name="talles" value="43" class="talle">
+                <label for="talles">45</label>
+                </div>
+            </form>
+    
+            <div class="buttons">
+                <button type="submit" name="añadir" class="boton-agregar"><a href="#">Añadir al Carrito</a></button>
+                <button type="submit" name="comprar"class="boton-comprar"><a href="#">Comprar Producto</a></button>
+                <form action="/products/editar/:id" method="GET">
+                    <button type="submit" name="editar" class="boton-agregar" href="/products/editar/:id">Editar este producto</button>
+                </form>
+            </div>
+    
+            <div class="div-descripcion">
+                <h3 class="descripcion">
+                    Descripción del producto:  
+                </h3>
+                <p>
+                    <%= products[productId].description %>
+                </p>
+            </div>       
+    
+        </section>    
 
     <%- include('partials/footer') %>
 
