@@ -17,3 +17,11 @@ Sport Wear es un sitio de venta de indumentaria deportiva especializada en las m
 3. Continuar haciendo: Seguir dedicandole tiempo periódicamente al proyecto
 4. Hacer menos: Enfocarse menos en lo estético por ahora y meterle más a la funcionalidad
 5. Dejar de hacer: Añadir cosas innecesarias al proyecto
+
+16/12/2021 Sprint 4
+
+1. Comenzar a hacer: aplicar nuevos métodos PUT y DELETE
+2. Hacer más: dedicarle mas tiempo al estudio y prueba de los temas de métodos HTTP, rutas y manejo de datos enviados por formularios.
+3. Continuar haciendo: Seguir dedicandole tiempo periódicamente al proyecto
+4. Hacer menos: Enfocarse menos en lo estético por ahora y meterle más a la funcionalidad
+5. Dejar de hacer: Añadir cosas innecesarias al proyecto

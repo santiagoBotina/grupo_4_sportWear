@@ -10,7 +10,7 @@ const formProductController = {
   },
 
   detalleProducto: (req, res) => {
-    let productId = req.params.id;
+    let productId = req.params.id - 1;
     res.render("detalle_del_producto", { products, productId });
   },
 
@@ -35,27 +35,36 @@ const formProductController = {
   },
 
   editar: (req, res) => {
-    let productId = req.params.id;
+    let productId = req.params.id - 1;
     res.render("editProduct", { products, productId });
   },
 
   editarProducto: (req, res) => {
     let productId = req.params.id;
+    // let productToEdit = products[productId];
+    let productToEdit = products.find((product) => product.id == productId);
 
-    let product = [
-      { id: 1, name: "nike 1" },
-      { id: 2, name: "nike 2" },
-      { id: 3, name: "nike 3" },
-      { id: 4, name: "nike 4" },
-    ];
+    productToEdit = {
+      id: productToEdit.id,
+      ...req.body,
+    };
 
-    let productToEdit = products[productId];
+    let newProducts = products.map((product) => {
+      if (product.id == productToEdit.id) {
+        return (product = { ...productToEdit });
+      }
+      return product;
+    });
 
-    res.render("editProduct", { productToEdit: productToEdit });
+    fs.writeFileSync(productsFilePath, JSON.stringify(newProducts));
+    res.redirect("/");
   },
 
-  desplazar: (req, res) => {
-    res.send("Cambio guardado");
+  borrar: (req, res) => {
+    let id = req.params.id;
+    let finalProducts = products.filter((product) => product.id != id);
+    fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts));
+    res.redirect("/");
   },
 };
 

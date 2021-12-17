@@ -16,11 +16,12 @@
       <h2>NUESTOS PRODUCTOS</h2>
       <div class="our-products">
         <% for (let i = 0; i < products.length; i++) { %>
-          <a href="/products/<% products[i].id %>">
+          <a href="/products/<%= products[i].id %>">
              <article class="product">
             <img src="\images\our_products\<%= products[i].image %> " alt="producto1"  >
-              <button><a href="/products/<% products[i].id %>"> IR A VERLO<i class="fas fa-arrow-right"></i></a></button>
-            
+            <form action="/products/<%= products[i].id %>" method="GET">
+              <button type="submit"> IR A VERLO<i class="fas fa-arrow-right"></i></a></button>
+            </form>
           </article>
         </a>
         <% } %> 

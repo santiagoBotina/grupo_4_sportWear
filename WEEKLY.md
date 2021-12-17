@@ -13,3 +13,11 @@ Se empezó el sprint con los EJS, se actualizaron las tareas en el trello y se c
 Entender el EJS y los temas nuevos que se han visto a lo largo de estas últimas dos semanas
 ● Qué va a hacer esta semana.
 Se crearon los EJS y se organizaron las carpetas, ajustamos los archivos e implementamos los partials en las páginas, se crearon las páginas de carga y edición de productos.
+
+16/12/2021
+● Qué se hizo la semana pasada:
+Se implementó el EJS en las vistas, se crearon las views de crear y editar productos, se hizo uso de los métodos PUT y DELETE, se agregaron las vistas de todos los productos.
+● Si se encontró con algún impedimento.
+Entender los métodos HTTP PUT y DELETE, el manejo de los formularios y el envio de la información.
+● Qué va a hacer esta semana.
+Finalizar los métodos PUT y DELETE, junto a las rutas de las nuevas vistas.
