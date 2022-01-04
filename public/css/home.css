@@ -232,6 +232,8 @@ a {
     margin-right: 20px;
   }
 
+  /* Footer */
+
   footer {
     background-color: #091353;
     justify-content: center;
@@ -443,6 +445,8 @@ a {
   .more-info-right p {
     text-align: center;
   }
+
+  /* Footer */
 
   footer {
     background-color: #091353;
@@ -662,6 +666,8 @@ a {
     display: flex;
     flex-direction: column-reverse;
   }
+
+  /* footer */
 
   footer {
     background-color: #091353;

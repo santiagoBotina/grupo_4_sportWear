@@ -1,7 +1,35 @@
-const registerController = {
-    registerRoute: function(req, res){
-        res.render("register")
-    }
-}
+const path = require("path");
+const fs = require("fs");
+const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
 
-module.exports=registerController
+const usersFilePath = path.join(__dirname, "../database/users.json");
+const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+
+const registerController = {
+  registerView: (req, res) => {
+    res.render("register");
+  },
+  registerProcess: (req, res) => {
+    // ***validaciones del texto del form***
+    let errores = validationResult(req);
+
+    if (errores.isEmpty()) {
+      let newUser = {
+        name: req.body.nombre,
+        email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        //*Imagen de perfil*/
+      };
+
+      users.push(newUser);
+      fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+
+      res.redirect("/login");
+    } else {
+      return res.render("register", { errors: errores.array() });
+    }
+  },
+};
+
+module.exports = registerController;
