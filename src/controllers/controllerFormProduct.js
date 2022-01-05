@@ -28,7 +28,7 @@ const formProductController = {
       description: req.body.description,
       category: req.body.categoria,
       talla: req.body.talla,
-      image: null,
+      //**IMAGEN */
     };
 
     products.push(newProduct);

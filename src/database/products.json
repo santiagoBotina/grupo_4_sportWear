@@ -1,1 +1,32 @@
-[{"id":0,"name":"Adidas 5","description":"orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed","precio":2549,"discount":20,"category":"zapatillas","image":"adidas-ranning-Ultraboost-celeste-a.jpg","talla":"35"},{"id":1,"name":"Puma 1","description":"orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed","precio":2549,"discount":20,"category":"zapatillas","image":"adidas-ranning-Ultraboost-Naranja-a.jpg","talla":"35"},{"id":2,"name":"puma 2","description":"linda zapas","precio":"10000","discount":20,"category":"on","image":"adidas-ranning-Ultraboost-Negro-a.jpg","talla":"35"},{"id":3,"name":"Santiago Botina Esparza","description":"sasasasa","image":"","categoria":"on","talla":"35 ","precio":"12345"}]
+[
+  {
+    "id": 0,
+    "name": "Adidas 5",
+    "description": "orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed",
+    "precio": 2549,
+    "discount": 20,
+    "category": "zapatillas",
+    "image": "adidas-ranning-Ultraboost-celeste-a.jpg",
+    "talla": "35"
+  },
+  {
+    "id": 1,
+    "name": "Puma 1",
+    "description": "orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed",
+    "precio": 2549,
+    "discount": 20,
+    "category": "zapatillas",
+    "image": "adidas-ranning-Ultraboost-Naranja-a.jpg",
+    "talla": "35"
+  },
+  {
+    "id": 2,
+    "name": "puma 2",
+    "description": "linda zapas",
+    "precio": "10000",
+    "discount": 20,
+    "category": "on",
+    "image": "adidas-ranning-Ultraboost-Negro-a.jpg",
+    "talla": "35"
+  }
+]

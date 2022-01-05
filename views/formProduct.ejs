@@ -6,7 +6,7 @@
   <%- include('partials/header.ejs') %>
   <main>
     <h1>CREAR PRODUCTO</h1>
-    <form action="/products/crear" method="post">
+    <form action="/products/crear" method="post" enctype="multipart/form-data">
       <input
         type="text"
         placeholder="Products name"
@@ -21,10 +21,13 @@
         class="input-text"
       />
       <br />
-
-      <input type="file" name="image" id="" />
+      <label for="productImage">Imágen de producto</label>
+      <input type="file" name="productImage" id="productImage" />
       <br />
-      <label for="categoria">Categoría</label>
+
+      <!-- *****CON LOS INPUTS DE TIPO CHECKBOX MULTER NO SE LLEVA LAS IMAGENES, NO SE AUN PORQUE, HE DESHABILITADO EL MISMO PARA QUE FUNCIONE POR AHORA***** -->
+
+      <!-- <label for="categoria">Categoría</label>
       <div class="categoria-checkbox">
         <label for="1">categoria 1</label>
         <input type="checkbox" name="categoria" id="1" />
@@ -35,7 +38,15 @@
         <label for="1">categoria 4</label>
         <input type="checkbox" name="categoria" id="4" />
       </div>
-      <br />
+      <br /> -->
+
+      <label for="categoría">Categoría</label>
+      <select name="categoria" id="categoria">
+        <% for (let i = 1; i <= 4; i++) { %>
+        <option value="categoria<%= i %> ">Categoría<%= i %></option>
+        <% } %>
+      </select>
+
       <label for="talla">Talla</label>
       <select name="talla" id="talla">
         <% for (let i = 35; i <= 42; i++) { %>
