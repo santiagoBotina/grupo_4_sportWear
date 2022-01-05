@@ -10,18 +10,21 @@ const formProductController = {
   },
 
   detalleProducto: (req, res) => {
-    let productId = req.params.id - 1;
-    res.render("detalle_del_producto", { products, productId });
+    let productId = req.params.id;
+    res.render("detalle_del_producto", {
+      products: products,
+      productId: productId,
+    });
   },
 
-  crear: (req, res) => {
+  crearProducto: (req, res) => {
     res.render("formProduct");
   },
   procesaFormulario: (req, res) => {
     let newProduct = {
-      id: products.length + 1,
+      id: products.length,
       name: req.body.name,
-      price: req.body.precio,
+      precio: req.body.precio,
       description: req.body.description,
       category: req.body.categoria,
       talla: req.body.talla,
@@ -35,7 +38,7 @@ const formProductController = {
   },
 
   editar: (req, res) => {
-    let productId = req.params.id - 1;
+    let productId = req.params.id;
     res.render("editProduct", { products, productId });
   },
 

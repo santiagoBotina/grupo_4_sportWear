@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 
 const routerIndex = require("./src/routes/index.js");
-const routerDetalleProducto = require("./src/routes/detalleProducto.js");
 const routerLogin = require("./src/routes/login.js");
 const routerRegister = require("./src/routes/register.js");
 const routerCarrito = require("./src/routes/carrito.js");
@@ -19,7 +18,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
 app.use("/", routerIndex);
-app.use("/productdetail", routerDetalleProducto);
 app.use("/login", routerLogin); // VER de cambiar rutas luego de definir los accesos 07/12/2021 sprint 4
 app.use("/register", routerRegister);
 app.use("/cart", routerCarrito);
