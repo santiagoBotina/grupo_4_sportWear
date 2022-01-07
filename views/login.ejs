@@ -13,7 +13,10 @@
         </div>         -->
         <h3 class="titulo-login">Iniciar sesión</h3>
         <div class="contenedor-form">
-          <form action="register" method="POST">            
+          <% if (locals.errors) { %> <% errors.forEach(error => { %>
+            <p><%= error.msg %></p>
+            <% }) %> <% } %>
+          <form action="/login" method="POST">            
             <div class="info">
                   <label for="email">Correo electrónico</label> <br> 
                   <input type="email" name="email" id="email">

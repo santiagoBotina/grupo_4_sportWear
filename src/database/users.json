@@ -1,47 +1,22 @@
 [
- {
-  "name": "Santiago",
-  "email": "santiagoboe04@gmail.com",
-  "password": "santiago"
- },
- {
-  "name": "Jose",
-  "email": "un@email.com",
-  "password": "12345"
- },
- {
-  "name": "Paula",
-  "email": "otro@email.com",
-  "password": "54321"
- },
- {
-  "name": "Santiago",
-  "email": "santiagoboe04@gmail.com",
-  "password": "$2a$10$eGFEfggv4qKFZYVephj7/.fQ.NEEBz9vFYIAV.lsM32aXPAqFut7O"
- },
- {
-  "name": "Santiago",
-  "email": "santiagoboe04@gmail.com",
-  "password": "$2a$10$0E/sfyioHwQygctVFkGADO8VHylvcPo.8sCryqKgrriTSkd9M/EJe"
- },
- {
-  "name": "Santiago",
-  "email": "santiagoboe04@gmail.com",
-  "password": "$2a$10$TuV8zB618j69mdvbIARX4ecaESGxkhzcTAP/Dqg8jjNrg4HNuNa6y"
- },
- {
-  "name": "Santiago",
-  "email": "santiagoboe04@gmail.com",
-  "password": "$2a$10$MXVY8mYebh1AeHZDbDapSOXYmM2qvrIP7FW2QgqXHj1PlVsTnlDcG"
- },
- {
-  "name": "Santiago",
-  "email": "santiagoboe04@gmail.com",
-  "password": "$2a$10$yhBeBfQkIh007DP4NIzqWug/VpCbpoNvWLdJ4RVjaePXUjRuUKozW"
- },
- {
-  "name": "Santiago",
-  "email": "santiagoboe04@gmail.com",
-  "password": "$2a$10$4He7pTSN.L1TpQNBdEqtrepDSJNESVdU4PCLl9Ww2G5JT2/GuejvG"
- }
+  {
+    "name": "Santiago",
+    "email": "santiagoboe04@gmail.com",
+    "password": "santiago"
+  },
+  {
+    "name": "Jose",
+    "email": "un@email.com",
+    "password": "12345"
+  },
+  {
+    "name": "Paula",
+    "email": "otro@email.com",
+    "password": "54321"
+  },
+  {
+    "name": "Santiago",
+    "email": "santiagoboe04@gmail.com",
+    "password": "$2a$10$eGFEfggv4qKFZYVephj7/.fQ.NEEBz9vFYIAV.lsM32aXPAqFut7O"
+  }
 ]

@@ -19,7 +19,7 @@ const registerController = {
         name: req.body.nombre,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        //*Imagen de perfil*/
+        image: req.file.filename,
       };
 
       users.push(newUser);
