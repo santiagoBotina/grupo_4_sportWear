@@ -21,10 +21,14 @@ const loginController = {
             usuarioLogged = users[i];
           }
         }
-        req.session.usuarioLogged = usuarioLogged;
+      }
+      req.session.usuarioLogged = usuarioLogged;
+
+      if (req.body.recordame != undefined) {
+        res.cookie("recordar", usuarioLogged.email, { maxAge: 120000 });
       }
 
-      res.redirect("/");
+      res.send("Hola " + req.session.usuarioLogged.name);
     } else {
       return res.render("login", { errors: errores.array() });
     }
