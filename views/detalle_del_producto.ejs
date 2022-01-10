@@ -9,34 +9,54 @@
             <div class="nombre-del-producto">
             <h3 class="nombre-del-producto"><%= products[productId].name %> </h3>
             </div>
+
+        <div class="media_wrap">    
             <div class="imagen-producto">
             <img class="ver-producto" src="/images/our_products/<%= products[productId].image %> " alt="product-image">
             </div>
-                <div class="precio">
-                <article class="precio">$<%= products[productId].precio %></article>
-            </div>
+                <div>
+                <article class="precio">Precio       $<%= products[productId].precio %></article>
+                </div>
     
             <form method="POST" action="/">
                 
-                <label for="talles" class="talles">Selecciona el Talle</label>
+                <label for="talles" class="titulo_talles">Selecciona el Talle</label>
                 
                 <div class="div-input">
                     <button class="seleccion-talle">
-                <input type="radio" name="talles" value="39" class="talle">
-                <label for="talles">39</label>
+                        <input type="radio" name="talle" id="39" class="formulario_talle">
+                        <label for="39">39</label>   <!--antes el for = "talles", se iguala con el id para unificar letras con circulo radio que esta con display none-->
                     </button>
-                <input type="radio" name="talles" value="40" class="talle">
-                <label for="talles">40</label>
-                <input type="radio" name="talles" value="41" class="talle">
-                <label for="talles">41</label>
-                <input type="radio" name="talles" value="42" class="talle">
-                <label for="talles">42</label>
-                <input type="radio" name="talles" value="43" class="talle">
-                <label for="talles">43</label>
-                <input type="radio" name="talles" value="43" class="talle">
-                <label for="talles">44</label>
-                <input type="radio" name="talles" value="43" class="talle">
-                <label for="talles">45</label>
+                
+                    <button class="seleccion-talle">
+                        <input type="radio" name="talle" id="40" class="formulario_talle">
+                        <label for="40">40</label> 
+                    </button>
+                
+                    <button class="seleccion-talle">
+                        <input type="radio" name="talle" id="41" class="formulario_talle">
+                        <label for="41">41</label>
+                    </button>
+
+                    <button class="seleccion-talle">
+                        <input type="radio" name="talle" id="42" class="formulario_talle">
+                        <label for="42">42</label>
+                    </button>
+                
+                    <button class="seleccion-talle">
+                        <input type="radio" name="talle" id="43" class="formulario_talle">
+                        <label for="43">43</label>
+                    </button>
+                
+                    <button class="seleccion-talle">
+                        <input type="radio" name="talle" id="44" class="formulario_talle">
+                        <label for="44">44</label>
+                    </button>
+                
+                    <button class="seleccion-talle">
+                        <input type="radio" name="talle" id="45" class="formulario_talle">
+                        <label for="45">45</label>
+                    </button>
                 </div>
             </form>
     
@@ -58,8 +78,9 @@
                 <p>
                     <%= products[productId].description %>
                 </p>
-            </div>       
-    
+            </div>
+
+        </div>
         </section>    
 
     <%- include('partials/footer') %>
