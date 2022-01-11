@@ -13,8 +13,9 @@
     </main>
 
     <section class="section-products">
-      <h2>NUESTOS PRODUCTOS</h2>
+      <h2>NUESTROS PRODUCTOS</h2>
       <div class="our-products">
+        
         <% for (let i = 0; i < products.length; i++) { %>
           <a href="/products/detail/<%= products[i].id %>">
              <article class="product">
@@ -24,7 +25,8 @@
             </form>
           </article>
         </a>
-        <% } %> 
+        <% } %>
+          
            
         <!-- Agregar todas las imagenes de productos y hacer que la imagen ser un boton, eliminar el boton -->
         

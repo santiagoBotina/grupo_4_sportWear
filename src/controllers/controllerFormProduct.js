@@ -22,7 +22,7 @@ const formProductController = {
   },
   procesaFormulario: (req, res) => {
     let newProduct = {
-      id: products.length,
+      id: products.length, 
       name: req.body.name,
       precio: req.body.precio,
       description: req.body.description,

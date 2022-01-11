@@ -10,7 +10,7 @@
 header {
   list-style: none;
   background-color: #091353;
-  /* padding: 2% 15%; */
+  padding: 2% 15%; 
 }
 
 a {
@@ -106,6 +106,7 @@ a {
     text-align: center;
     margin-bottom: 80px;
     font-size: 3rem;
+    padding-bottom: 5%;
   }
 
   .our-products {
@@ -113,6 +114,9 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  
+
   .product {
     width: 20%;
     height: 280px;
@@ -120,6 +124,10 @@ a {
     margin: 10px;
     text-align: center;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
   }
 
   .product img {
@@ -298,6 +306,7 @@ a {
     justify-content: center;
     align-items: center;
     display: flex;
+    width: 80%;
   }
   .mobile-nav input {
     border: none;

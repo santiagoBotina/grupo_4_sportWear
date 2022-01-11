@@ -81,7 +81,7 @@ cursor: pointer; /* no esta funcionando*/
   background-color: grey
 }
 
-/*Borones de acceso a carrito, comprar, editar y borrar*/
+/*Botones de acceso a carrito, comprar, editar y borrar*/
   .buttons{
     display: flex;
     justify-content: space-around;
@@ -156,7 +156,7 @@ cursor: pointer; /* no esta funcionando*/
     font-size: 0.8em;
     margin-top: 20px;
   }
-
+/*
 @media (min: 375){
   .media_wrap{
     display: flex;
@@ -164,3 +164,4 @@ cursor: pointer; /* no esta funcionando*/
   }
   
 } 
+*/
