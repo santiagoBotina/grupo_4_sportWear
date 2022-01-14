@@ -9,7 +9,7 @@ const { body, check } = require("express-validator");
 
 let multerDiskStorage = multer.diskStorage({
   destination: (req, file, callback) => {
-    let folder = path.join(__dirname + "/../../public/images/profileImages");
+    let folder = path.join(__dirname + "../../../public/images/profileImages");
     callback(null, folder);
   },
   filename: (req, file, callback) => {
