@@ -28,12 +28,10 @@ CREATE TABLE `carrito_de_compras` (
   `idcarrito_de_compras` int NOT NULL AUTO_INCREMENT,
   `fecha` date NOT NULL,
   `usuario_id` int NOT NULL,
-  `producto_talle_id` int NOT NULL,
   `sum_precio` decimal(10,0) NOT NULL,
+  `login_id` varchar(45) NOT NULL,
   PRIMARY KEY (`idcarrito_de_compras`),
   KEY `fk_carrito_usuario_idx` (`usuario_id`),
-  KEY `fk_carrito_produtalle_id_idx` (`producto_talle_id`),
-  CONSTRAINT `fk_carrito_produtalle_id` FOREIGN KEY (`producto_talle_id`) REFERENCES `producto_talle` (`idproducto_talle`),
   CONSTRAINT `fk_carrito_usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`idusuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -83,12 +81,8 @@ DROP TABLE IF EXISTS `marca`;
 CREATE TABLE `marca` (
   `idmarca` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
-  `marca_tipocalzado_id` int NOT NULL,
-  `producto_id` int NOT NULL,
-  PRIMARY KEY (`idmarca`),
-  KEY `fk_marca_marcatipo_id_idx` (`marca_tipocalzado_id`),
-  CONSTRAINT `fk_marca_marcatipo_id` FOREIGN KEY (`marca_tipocalzado_id`) REFERENCES `marca_tipocalzado` (`tipo_calzado_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+  PRIMARY KEY (`idmarca`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,6 +91,7 @@ CREATE TABLE `marca` (
 
 LOCK TABLES `marca` WRITE;
 /*!40000 ALTER TABLE `marca` DISABLE KEYS */;
+INSERT INTO `marca` VALUES (9,'Adidas'),(10,'Nike');
 /*!40000 ALTER TABLE `marca` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,18 +138,13 @@ CREATE TABLE `producto` (
   `precio` decimal(10,0) NOT NULL,
   `image` varchar(100) NOT NULL,
   `tipo_calzado_id` int NOT NULL,
-  `marca_tipocalzado_id` int NOT NULL,
   `marca_id` int NOT NULL,
-  `producto_talle_id` int NOT NULL,
   PRIMARY KEY (`idproducto`),
   KEY `fk_producto_tipocalzado_id_idx` (`tipo_calzado_id`),
   KEY `fk_producto_marca_id_idx` (`marca_id`),
-  KEY `fk_producto_marcatipo_id_idx` (`marca_tipocalzado_id`),
-  KEY `fk_producto_produtalle_id_idx` (`producto_talle_id`),
-  CONSTRAINT `fk_prodcuto_marca_id` FOREIGN KEY (`marca_id`) REFERENCES `marca` (`idmarca`),
-  CONSTRAINT `fk_producto_produtalle_id` FOREIGN KEY (`producto_talle_id`) REFERENCES `producto_talle` (`idproducto_talle`),
-  CONSTRAINT `fk_producto_tipocalzado_id` FOREIGN KEY (`tipo_calzado_id`) REFERENCES `tipo_calzado` (`marca_tipocalzado_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  CONSTRAINT `fk_producto_marca_id` FOREIGN KEY (`marca_id`) REFERENCES `marca` (`idmarca`),
+  CONSTRAINT `fk_producto_tipocalzado_id` FOREIGN KEY (`tipo_calzado_id`) REFERENCES `tipo_calzado` (`idtipo_calzado`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -163,7 +153,36 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
+INSERT INTO `producto` VALUES (2,'New York','Ochentosa','gris',15000,'kalshjfkldjsahlkdjsa',2,9);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `producto_carrito`
+--
+
+DROP TABLE IF EXISTS `producto_carrito`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `producto_carrito` (
+  `idproducto_carrito` int NOT NULL AUTO_INCREMENT,
+  `producto_id` int NOT NULL,
+  `carrito_id` int NOT NULL,
+  PRIMARY KEY (`idproducto_carrito`),
+  KEY `fk_producarrito_producto_id_idx` (`producto_id`),
+  KEY `fk_producarrito_carrito_id_idx` (`carrito_id`),
+  CONSTRAINT `fk_producarrito_carrito_id` FOREIGN KEY (`carrito_id`) REFERENCES `carrito_de_compras` (`idcarrito_de_compras`),
+  CONSTRAINT `fk_producarrito_producto_id` FOREIGN KEY (`producto_id`) REFERENCES `producto` (`idproducto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `producto_carrito`
+--
+
+LOCK TABLES `producto_carrito` WRITE;
+/*!40000 ALTER TABLE `producto_carrito` DISABLE KEYS */;
+/*!40000 ALTER TABLE `producto_carrito` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -177,7 +196,11 @@ CREATE TABLE `producto_talle` (
   `idproducto_talle` int NOT NULL AUTO_INCREMENT,
   `producto_id` int NOT NULL,
   `talle_id` int NOT NULL,
-  PRIMARY KEY (`idproducto_talle`)
+  PRIMARY KEY (`idproducto_talle`),
+  KEY `fk_produtalle_talle_id_idx` (`talle_id`),
+  KEY `fk_produtalle_producto_id_idx` (`producto_id`),
+  CONSTRAINT `fk_produtalle_producto_id` FOREIGN KEY (`producto_id`) REFERENCES `producto` (`idproducto`),
+  CONSTRAINT `fk_produtalle_talle_id` FOREIGN KEY (`talle_id`) REFERENCES `talle` (`idtalle`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -191,6 +214,34 @@ LOCK TABLES `producto_talle` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `produtalle_carrito`
+--
+
+DROP TABLE IF EXISTS `produtalle_carrito`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `produtalle_carrito` (
+  `idprodutalle_carrito` int NOT NULL AUTO_INCREMENT,
+  `produtalle_id` int NOT NULL,
+  `carrito_id` int NOT NULL,
+  PRIMARY KEY (`idprodutalle_carrito`),
+  KEY `fk_produtallecarrito_produtalle_id_idx` (`produtalle_id`),
+  KEY `fk_produtallecarrito_carrito_id_idx` (`carrito_id`),
+  CONSTRAINT `fk_produtallecarrito_carrito_id` FOREIGN KEY (`carrito_id`) REFERENCES `carrito_de_compras` (`idcarrito_de_compras`),
+  CONSTRAINT `fk_produtallecarrito_produtalle_id` FOREIGN KEY (`produtalle_id`) REFERENCES `producto_talle` (`idproducto_talle`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `produtalle_carrito`
+--
+
+LOCK TABLES `produtalle_carrito` WRITE;
+/*!40000 ALTER TABLE `produtalle_carrito` DISABLE KEYS */;
+/*!40000 ALTER TABLE `produtalle_carrito` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `talle`
 --
 
@@ -200,11 +251,8 @@ DROP TABLE IF EXISTS `talle`;
 CREATE TABLE `talle` (
   `idtalle` int NOT NULL AUTO_INCREMENT,
   `talle` varchar(2) NOT NULL,
-  `producto_talle_id` int NOT NULL,
-  PRIMARY KEY (`idtalle`),
-  KEY `fk_talle_productotalle_id_idx` (`producto_talle_id`),
-  CONSTRAINT `fk_talle_productotalle_id` FOREIGN KEY (`producto_talle_id`) REFERENCES `producto_talle` (`idproducto_talle`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb3;
+  PRIMARY KEY (`idtalle`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -213,6 +261,7 @@ CREATE TABLE `talle` (
 
 LOCK TABLES `talle` WRITE;
 /*!40000 ALTER TABLE `talle` DISABLE KEYS */;
+INSERT INTO `talle` VALUES (18,'40');
 /*!40000 ALTER TABLE `talle` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -228,9 +277,7 @@ CREATE TABLE `tipo_calzado` (
   `tipo_de_calzado` varchar(45) NOT NULL,
   `descripcion` varchar(120) NOT NULL,
   `genero` varchar(9) NOT NULL,
-  `marca_tipocalzado_id` int NOT NULL,
-  PRIMARY KEY (`idtipo_calzado`),
-  KEY `fk_tipocalzado_marcatipo_id_idx` (`marca_tipocalzado_id`)
+  PRIMARY KEY (`idtipo_calzado`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -240,7 +287,7 @@ CREATE TABLE `tipo_calzado` (
 
 LOCK TABLES `tipo_calzado` WRITE;
 /*!40000 ALTER TABLE `tipo_calzado` DISABLE KEYS */;
-INSERT INTO `tipo_calzado` VALUES (1,'Deportivo','Calzado para realizar todo tipo de deportes, para mayor especificación mirar el modelo de cada calzado','masculino',1),(2,'Casual','Calzado no específico para realizar deportes sino calzado urbano para mayor comodidad en la actividad diaria','masculino',1),(3,'Trekking','Calzado para realizar caminatas y actividades outdoor y de montaña,','masculino',1),(4,'Fulbol','Calzado para la practica de fútbol al aire libre e indoor','masculino',1),(5,'Deportivo','Calzado para realizar todo tipo de deportes, para mayor especificación mirar el modelo de cada calzado','femenino',1),(6,'Casual','Calzado no específico para realizar deportes sino calzado urbano para mayor comodidad en la actividad diaria','femenino',1),(7,'Trekking','Calzado para realizar caminatas y actividades outdoor y de montaña,','femenino',1),(8,'Fulbol','Calzado para la practica de fútbol al aire libre e indoor','femenino',1);
+INSERT INTO `tipo_calzado` VALUES (1,'Deportivo','Calzado para realizar todo tipo de deportes, para mayor especificación mirar el modelo de cada calzado','masculino'),(2,'Casual','Calzado no específico para realizar deportes sino calzado urbano para mayor comodidad en la actividad diaria','masculino'),(3,'Trekking','Calzado para realizar caminatas y actividades outdoor y de montaña,','masculino'),(4,'Fulbol','Calzado para la practica de fútbol al aire libre e indoor','masculino'),(5,'Deportivo','Calzado para realizar todo tipo de deportes, para mayor especificación mirar el modelo de cada calzado','femenino'),(6,'Casual','Calzado no específico para realizar deportes sino calzado urbano para mayor comodidad en la actividad diaria','femenino'),(7,'Trekking','Calzado para realizar caminatas y actividades outdoor y de montaña,','femenino'),(8,'Fulbol','Calzado para la practica de fútbol al aire libre e indoor','femenino');
 /*!40000 ALTER TABLE `tipo_calzado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -258,8 +305,6 @@ CREATE TABLE `usuario` (
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   `profile_image` varchar(100) DEFAULT NULL,
-  `carrito_id` int NOT NULL,
-  `login_id` int NOT NULL,
   PRIMARY KEY (`idusuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -270,7 +315,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'juan','perez','juan@gmail.com','juan','asdkljflasdkj',1,1),(2,'jose','gomez','jose@gmail.com','jose','asdfjhaskdjjkklj',1,1);
+INSERT INTO `usuario` VALUES (1,'juan','perez','juan@gmail.com','juan','asdkljflasdkj'),(2,'jose','gomez','jose@gmail.com','jose','asdfjhaskdjjkklj');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -283,4 +328,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-26 18:48:04
+-- Dump completed on 2022-01-26 21:41:12
