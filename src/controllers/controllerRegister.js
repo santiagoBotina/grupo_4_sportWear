@@ -14,7 +14,9 @@ const registerController = {
     // ***validaciones del texto del form***
     let errores = validationResult(req);
 
-    if (errores.isEmpty()) {
+    let profileImage = req.file;
+
+    if (errores.isEmpty() && profileImage !== undefined) {
       let newUser = {
         name: req.body.nombre,
         email: req.body.email,
