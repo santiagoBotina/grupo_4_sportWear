@@ -1,29 +1,29 @@
 [
- {
-  "id": 0,
-  "name": "producto1",
-  "precio": "1",
-  "description": "producto1",
-  "category": "categoria3 ",
-  "talla": "37 ",
-  "image": "1641920912672.webp"
- },
- {
-  "id": 2,
-  "name": "producto3",
-  "precio": "3",
-  "description": "producto3",
-  "category": "categoria3 ",
-  "talla": "35 ",
-  "image": "1641921019572.webp"
- },
- {
-  "id": 2,
-  "name": "producto4",
-  "precio": "4",
-  "description": "producto4",
-  "category": "categoria1 ",
-  "talla": "37 ",
-  "image": "1641921882374.webp"
- }
+  {
+    "id": 0,
+    "name": "producto1",
+    "precio": "20.000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita, itaque soluta blanditiis perferendis doloribus voluptate recusandae magni provident odio amet, beatae quidem in totam!",
+    "category": "categoria3 ",
+    "talla": "37 ",
+    "image": "1620247550_028541_1620247601_noticia_normal_recorte1.jpg"
+  },
+  {
+    "id": 1,
+    "name": "producto3",
+    "precio": "30.000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita, itaque soluta blanditiis perferendis doloribus voluptate recusandae magni provident odio amet, beatae quidem in totam!",
+    "category": "categoria3 ",
+    "talla": "35 ",
+    "image": "adidas-ranning-Ultraboost-celeste-a.jpg"
+  },
+  {
+    "id": 2,
+    "name": "producto4",
+    "precio": "40.000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita, itaque soluta blanditiis perferendis doloribus voluptate recusandae magni provident odio amet, beatae quidem in totam!",
+    "category": "categoria1 ",
+    "talla": "37 ",
+    "image": "adidas-Running-UltraBOOST21-8.jpg"
+  }
 ]

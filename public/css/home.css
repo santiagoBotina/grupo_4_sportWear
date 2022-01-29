@@ -8,9 +8,8 @@
 }
 
 header {
-  list-style: none;
-  background-color: #091353;
-  padding: 2% 15%; 
+  background-color: black;
+  padding: 2% 15%;
 }
 
 a {
@@ -28,7 +27,7 @@ a {
   }
 
   header nav {
-    padding-bottom: 5%;
+    padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -40,11 +39,11 @@ a {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-right: 30px;
+    padding: 25px 30px;
   }
 
   .mobile-nav input {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
     border: none;
     padding: 15px;
@@ -53,13 +52,12 @@ a {
 
   .mobile-nav ul {
     position: absolute;
-    top: 15%;
+    top: 170px;
     right: 20%;
     left: 15%;
     display: flex;
     width: 1024px;
     justify-content: center;
-    font-weight: bold;
     font-size: 1.5rem;
   }
 
@@ -68,12 +66,11 @@ a {
   }
 
   li a {
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
   }
 
   li a:hover {
-    color: #ff5151;
-    font-size: 2rem;
+    text-decoration: underline;
   }
 
   .logo-home {
@@ -87,7 +84,7 @@ a {
   /*Product section*/
 
   main {
-    background-color: #091353;
+    background-color: black;
   }
 
   .carousel {
@@ -115,8 +112,6 @@ a {
     justify-content: space-between;
   }
 
-  
-
   .product {
     width: 20%;
     height: 280px;
@@ -127,7 +122,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
   }
 
   .product img {
@@ -243,7 +237,7 @@ a {
   /* Footer */
 
   footer {
-    background-color: #091353;
+    background-color: black;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -286,10 +280,10 @@ a {
     align-items: center;
     position: fixed;
     left: -100%;
-    top: 21%;
+    top: 250px;
     width: 100%;
     height: 80vh;
-    background: linear-gradient(#091353, #4353bb);
+    background: linear-gradient(black, #232429);
     transition: all 0.5s;
   }
   ul li {
@@ -306,18 +300,19 @@ a {
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 80%;
+    width: 100%;
   }
   .mobile-nav input {
     border: none;
     padding: 2%;
-    background-color: #b2f9fc;
+    background-color: white;
     border-radius: 20px;
     width: 70%;
+    margin-right: 10px;
   }
 
   .mobile-nav button {
-    background-color: #091353;
+    background-color: black;
     border: none;
     margin-left: 10px;
   }
@@ -329,7 +324,7 @@ a {
   /*Product section*/
 
   main {
-    background-color: #091353;
+    background-color: black;
     padding: 5% 0 0;
     border: none;
   }
@@ -458,7 +453,7 @@ a {
   /* Footer */
 
   footer {
-    background-color: #091353;
+    background-color: black;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -491,7 +486,7 @@ a {
 @media only screen and (max-width: 767px) {
   header {
     list-style: none;
-    background-color: #091353;
+    background-color: black;
     padding: 2% 15%;
   }
   /*Navbar*/
@@ -508,11 +503,12 @@ a {
     align-items: center;
     position: fixed;
     left: -100%;
-    top: 21%;
+    top: 120px;
     width: 100%;
-    height: 80vh;
-    background: linear-gradient(#091353, #4353bb);
+    height: 90vh;
+    background: linear-gradient(black, #232429);
     transition: all 0.5s;
+    z-index: 1;
   }
   ul li {
     display: block;
@@ -532,12 +528,12 @@ a {
   .mobile-nav input {
     border: none;
     padding: 3%;
-    background-color: #b2f9fc;
+    background-color: white;
     border-radius: 20px;
   }
 
   .mobile-nav button {
-    background-color: #091353;
+    background-color: black;
     border: none;
     margin-left: 10px;
   }
@@ -549,7 +545,7 @@ a {
   /*Products section*/
 
   main {
-    background-color: #091353;
+    background-color: black;
     padding: 5% 0 0;
   }
 
@@ -679,7 +675,7 @@ a {
   /* footer */
 
   footer {
-    background-color: #091353;
+    background-color: black;
     justify-content: center;
     align-items: center;
     display: flex;

@@ -13,50 +13,25 @@
         <div class="media_wrap">    
             <div class="imagen-producto">
             <img class="ver-producto" src="/images/our_products/<%= products[productId].image %> " alt="product-image">
-            </div>
-                <div>
-                <article class="precio">Precio       $<%= products[productId].precio %></article>
-                </div>
+        </div>
+        <div>
+            <article class="precio">Precio $<%= products[productId].precio %></article>
+        </div>
     
             <form method="POST" action="/">
                 
                 <label for="talles" class="titulo_talles">Selecciona el Talle</label>
                 
                 <div class="div-input">
-                    <button class="seleccion-talle">
-                        <input type="radio" name="talle" id="39" class="formulario_talle">
-                        <label for="39">39</label>   <!--antes el for = "talles", se iguala con el id para unificar letras con circulo radio que esta con display none-->
-                    </button>
-                
-                    <button class="seleccion-talle">
-                        <input type="radio" name="talle" id="40" class="formulario_talle">
-                        <label for="40">40</label> 
-                    </button>
-                
-                    <button class="seleccion-talle">
-                        <input type="radio" name="talle" id="41" class="formulario_talle">
-                        <label for="41">41</label>
-                    </button>
+                    <% for(let i = 39; i<=44; i++) { %> 
 
-                    <button class="seleccion-talle">
-                        <input type="radio" name="talle" id="42" class="formulario_talle">
-                        <label for="42">42</label>
-                    </button>
-                
-                    <button class="seleccion-talle">
-                        <input type="radio" name="talle" id="43" class="formulario_talle">
-                        <label for="43">43</label>
-                    </button>
-                
-                    <button class="seleccion-talle">
-                        <input type="radio" name="talle" id="44" class="formulario_talle">
-                        <label for="44">44</label>
-                    </button>
-                
-                    <button class="seleccion-talle">
-                        <input type="radio" name="talle" id="45" class="formulario_talle">
-                        <label for="45">45</label>
-                    </button>
+                        <div class="talle">
+                            <input type="radio" name="talle" id=${´talle_<% i %>´} class="opcion-talle">
+                            <label for="39"><%= i %> </label>   <!--antes el for = "talles", se iguala con el id para unificar letras con circulo radio que esta con display none-->
+                        </div>
+
+                    <% } %>     
+
                 </div>
             </form>
     
