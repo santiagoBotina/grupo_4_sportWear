@@ -310,14 +310,65 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 0px 85px;
-    flex-wrap: wrap;
+    flex-wrap: wrap
+        
   }
-
-  .talle {
+  
+    .talle {
     width: 30%;
     margin: 10px 0;
+    border: 3px solid DodgerBlue;
+    padding: 10px;
+    text-align: center
+    
+  }
+  
+  .opcion-talle {
+    display: none;
+  
+  }
+  .input :focus {
+    transition:all 1.9s ease;
+    transform:scale(1.25)
   }
 
+  /*icons de entrega y pago*/
+  .truck {
+    width: 20px;
+    font-size: 35px;
+    color: rgb(0, 255, 0);
+    margin: 0 0 0 20px;
+  }
+  
+  .truck :hover{
+    transform: translate(350px,0);
+    transition: 5s;
+  }
+  .entrega {
+    color: dodgerblue;
+    font-size: 25px;
+    position: absolute;
+    left: 150px;
+    top: 1250px
+  }
+  .calendario {
+    width: 20px;
+    font-size: 35px;
+    color: DodgerBlue;
+    margin: 0 0 0 20px;
+    position: relative;
+    left: 550px;
+    top: -40px
+  }
+  
+  .tarjetas {
+    width: 20px;
+    font-size: 35px;
+    color: DodgerBlue;
+    margin: 0 0 0 20px;
+    flex-wrap: wrap
+  }
+    
   /*Botones de acceso a carrito, comprar, editar y borrar*/
   .buttons {
     display: flex;

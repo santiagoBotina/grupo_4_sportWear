@@ -24,5 +24,17 @@
   "email": "as@as.com",
   "password": "$2a$10$Q9hhuUsD3.2br6sOfYCQoOFro7CGErA2DBn0yetP1aL/77BzV0uHW",
   "image": "1642118451217.jpg"
+ },
+ {
+  "name": "Lao",
+  "email": "colomae@hotmail.com",
+  "password": "$2a$10$3EMEieSD2Rhjjte.sXWXHeVXXWupMipfWFYLSZotMd.F9/WTO02fa",
+  "image": "1643483266472.jpg"
+ },
+ {
+  "name": "Lao2",
+  "email": "roma@hotmail.com",
+  "password": "$2a$10$./ytsoOzuK8ClGTrd9UxZeAbgA/MEgmlJCPZKvpM0hdMKm5XALJ9y",
+  "image": "1643483876966.jpg"
  }
 ]

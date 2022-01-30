@@ -24,7 +24,7 @@ const fileUpload = multer({ storage: multerDiskStorage });
 
 let registerValidator = [
   body("nombre").notEmpty().withMessage("Debes llenar el campo de 'nombre'"),
-  body("email").notEmpty().withMessage("Debes usar un email váilido"),
+  body("email").notEmpty().withMessage("Debes usar un email válido"),
   body("password")
     .isLength({ min: 6 })
     .withMessage("Debes crear una contraseña con mínimo 6 caractéres"),

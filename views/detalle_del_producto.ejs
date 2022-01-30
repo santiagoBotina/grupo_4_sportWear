@@ -26,15 +26,32 @@
                     <% for(let i = 39; i<=44; i++) { %> 
 
                         <div class="talle">
-                            <input type="radio" name="talle" id=${´talle_<% i %>´} class="opcion-talle">
-                            <label for="39"><%= i %> </label>   <!--antes el for = "talles", se iguala con el id para unificar letras con circulo radio que esta con display none-->
+                            <input type="radio" name="talle" class="opcion-talle" id=${´talle_<% i %>´}  >  
+                            <label for="talle"><%= i %> </label>   <!--antes el for = "talles", se iguala con el id para unificar letras con circulo radio que esta con display none-->
                         </div>
 
                     <% } %>     
 
                 </div>
             </form>
-    
+
+            <div class="truck">
+                <i class="fas fa-shipping-fast"></i>
+                <p class="entrega">Entrega rápida</p>
+            </div>
+
+                       
+            <div class="calendario">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+
+            <div class="tarjetas"> 
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-diners-club"></i>
+            </div>
+
             <div class="buttons">
                 <button type="submit" name="añadir" class="boton-agregar"><a href="#">Añadir al Carrito</a></button>
                 <button type="submit" name="comprar"class="boton-comprar"><a href="#">Comprar Producto</a></button>
@@ -45,7 +62,9 @@
                     <button type="submit" name="editar" class="boton-agregar">Borrar este producto</button>
                 </form>
             </div>
-    
+
+            
+
             <div class="div-descripcion">
                 <h3 class="descripcion">
                     Descripción del producto:  
@@ -56,6 +75,12 @@
             </div>
 
         </div>
+
+        <div>
+
+
+        </div>
+
         </section>    
 
     <%- include('partials/footer') %>
