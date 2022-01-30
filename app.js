@@ -14,6 +14,8 @@ const routerRegister = require("./src/routes/register.js");
 const routerCarrito = require("./src/routes/carrito.js");
 const routerProducts = require("./src/routes/formProduct.js");
 
+const routerUsers = require("./src/routes/usuario.js");
+
 app.use(session({ secret: "secreto" }));
 //MIDDLEWARES
 app.use(express.static("public"));
@@ -32,6 +34,7 @@ app.use("/login", routerLogin); // VER de cambiar rutas luego de definir los acc
 app.use("/register", routerRegister);
 app.use("/cart", routerCarrito);
 app.use("/products", routerProducts);
+app.use("/usuario", routerUsers);
 
 app.listen(5000, () => {
   console.log("Servidor funcionando en local host 5000");
