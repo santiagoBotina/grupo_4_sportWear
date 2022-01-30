@@ -2,15 +2,15 @@
 <head>    <link rel="stylesheet" href="/css/register-styles.css" />
 </head>
 
+<%- include('partials/header.ejs') %>
   <body>
     
-<%- include('partials/header.ejs') %>
 
       <main>
           
-        <3>usuario    </3>
+        <h3>usuario    </h3>
         <% for(let i=1; i<=usuario.length; i++ ) {  %>
-            <p> <%=i%> </p>
+            <p> <%=usuario[i].nombre%> </p>
         <% } %>
 
 

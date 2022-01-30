@@ -1,40 +1,20 @@
 [
- {
-  "name": "Santiago",
-  "email": "santiagoboe04@gmail.com",
-  "password": "santiago"
- },
- {
-  "name": "Jose",
-  "email": "un@email.com",
-  "password": "12345"
- },
- {
-  "name": "Paula",
-  "email": "otro@email.com",
-  "password": "54321"
- },
- {
-  "name": "Santiago",
-  "email": "santiagoboe04@gmail.com",
-  "password": "$2a$10$eGFEfggv4qKFZYVephj7/.fQ.NEEBz9vFYIAV.lsM32aXPAqFut7O"
- },
- {
-  "name": "lucas",
-  "email": "as@as.com",
-  "password": "$2a$10$Q9hhuUsD3.2br6sOfYCQoOFro7CGErA2DBn0yetP1aL/77BzV0uHW",
-  "image": "1642118451217.jpg"
- },
- {
-  "name": "Lao",
-  "email": "colomae@hotmail.com",
-  "password": "$2a$10$3EMEieSD2Rhjjte.sXWXHeVXXWupMipfWFYLSZotMd.F9/WTO02fa",
-  "image": "1643483266472.jpg"
- },
- {
-  "name": "Lao2",
-  "email": "roma@hotmail.com",
-  "password": "$2a$10$./ytsoOzuK8ClGTrd9UxZeAbgA/MEgmlJCPZKvpM0hdMKm5XALJ9y",
-  "image": "1643483876966.jpg"
- }
+  {
+    "name": "lucas",
+    "email": "as@as.com",
+    "password": "$2a$10$Q9hhuUsD3.2br6sOfYCQoOFro7CGErA2DBn0yetP1aL/77BzV0uHW",
+    "image": "1642118451217.jpg"
+  },
+  {
+    "name": "Lao",
+    "email": "colomae@hotmail.com",
+    "password": "$2a$10$3EMEieSD2Rhjjte.sXWXHeVXXWupMipfWFYLSZotMd.F9/WTO02fa",
+    "image": "1643483266472.jpg"
+  },
+  {
+    "name": "Santiago",
+    "email": "santiagoboe04@gmail.com",
+    "password": "$2a$10$JSKvZyCEHf5FYg36AtTFaOkXjDLv9ubNVUrJa2Cbb006QE.enp0fe",
+    "image": "1643566110180.png"
+  }
 ]

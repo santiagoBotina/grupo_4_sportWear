@@ -22,6 +22,11 @@ a {
   width: 100%;
 }
 
+.text-danger {
+  color: red;
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 1024px) {
   #check {
     display: none;
@@ -105,8 +110,9 @@ a {
   }
 
   form input {
-    border-radius: 15px;
-    font-size: 2rem;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 12px;
     background-color: #ebebeb;
     border: none;
   }
@@ -335,7 +341,6 @@ a {
   }
 
   .titulo-bienvenida {
-    
     text-align: center;
     font-size: 40px;
   }
@@ -344,12 +349,9 @@ a {
   }
 
   .titulo-login {
-    
     font-size: 40px;
     text-align: center;
   }
-
-  
 
   .boton {
     text-align: center;
