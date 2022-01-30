@@ -46,32 +46,6 @@ LOCK TABLES `carrito_de_compras` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `login`
---
-
-DROP TABLE IF EXISTS `login`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `login` (
-  `idlogin` int NOT NULL AUTO_INCREMENT,
-  `usuario_id` int NOT NULL,
-  `fecha` date NOT NULL,
-  PRIMARY KEY (`idlogin`),
-  KEY `fk_login_usuario_id_idx` (`usuario_id`),
-  CONSTRAINT `fk_login_usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`idusuario`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `login`
---
-
-LOCK TABLES `login` WRITE;
-/*!40000 ALTER TABLE `login` DISABLE KEYS */;
-/*!40000 ALTER TABLE `login` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `marca`
 --
 
@@ -93,34 +67,6 @@ LOCK TABLES `marca` WRITE;
 /*!40000 ALTER TABLE `marca` DISABLE KEYS */;
 INSERT INTO `marca` VALUES (9,'Adidas'),(10,'Nike');
 /*!40000 ALTER TABLE `marca` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `marca_tipocalzado`
---
-
-DROP TABLE IF EXISTS `marca_tipocalzado`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `marca_tipocalzado` (
-  `idmarca_tipocalzado` int NOT NULL,
-  `tipo_calzado_id` int NOT NULL,
-  `nombre_marca_id` int NOT NULL,
-  PRIMARY KEY (`idmarca_tipocalzado`),
-  KEY `fk_marcatipocalzado_tipocalzado_id_idx` (`tipo_calzado_id`),
-  KEY `fk_marcatipocalzado_marca_id_idx` (`nombre_marca_id`),
-  CONSTRAINT `fk_marcatipocalzado_marca_id` FOREIGN KEY (`nombre_marca_id`) REFERENCES `marca` (`idmarca`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_marcatipocalzado_tipocalzado_id` FOREIGN KEY (`tipo_calzado_id`) REFERENCES `tipo_calzado` (`idtipo_calzado`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `marca_tipocalzado`
---
-
-LOCK TABLES `marca_tipocalzado` WRITE;
-/*!40000 ALTER TABLE `marca_tipocalzado` DISABLE KEYS */;
-/*!40000 ALTER TABLE `marca_tipocalzado` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -155,34 +101,6 @@ LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
 INSERT INTO `producto` VALUES (2,'New York','Ochentosa','gris',15000,'kalshjfkldjsahlkdjsa',2,9);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `producto_carrito`
---
-
-DROP TABLE IF EXISTS `producto_carrito`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `producto_carrito` (
-  `idproducto_carrito` int NOT NULL AUTO_INCREMENT,
-  `producto_id` int NOT NULL,
-  `carrito_id` int NOT NULL,
-  PRIMARY KEY (`idproducto_carrito`),
-  KEY `fk_producarrito_producto_id_idx` (`producto_id`),
-  KEY `fk_producarrito_carrito_id_idx` (`carrito_id`),
-  CONSTRAINT `fk_producarrito_carrito_id` FOREIGN KEY (`carrito_id`) REFERENCES `carrito_de_compras` (`idcarrito_de_compras`),
-  CONSTRAINT `fk_producarrito_producto_id` FOREIGN KEY (`producto_id`) REFERENCES `producto` (`idproducto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `producto_carrito`
---
-
-LOCK TABLES `producto_carrito` WRITE;
-/*!40000 ALTER TABLE `producto_carrito` DISABLE KEYS */;
-/*!40000 ALTER TABLE `producto_carrito` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -305,6 +223,7 @@ CREATE TABLE `usuario` (
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   `profile_image` varchar(100) DEFAULT NULL,
+  `tipo_usuario` varchar(10) NOT NULL,
   PRIMARY KEY (`idusuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -315,7 +234,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'juan','perez','juan@gmail.com','juan','asdkljflasdkj'),(2,'jose','gomez','jose@gmail.com','jose','asdfjhaskdjjkklj');
+INSERT INTO `usuario` VALUES (1,'juan','perez','juan@gmail.com','juan','asdkljflasdkj',''),(2,'jose','gomez','jose@gmail.com','jose','asdfjhaskdjjkklj','');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -328,4 +247,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-26 21:41:12
+-- Dump completed on 2022-01-30 12:37:31
