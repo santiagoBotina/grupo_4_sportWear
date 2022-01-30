@@ -1,7 +1,7 @@
 let db = require("../database/models");
 
 let usuariosController = {
-  list: (req, res) => {
+  mostrar: (req, res) => {
     db.Usuarios.findAll().then((usuarios) => {
       res.render("usuario", { usuario: usuarios });
     });
