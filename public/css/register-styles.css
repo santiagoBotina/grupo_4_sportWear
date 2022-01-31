@@ -9,8 +9,8 @@
 }
 
 header {
-  list-style: none;
-  background-color: #091353;
+  padding: 2% 15%;
+  background-color: black;
 }
 
 a {
@@ -22,13 +22,18 @@ a {
   width: 100%;
 }
 
+.text-danger {
+  color: red;
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 1024px) {
   #check {
     display: none;
   }
 
   header nav {
-    padding-bottom: 5%;
+    padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -40,11 +45,11 @@ a {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-right: 30px;
+    padding: 25px 30px;
   }
 
   .mobile-nav input {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
     border: none;
     padding: 15px;
@@ -52,12 +57,13 @@ a {
   }
 
   .mobile-nav ul {
-    margin-right: 10%;
-    margin-top: 3%;
+    position: absolute;
+    top: 170px;
+    right: 20%;
+    left: 15%;
     display: flex;
     width: 1024px;
     justify-content: center;
-    font-weight: bold;
     font-size: 1.5rem;
   }
 
@@ -66,12 +72,11 @@ a {
   }
 
   li a {
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
   }
 
   li a:hover {
-    color: #ff5151;
-    font-size: 2rem;
+    text-decoration: underline;
   }
 
   .logo-home {
@@ -82,43 +87,47 @@ a {
     display: none;
   }
 
-  /*form */
+  /* Contenido register */
 
-  h2,
-  h3 {
-    font-size: 2.5rem;
+  main h2,
+  main h3 {
+    font-size: 2rem;
     text-align: center;
-    padding: 20px 0;
+    margin-top: 15px;
   }
 
-  .form-register{
+  .contenedor-form {
     display: flex;
     justify-content: center;
   }
 
-  form {
+  .form-register {
     display: flex;
     flex-direction: column;
     align-content: center;
-  }
-
-  form input {
-    border-radius: 15px;
-    font-size: 2rem;
-    background-color: #ebebeb;
-    border: none;
-  }
-
-  
-
-  .boton {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin-top: 20px;
   }
 
-  form button {
+  .form-register input {
+    border-radius: 15px;
+    font-size: 1.5rem;
+    padding: 12px;
+    background-color: #ebebeb;
+    border: none;
+    margin: 20px 0;
+  }
+
+  .form-register label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .input-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-register button {
     border: none;
     background-color: #ff5151;
     font-size: 1.5rem;
@@ -126,12 +135,41 @@ a {
     padding: 3px;
     border-radius: 4px;
     margin: 10px 0;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+
+  .form-register button:hover {
+    background-color: #fc2323;
+    cursor: pointer;
+  }
+
+  .login-redirect {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .login-redirect button {
+    border: none;
+    background-color: #35d0ba;
+    font-size: 1.5rem;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+    margin: 10px 0;
+    width: 50%;
+    transition: all 0.2s ease;
+  }
+
+  .login-redirect button:hover {
+    background-color: #17e7c8;
+    cursor: pointer;
   }
 
   /* Footer */
 
   footer {
-    background-color: #091353;
+    background-color: black;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -159,119 +197,335 @@ a {
     font-size: 0.8em;
     margin-top: 20px;
   }
-}  
-
-
-
-@media (max-width: 768px) {
-    #check {
-      display: none;
-    }
-  
-    ul {
-      font-weight: bold;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      left: -100%;
-      top: 21%;
-      width: 100%;
-      height: 80vh;
-      background: linear-gradient(#091353, #4353bb);
-      transition: all 0.5s;
-    }
-    ul li {
-      display: block;
-      font-size: 2rem;
-      margin: 2% 0;
-    }
-  
-    #check:checked ~ ul {
-      left: 0;
-    }
-  
-    .mobile-nav {
-      justify-content: center;
-      align-items: center;
-      display: flex;
-    }
-    .mobile-nav input {
-      border: none;
-      padding: 3%;
-      background-color: #b2f9fc;
-      border-radius: 20px;
-    }
-  
-    .mobile-nav button {
-      background-color: #091353;
-      border: none;
-      margin-left: 10px;
-    }
-    .fa-bars {
-      color: white;
-      font-size: 2rem;
-    }
 }
 
-main{
-    text-align: center;
-    background-color:white;
-}
+@media only screen and (max-width: 1023px) {
+  #check {
+    display: none;
+  }
 
-.text-margin{
-    margin-top: 40px;
+  ul {
+    font-weight: bold;
     display: flex;
-    flex-wrap: wrap ;
     flex-direction: column;
-    text-align: center;
     justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -100%;
+    top: 250px;
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(black, #232429);
+    transition: all 0.5s;
+  }
+  ul li {
+    display: block;
+    font-size: 2rem;
+    margin: 2% 0;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .mobile-nav {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
+  .mobile-nav input {
+    border: none;
+    padding: 2%;
+    background-color: white;
+    border-radius: 20px;
+    width: 70%;
+    margin-right: 10px;
+  }
+
+  .mobile-nav button {
+    background-color: black;
+    border: none;
+    margin-left: 10px;
+  }
+  .fa-bars {
+    color: white;
+    font-size: 2rem;
+  }
+
+  /* Contenido register */
+
+  main h2,
+  main h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .contenedor-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-register {
+    display: flex;
+    flex-direction: column;
     align-content: center;
+    margin-top: 20px;
+  }
+
+  .form-register input {
+    border-radius: 15px;
+    font-size: 1.5rem;
+    padding: 12px;
+    background-color: #ebebeb;
+    border: none;
+    margin: 20px 0;
+  }
+
+  .form-register label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .input-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-register button {
+    border: none;
+    background-color: #ff5151;
+    font-size: 1.5rem;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+    margin: 10px 0;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+
+  .form-register button:hover {
+    background-color: #fc2323;
+    cursor: pointer;
+  }
+
+  .login-redirect {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .login-redirect button {
+    border: none;
+    background-color: #35d0ba;
+    font-size: 1.5rem;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+    margin: 10px 0;
+    width: 50%;
+    transition: all 0.2s ease;
+  }
+
+  .login-redirect button:hover {
+    background-color: #17e7c8;
+    cursor: pointer;
+  }
+
+  /* Footer */
+
+  footer {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 10%;
+    flex-wrap: wrap;
+  }
+
+  .footer-info {
+    font-size: 0.9em;
+    margin-left: 20px;
+    width: 40%;
+  }
+
+  .logo-footer {
+    width: 50%;
+  }
+
+  .phrase {
+    width: 100%;
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }
 }
 
-.text-margin label{
-    padding-bottom:10px;
-    font-size: 25px;
+@media only screen and (max-width: 767px) {
+  /*Navbar*/
+
+  #check {
+    display: none;
+  }
+
+  ul {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -100%;
+    top: 120px;
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(black, #232429);
+    transition: all 0.5s;
+    z-index: 1;
+  }
+  ul li {
+    display: block;
+    font-size: 2rem;
+    margin: 2% 0;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .mobile-nav {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .mobile-nav input {
+    border: none;
+    padding: 3%;
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  .mobile-nav button {
+    background-color: black;
+    border: none;
+    margin-left: 10px;
+  }
+  .fa-bars {
+    color: white;
+    font-size: 2rem;
+  }
+
+  /* Contenido register */
+
+  main h2,
+  main h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .contenedor-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-register {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 20px;
+    width: 80%;
+  }
+
+  .form-register input {
+    border-radius: 15px;
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: #ebebeb;
+    border: none;
+    margin: 15px 0;
+  }
+
+  .form-register label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .input-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-register button {
+    border: none;
+    background-color: #ff5151;
+    font-size: 1.5rem;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+    margin: 10px 0;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+
+  .form-register button:hover {
+    background-color: #fc2323;
+    cursor: pointer;
+  }
+
+  .login-redirect {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .login-redirect button {
+    border: none;
+    background-color: #35d0ba;
+    font-size: 1.5rem;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+    margin: 10px 0;
+    width: 50%;
+    transition: all 0.2s ease;
+  }
+
+  .login-redirect button:hover {
+    background-color: #17e7c8;
+    cursor: pointer;
+  }
+
+  /* footer */
+
+  footer {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 20% 15%;
+    flex-wrap: wrap;
+  }
+
+  .footer-info {
+    font-size: 0.9em;
+    margin-left: 20px;
+  }
+
+  .logo-footer {
+    width: 50%;
+  }
+
+  .phrase {
+    margin-top: 50px;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }
 }
-
-
-
-.text-margin-enviar{
-    padding-top: 30px;
-    margin-bottom: 30px;
-}
-
-
-/* Footer */
-
-footer {
-  background-color: #091353;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: white;
-  padding: 5%;
-  flex-wrap: wrap;
-}
-
-.footer-info {
-  font-size: 0.9em;
-  margin-left: 20px;
-  width: 40%;
-}
-
-.logo-footer {
-  width: 30%;
-}
-
-.phrase {
-  width: 100%;
-  text-align: center;
-}
-
-.copyright {
-  font-size: 0.8em;
-  margin-top: 20px;
-}
- 

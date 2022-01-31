@@ -9,8 +9,8 @@
 }
 
 header {
-  list-style: none;
-  background-color: #091353;
+  padding: 2% 15%;
+  background-color: black;
 }
 
 a {
@@ -33,7 +33,7 @@ a {
   }
 
   header nav {
-    padding-bottom: 5%;
+    padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -45,11 +45,11 @@ a {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-right: 30px;
+    padding: 25px 30px;
   }
 
   .mobile-nav input {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
     border: none;
     padding: 15px;
@@ -58,13 +58,12 @@ a {
 
   .mobile-nav ul {
     position: absolute;
-    top: 15%;
+    top: 170px;
     right: 20%;
     left: 15%;
     display: flex;
     width: 1024px;
     justify-content: center;
-    font-weight: bold;
     font-size: 1.5rem;
   }
 
@@ -73,12 +72,11 @@ a {
   }
 
   li a {
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
   }
 
   li a:hover {
-    color: #ff5151;
-    font-size: 2rem;
+    text-decoration: underline;
   }
 
   .logo-home {
@@ -141,7 +139,7 @@ a {
   /* Footer */
 
   footer {
-    background-color: #091353;
+    background-color: black;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -184,10 +182,10 @@ a {
     align-items: center;
     position: fixed;
     left: -100%;
-    top: 21%;
+    top: 250px;
     width: 100%;
     height: 80vh;
-    background: linear-gradient(#091353, #4353bb);
+    background: linear-gradient(black, #232429);
     transition: all 0.5s;
   }
   ul li {
@@ -204,17 +202,19 @@ a {
     justify-content: center;
     align-items: center;
     display: flex;
+    width: 100%;
   }
   .mobile-nav input {
     border: none;
     padding: 2%;
-    background-color: #b2f9fc;
+    background-color: white;
     border-radius: 20px;
     width: 70%;
+    margin-right: 10px;
   }
 
   .mobile-nav button {
-    background-color: #091353;
+    background-color: black;
     border: none;
     margin-left: 10px;
   }
@@ -225,28 +225,56 @@ a {
 
   /*form*/
 
-  h2,
-  h3 {
-    font-size: 2.5rem;
+  main {
+    padding: 25px 0px;
+  }
+
+  .titulo-bienvenida {
     text-align: center;
-    padding: 10px 0;
+    font-size: 2rem;
+  }
+
+  .titulo-login {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .contenedor-form {
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+  .info {
+    margin-bottom: 15px;
+  }
+
+  .info input {
+    border: none;
+    border-radius: 5px;
+    background-color: #bdbdbd;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+    width: 300px;
+  }
+
+  .boton {
+    text-align: center;
+  }
+
+  .boton button {
+    background-color: #ff5151;
+    color: white;
+    font-size: 15px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
   }
 
   /* Footer */
 
   footer {
-    background-color: #091353;
+    background-color: black;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -277,12 +305,6 @@ a {
 }
 
 @media only screen and (max-width: 767px) {
-  header {
-    list-style: none;
-    background-color: #091353;
-    padding: 10% 0%;
-  }
-
   /*Navbar*/
 
   #check {
@@ -297,11 +319,12 @@ a {
     align-items: center;
     position: fixed;
     left: -100%;
-    top: 21%;
+    top: 120px;
     width: 100%;
-    height: 80vh;
-    background: linear-gradient(#091353, #4353bb);
+    height: 90vh;
+    background: linear-gradient(black, #232429);
     transition: all 0.5s;
+    z-index: 1;
   }
   ul li {
     display: block;
@@ -321,12 +344,12 @@ a {
   .mobile-nav input {
     border: none;
     padding: 3%;
-    background-color: #b2f9fc;
+    background-color: white;
     border-radius: 20px;
   }
 
   .mobile-nav button {
-    background-color: #091353;
+    background-color: black;
     border: none;
     margin-left: 10px;
   }
@@ -335,40 +358,54 @@ a {
     font-size: 2rem;
   }
 
+  /*Login section*/
+
   main {
-    padding: 50px 0px;
-    /*border: 1px red solid;*/
+    padding: 25px 0px;
   }
 
   .titulo-bienvenida {
     text-align: center;
-    font-size: 40px;
-  }
-  .foto-login img {
-    width: 100%;
+    font-size: 30px;
   }
 
   .titulo-login {
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .info {
+    margin-bottom: 15px;
+  }
+
+  .info input {
+    border: none;
+    border-radius: 5px;
+    background-color: #bdbdbd;
+    padding: 5px 10px;
+    font-size: 1rem;
+    width: 220px;
   }
 
   .boton {
     text-align: center;
   }
 
-  .boton input {
-    background-color: #091353;
-    font-size: 24px;
-    color: ivory;
-    padding: 0px 10px;
+  .boton button {
+    background-color: #ff5151;
+    color: white;
+    font-size: 15px;
+    padding: 5px 15px;
     border: none;
+    border-radius: 4px;
+    margin-top: 10px;
   }
 
-  /*footer section*/
+  /* footer */
 
   footer {
-    background-color: #091353;
+    background-color: black;
     justify-content: center;
     align-items: center;
     display: flex;

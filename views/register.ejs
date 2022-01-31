@@ -7,38 +7,43 @@
 <%- include('partials/header.ejs') %>
 
       <main>
-          <h2 class="text-margin-enviar">Crea tu cuenta!</h2>
-          <h3 class="text-margin-enviar">Registro</h3>
+          <h2>Crea tu cuenta!</h2>
+          <h3>Registro</h3>
           <% if (locals.errors) { %> <% errors.forEach(error => { %>
             <p><%= error.msg %></p>
             <% }) %> <% } %>
+        <div class="contenedor-form">
           <form action="register" method="POST" enctype="multipart/form-data" class="form-register">
-              <div class="text-margin">
+              <div class="input-field">
                   <label for="nombre">Nombre</label>
                   <input type="text" name="nombre" id="nombre">
               </div>
-              <div class="text-margin">
+              <div class="input-field">
                   <label for="email">Email</label>  
                   <input type="email" name="email" id="email">
               </div>
-              <div class="text-margin">
+              <div class="input-field">
                   <label for="password">Password</label>
                   <input type="password" name="password" id="password">  
               </div>
-              <div class="text-margin">
+              <div class="input-field">
                 <label for="profileImage">Profile image</label>
                 <input type="file" name="profileImage" id="profileImage">  
             </div>
               <div class="text-margin-enviar">
-                  <label for="submit"></label>
                   <button type="submit">Enviar</button>
               </div>
+              
+              
+            </div>         
+            </form>
 
-              
-             
-              
-          </form>
-          <h3>Ya tenés cuenta? Ingresá con tu usuario! </h3>
+          <div class="contenedor-form">
+          <form action="/login" method="get" class="login-redirect">
+            <h4>Ya tenés cuenta? Ingresá con tu usuario!</h4>
+            <button type="submit">Ingresar</button>
+          </form>  
+        </div>        
       </main>
       
       <%- include('partials/footer') %>

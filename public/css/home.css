@@ -328,8 +328,7 @@ a {
     padding: 5% 0 0;
     border: none;
   }
-  
-  
+
   .carousel {
     width: 100%;
     height: 52vh;
@@ -485,11 +484,6 @@ a {
 }
 
 @media only screen and (max-width: 767px) {
-  header {
-    list-style: none;
-    background-color: black;
-    padding: 2% 15%;
-  }
   /*Navbar*/
 
   #check {
