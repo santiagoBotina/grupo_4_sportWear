@@ -8,14 +8,13 @@
 <%- include('partials/header.ejs') %>
 
     <main>
-      <section class="home-carousel">
-        <video width="100%" controls loop> 
-          <source src="video.mp4" type="video/mp4"  > 
+
+        <video width="100%" autoplay muted loop> 
+          <source src="/video/video.mp4" type="video/mp4"  > 
                     
           <!--  <div class="carousel">Carousel</div> -->
         </video>
-      </section>
-    </main>
+    
 
     <section class="section-products">
       <h2>Our Products</h2>
@@ -63,6 +62,7 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur impedit laborum adipisci ratione</p>
       </div>
     </section>
+  </main>
 
 <%- include('partials/footer') %>
     

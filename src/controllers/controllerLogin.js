@@ -40,8 +40,6 @@ const loginController = {
       if (req.body.recordame != undefined) {
         res.cookie("recordar", usuarioLogged.email, { maxAge: 120000 });
       }
-
-      // res.send("Hola " + req.session.usuarioLogged.name);
     } else {
       return res.render("login", { errors: errores.mapped() });
     }

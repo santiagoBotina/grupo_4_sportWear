@@ -29,7 +29,7 @@ const registerController = {
 
       res.redirect("/login");
     } else {
-      return res.render("register", { errors: errores.array() });
+      return res.render("register", { errors: errores.mapped() });
     }
   },
 };
