@@ -10,6 +10,7 @@
       action="/products/editar/<%= products[productId].id %>?_method=PUT"
       method="post"
       class="flex-container"
+      enctype="multipart/form-data"
     >
       <input
         type="text"
@@ -26,7 +27,7 @@
       />
       <br />
 
-      <input type="file" name="image" id="" />
+      <input type="file" name="productImage" />
       <br />
       <label for="categoria">Categoría</label>
       <div class="categoria-checkbox">

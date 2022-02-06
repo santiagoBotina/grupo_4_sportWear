@@ -1,5 +1,5 @@
 <%- include('partials/head.ejs') %>
-<head>    <link rel="stylesheet" href="/css/home.css" />
+<head>    <link rel="stylesheet" href="/css/our_products.css" />
 </head>
 
   <body>
@@ -19,7 +19,7 @@
         <% for (let i = 0; i < products.length; i++) { %>
           <a href="/products/detail/<%= products[i].id %>">
              <article class="product">
-            <img src="\images\our_products\<%= products[i].image %> " alt="producto1"  >
+            <img src="/images/our_products/<%= products[i].image %> " alt="producto1"  >
             <form action="/products/detail/<%= products[i].id %>" method="GET">
               <button type="submit"> IR A VERLO<i class="fas fa-arrow-right"></i></a></button>
             </form>

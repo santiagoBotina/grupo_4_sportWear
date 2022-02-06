@@ -1,1 +1,29 @@
-[{"id":0,"name":"producto1","precio":"20.000","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita, itaque soluta blanditiis perferendis doloribus voluptate recusandae magni provident odio amet, beatae quidem in totam!","category":"categoria3 ","talla":"37 ","image":"1620247550_028541_1620247601_noticia_normal_recorte1.jpg"},{"id":1,"name":"Pumita","description":"zapas rosa furioso","image":"","categoria":"on","talla":"40 ","precio":"1"},{"id":2,"name":"producto4","precio":"40.000","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita, itaque soluta blanditiis perferendis doloribus voluptate recusandae magni provident odio amet, beatae quidem in totam!","category":"categoria1 ","talla":"37 ","image":"adidas-Running-UltraBOOST21-8.jpg"},{"id":3,"name":"Pumita","precio":"20001","description":"zapas rosa furioso","category":"categoria1 ","talla":"35 ","image":"1643483686603.jfif"},{"id":4,"name":"Canterbury","precio":"12525","description":"No tengo","category":"categoria1 ","talla":"42 ","image":"1643483780969.jpg"}]
+[
+  {
+    "id": 0,
+    "name": "Pumita",
+    "precio": "20001",
+    "description": "zapas rosa furioso",
+    "category": "categoria1 ",
+    "talla": "35 ",
+    "image": "1643483686603.jfif"
+  },
+  {
+    "id": 1,
+    "name": "Canterbury",
+    "precio": "12525",
+    "description": "No tengo",
+    "category": "categoria1 ",
+    "talla": "42 ",
+    "image": "1643483780969.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Adidas",
+    "precio": "12525",
+    "description": "No tengo",
+    "category": "categoria1 ",
+    "talla": "42 ",
+    "image": "adidas-Running-UltraBOOST21-8.jpg"
+  }
+]

@@ -31,7 +31,11 @@ router.post(
 //router.post("/", detalleProductoController.procesaFormulario);
 
 router.get("/editar/:id", controllerFormProduct.editar);
-router.put("/editar/:id", controllerFormProduct.editarProducto);
+router.put(
+  "/editar/:id",
+  fileUpload.single("productImage"),
+  controllerFormProduct.editarProducto
+);
 router.delete("/borrar/:id", controllerFormProduct.borrar);
 
 module.exports = router;

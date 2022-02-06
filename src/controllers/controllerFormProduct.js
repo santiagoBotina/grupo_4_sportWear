@@ -22,7 +22,7 @@ const formProductController = {
   },
   procesaFormulario: (req, res) => {
     let newProduct = {
-      id: products.length, 
+      id: products.length,
       name: req.body.name,
       precio: req.body.precio,
       description: req.body.description,
@@ -49,7 +49,12 @@ const formProductController = {
 
     productToEdit = {
       id: productToEdit.id,
-      ...req.body,
+      name: req.body.name,
+      precio: req.body.precio,
+      description: req.body.description,
+      category: req.body.categoria,
+      talla: req.body.talla,
+      image: req.file.filename,
     };
 
     let newProducts = products.map((product) => {
