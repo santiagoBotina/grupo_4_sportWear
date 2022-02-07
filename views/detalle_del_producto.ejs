@@ -7,15 +7,15 @@
 <%- include('partials/header.ejs') %>
         <section>
             <div class="nombre-del-producto">
-            <h3 class="nombre-del-producto"><%= products[productId].name %> </h3>
+            <h3 class="nombre-del-producto"><%= products.nombre %> </h3>
             </div>
 
         <div class="media_wrap">    
             <div class="imagen-producto">
-            <img class="ver-producto" src="/images/our_products/<%= products[productId].image %> " alt="product-image">
+            <img class="ver-producto" src="/images/our_products/<%= products.image %> " alt="product-image">
         </div>
         <div>
-            <article class="precio">Precio $<%= products[productId].precio %></article>
+            <article class="precio">Precio $<%= products.precio %></article>
         </div>
     
             <form method="POST" action="/">
@@ -55,11 +55,11 @@
             <div class="buttons">
                 <button type="submit" name="añadir" class="boton-agregar"><a href="#">Añadir al Carrito</a></button>
                 <button type="submit" name="comprar"class="boton-comprar"><a href="#">Comprar Producto</a></button>
-                <form action="/products/editar/<%= products[productId].id %>" method="GET">
+                <form action="/products/editar/<%= products.idproducto %>" method="GET">
                     <button type="submit" name="editar" class="boton-agregar">Editar este producto</button>
                 </form>
-                <form action="/products/borrar/<%= products[productId].id %>?_method=DELETE" method="POST">
-                    <button type="submit" name="editar" class="boton-agregar">Borrar este producto</button>
+                <form action="/products/borrar/<%= products.idproducto %>?_method=DELETE" method="POST">
+                <button type="submit" name="editar" class="boton-agregar">Borrar este producto</button>
                 </form>
             </div>
 
@@ -70,7 +70,7 @@
                     Descripción del producto:  
                 </h3>
                 <p>
-                    <%= products[productId].description %>
+                    <%= products.descripcion %>
                 </p>
             </div>
 

@@ -1,6 +1,10 @@
+const db = require("../database/models");
+
 const ourProductsController = {
   index: function (req, res) {
-    res.render("our_Products");
+    db.findAll().then((products) => {
+      res.render("our_Products", { products });
+    });
   },
 };
 

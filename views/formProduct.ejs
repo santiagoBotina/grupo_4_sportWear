@@ -21,10 +21,10 @@
         class="input-text"
       />
       <br />
-      
-        <label for="productImage">Imágen de producto</label>
-        <input type="file" name="productImage" id="productImage" />
-      
+
+      <label for="productImage">Imágen de producto</label>
+      <input type="file" name="productImage" id="productImage" />
+
       <br />
 
       <!-- *****CON LOS INPUTS DE TIPO CHECKBOX MULTER NO SE LLEVA LAS IMAGENES, NO SE AUN PORQUE, HE DESHABILITADO EL MISMO PARA QUE FUNCIONE POR AHORA***** -->
@@ -41,31 +41,38 @@
         <input type="checkbox" name="categoria" id="4" />
       </div>
       <br /> -->
-      
-      <label for="categoría">Categoría</label>
-      <select name="categoria" id="categoria">
-        <% for (let i = 1; i <= 4; i++) { %>
-        <option value="categoria<%= i %> ">Categoría<%= i %></option>
-        <% } %>
-      </select>
-      
 
-      
-      <label for="talla">Talla</label>
-      <select name="talla" id="talla">
-        <% for (let i = 35; i <= 42; i++) { %>
-        <option value="<%= i %> "><%= i %></option>
+      <label for="calzado">Tipo Calzado</label>
+      <select name="calzado" id="calzado">
+        <% for (let i = 0; i < tipoCalzado.length; i++) { %>
+        <option value="<%= tipoCalzado[i].idtipo_calzado %> ">
+          <%= tipoCalzado[i].tipo_de_calzado %>
+        </option>
         <% } %>
       </select>
-      
+
+      <label for="color">Color</label>
+      <select name="color" id="color">
+        <option value="Azul">Azul</option>
+        <option value="Verde">Verde</option>
+        <option value="Blanco">Blanco</option>
+        <option value="Negro">Negro</option>
+        <option value="Amarillo">Amarillo</option>
+        <option value="Rojo">Rojo</option>
+      </select>
+
+      <label for="marca">Marca</label>
+      <select name="marca" id="marca">
+        <option value="9">Adidas</option>
+        <option value="10">Nike</option>
+      </select>
+
       <br />
-      
+
       <label for="precio">Precio</label>
       <input type="number" name="precio" id="precio" class="input-text" />
       <br />
-      
 
-      
       <input type="submit" value="Crear" />
       <br />
     </form>

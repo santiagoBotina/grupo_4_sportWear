@@ -1,71 +1,104 @@
 const fs = require("fs");
 const path = require("path");
+const db = require("../database/models");
 
-const productsFilePath = path.join(__dirname, "../database/products.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+let products = db.Producto;
+let tipoCalzado = db.TipoCalzado;
+
+//usando JSON
+// const productsFilePath = path.join(__dirname, "../database/products.json");
+// const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const formProductController = {
   index: function (req, res) {
-    res.render("our_Products", { products });
+    products.findAll().then((products) => {
+      res.render("our_Products", { products });
+    });
   },
 
   detalleProducto: (req, res) => {
-    let productId = req.params.id;
-    res.render("detalle_del_producto", {
-      products: products,
-      productId: productId,
+    products.findByPk(req.params.id).then((products) => {
+      res.render("detalle_del_producto", { products });
     });
   },
 
   crearProducto: (req, res) => {
-    res.render("formProduct");
+    tipoCalzado.findAll().then((tipoCalzado) => {
+      return res.render("formProduct", { tipoCalzado: tipoCalzado });
+    });
   },
   procesaFormulario: (req, res) => {
-    let newProduct = {
-      id: products.length,
-      name: req.body.name,
-      precio: req.body.precio,
-      description: req.body.description,
-      category: req.body.categoria,
-      talla: req.body.talla,
-      image: req.file.filename,
-    };
+    products
+      .create({
+        nombre: req.body.name,
+        descripcion: req.body.description,
+        color: req.body.color,
+        precio: req.body.precio,
+        image: req.file.filename,
+        tipo_calzado_id: req.body.calzado,
+        marca_id: req.body.marca,
+      })
+      .then(() => {
+        res.redirect("/products");
+      });
 
-    products.push(newProduct);
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+    //usando JSON
+    // products.push(newProduct);
+    // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 
-    res.redirect("/");
+    // res.redirect("/");
   },
 
   editar: (req, res) => {
-    let productId = req.params.id;
-    res.render("editProduct", { products, productId });
+    products.findByPk(req.params.id).then((products) => {
+      tipoCalzado.findAll().then((tipoCalzado) => {
+        res.render("editProduct", { products, tipoCalzado });
+      });
+    });
   },
 
   editarProducto: (req, res) => {
-    let productId = req.params.id;
-    // let productToEdit = products[productId];
-    let productToEdit = products.find((product) => product.id == productId);
+    products
+      .update(
+        {
+          nombre: req.body.name,
+          descripcion: req.body.description,
+          color: req.body.color,
+          precio: req.body.precio,
+          image: req.file.filename,
+          tipo_calzado_id: req.body.calzado,
+          marca_id: req.body.marca,
+        },
+        {
+          where: { idproducto: req.params.id },
+        }
+      )
+      .then(res.redirect("/products/detail/" + req.params.id));
 
-    productToEdit = {
-      id: productToEdit.id,
-      name: req.body.name,
-      precio: req.body.precio,
-      description: req.body.description,
-      category: req.body.categoria,
-      talla: req.body.talla,
-      image: req.file.filename,
-    };
+    //usando JSON
+    // let productId = req.params.id;
+    // // let productToEdit = products[productId];
+    // let productToEdit = products.find((product) => product.id == productId);
 
-    let newProducts = products.map((product) => {
-      if (product.id == productToEdit.id) {
-        return (product = { ...productToEdit });
-      }
-      return product;
-    });
+    // productToEdit = {
+    //   id: productToEdit.id,
+    //   name: req.body.name,
+    //   precio: req.body.precio,
+    //   description: req.body.description,
+    //   category: req.body.categoria,
+    //   talla: req.body.talla,
+    //   image: req.file.filename,
+    // };
 
-    fs.writeFileSync(productsFilePath, JSON.stringify(newProducts));
-    res.redirect("/");
+    // let newProducts = products.map((product) => {
+    //   if (product.id == productToEdit.id) {
+    //     return (product = { ...productToEdit });
+    //   }
+    //   return product;
+    // });
+
+    // fs.writeFileSync(productsFilePath, JSON.stringify(newProducts));
+    // res.redirect("/");
   },
 
   borrar: (req, res) => {
