@@ -4,7 +4,7 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 const bcrypt = require("bcryptjs");
-const recordamemiddleware = require("./src/middlewares/recordameCookieMiddleware");
+const recordameMiddleware = require("./src/middlewares/recordameCookieMiddleware");
 
 const app = express();
 
@@ -13,7 +13,6 @@ const routerLogin = require("./src/routes/login.js");
 const routerRegister = require("./src/routes/register.js");
 const routerCarrito = require("./src/routes/carrito.js");
 const routerProducts = require("./src/routes/formProduct.js");
-
 const routerUsers = require("./src/routes/usuario.js");
 
 app.use(session({ secret: "secreto" }));
@@ -23,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride("_method"));
-app.use(recordamemiddleware);
+app.use(recordameMiddleware);
 
 //EJS
 app.set("view engine", "ejs");

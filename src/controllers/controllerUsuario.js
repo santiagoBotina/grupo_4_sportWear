@@ -1,12 +1,51 @@
 let db = require("../database/models");
-
-
+const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
 
 let usuariosController = {
   mostrar: (req, res) => {
-    db.Usuario.findAll().then(usuarios => {
-      res.render("usuario.ejs", {usuarios});
+    let usuarioLogged = req.session.usuarioLogged;
+    db.Usuario.findByPk(usuarioLogged.idusuario).then((usuario) => {
+      // console.log(usuario);
+      res.render("usuario.ejs", { usuario });
     });
+  },
+  editarUsuario: (req, res) => {
+    let errores = validationResult(req);
+    let usuarioLogged = req.session.usuarioLogged;
+    let profileImage = req.file;
+    console.log(profileImage);
+
+    // console.log(usuarioLogged);
+    console.log(errores);
+    if (errores.isEmpty() && profileImage !== undefined) {
+      db.Usuario.findByPk(usuarioLogged.idusuario).then((usuario) => {
+        usuario
+          .update(
+            {
+              nombre: req.body.nombre,
+              apellido: req.body.apellido,
+              email: usuario.email,
+              password: bcrypt.hashSync(req.body.password, 10),
+              profile_image: profileImage.filename,
+              tipo_usuario: req.body.tipoUsuario,
+            },
+            {
+              where: {
+                idusuario: usuario.idusuario,
+              },
+            }
+          )
+          .then((nuevousuario) => {
+            res.render("usuario", { usuario: nuevousuario });
+          });
+      });
+    } else {
+      return res.render("usuario", {
+        errors: errores.mapped(),
+        usuario: usuarioLogged,
+      });
+    }
   },
 };
 

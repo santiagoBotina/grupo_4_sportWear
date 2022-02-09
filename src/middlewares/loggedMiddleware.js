@@ -1,6 +1,6 @@
 const isLogged = (req, res, next) => {
   if (req.session.usuarioLogged !== undefined) {
-    res.send("Está página es solo para invitados");
+    res.render("alreadyLogged");
   } else {
     next();
   }

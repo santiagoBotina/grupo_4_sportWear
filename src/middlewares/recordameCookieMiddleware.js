@@ -1,8 +1,5 @@
-const path = require("path");
-const fs = require("fs");
-
-const usersFilePath = path.join(__dirname, "../database/users.json");
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+let db = require("../database/models");
+let user = db.Usuario;
 
 const recordame = (req, res, next) => {
   if (
@@ -11,12 +8,14 @@ const recordame = (req, res, next) => {
   ) {
     let usuarioLogged;
 
-    for (let i = 0; i < users.length; i++) {
-      if (users[i].email == req.cookies.recordar) {
-        usuarioLogged = users[i];
-        break;
-      }
-    }
+    const cookieUser = user.findOne({
+      where: {
+        email: req.cookies.recordar,
+      },
+    });
+
+    usuarioLogged = cookieUser;
+
     req.session.usuarioLogged = usuarioLogged;
   }
 

@@ -26,7 +26,7 @@ router.get("/crear", controllerFormProduct.crearProducto);
 router.post(
   "/crear",
   fileUpload.single("productImage"),
-  controllerFormProduct.procesaFormulario
+  controllerFormProduct.procesaCrearFormulario
 );
 //router.post("/", detalleProductoController.procesaFormulario);
 
