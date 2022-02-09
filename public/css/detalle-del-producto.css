@@ -83,6 +83,131 @@ a {
 
   /*Product section*/
 
+  div.nombre-del-producto {
+    padding: 25px;
+    background: black;
+    height: 65px;
+  }
+  h3.nombre-del-producto {
+    color: #ffffff;
+    font-size: 2.5rem;
+  }
+
+  .imagen-producto {
+    padding: 30px;
+    background: black;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagen-producto img {
+    width: 70%;
+    height: 50%;
+    border-radius: 1%;
+  }
+
+  .precio {
+    display: flex;
+    color: white;
+    background-color: black;
+    padding: 0 20px 15px;
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+
+  .titulo_talles {
+    font-size: 1.5rem;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  /* botones de talle*/
+
+  .div-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 85px;
+    flex-wrap: wrap;
+  }
+
+  .talle {
+    width: 15%;
+    margin: 10px 0;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .opcion-talle {
+    display: none;
+  }
+
+  .tarjetas {
+    font-size: 35px;
+    color: DodgerBlue;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tarjetas i {
+    width: 5%;
+    font-size: 2.8rem;
+  }
+
+  /*Botones de acceso a carrito, comprar, editar y borrar*/
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 70%;
+  }
+
+  .boton {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: auto;
+    margin: 10px 10px;
+    background-color: #54e346;
+    font-size: 1.5rem;
+  }
+
+  .boton-verde {
+    width: 45%;
+  }
+
+  .boton-delete {
+    background-color: red;
+  }
+
+  .boton-editar {
+    background-color: #548cff;
+  }
+
+  .div-descripcion {
+    margin-top: 20px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .descripcion {
+    font-size: 1.7rem;
+    padding: 5px;
+  }
+
   /* Footer */
 
   footer {
@@ -171,6 +296,127 @@ a {
   }
 
   /*Product section*/
+
+  div.nombre-del-producto {
+    padding: 25px;
+    background: black;
+    height: 65px;
+  }
+  h3.nombre-del-producto {
+    color: #ffffff;
+    font-size: 2.5rem;
+  }
+
+  .imagen-producto {
+    padding: 30px;
+    background: black;
+  }
+
+  .imagen-producto img {
+    width: 100%;
+    height: 80%;
+    border-radius: 1%;
+  }
+
+  .precio {
+    display: flex;
+    color: white;
+    background-color: black;
+    padding: 0 20px 15px;
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+
+  .titulo_talles {
+    font-size: 1.5rem;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  /* botones de talle*/
+
+  .div-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 85px;
+    flex-wrap: wrap;
+  }
+
+  .talle {
+    width: 30%;
+    margin: 10px 0;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .opcion-talle {
+    display: none;
+  }
+
+  .tarjetas {
+    font-size: 35px;
+    color: DodgerBlue;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tarjetas i {
+    width: 7%;
+  }
+
+  /*Botones de acceso a carrito, comprar, editar y borrar*/
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+
+  .boton {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: auto;
+    margin: 10px 10px;
+    background-color: #54e346;
+  }
+
+  .boton-verde {
+    width: 45%;
+  }
+
+  .boton-delete {
+    background-color: red;
+  }
+
+  .boton-editar {
+    background-color: #548cff;
+  }
+
+  .div-descripcion {
+    margin-top: 20px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .descripcion {
+    font-size: 1.7rem;
+    padding: 5px;
+  }
 
   /* Footer */
 
@@ -264,7 +510,7 @@ a {
     font-size: 2rem;
   }
 
-  /*Products section*/
+  /*Product section*/
 
   div.nombre-del-producto {
     padding: 25px;
@@ -281,7 +527,7 @@ a {
     background: black;
   }
 
-  .ver-producto {
+  .imagen-producto img {
     width: 100%;
     height: 80%;
     border-radius: 1%;
@@ -316,7 +562,7 @@ a {
   .talle {
     width: 30%;
     margin: 10px 0;
-    border: 3px solid DodgerBlue;
+    border: 2px solid black;
     padding: 10px;
     text-align: center;
   }
@@ -324,43 +570,8 @@ a {
   .opcion-talle {
     display: none;
   }
-  .input :focus {
-    transition: all 1.9s ease;
-    transform: scale(1.25);
-  }
-
-  /*icons de entrega y pago*/
-  .truck {
-    width: 20px;
-    font-size: 35px;
-    color: rgb(0, 255, 0);
-    margin: 0 0 0 20px;
-  }
-
-  /* .truck :hover{
-    transform: translate(350px,0);
-    transition: 5s;
-  } 
-   .entrega {
-    color: black;
-    font-size: 15px;
-    /* position: absolute; */
-  /* left: 150px;
-    top: 1250px; 
-  } */
-
-  .calendario {
-    width: 20px;
-    font-size: 35px;
-    color: DodgerBlue;
-    margin: 0 0 0 20px;
-    position: relative;
-    left: 200px;
-    top: -40px;
-  }
 
   .tarjetas {
-    /* width: 20px; */
     font-size: 35px;
     color: DodgerBlue;
     margin: 20px;
@@ -373,32 +584,35 @@ a {
   }
 
   /*Botones de acceso a carrito, comprar, editar y borrar*/
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+
   .buttons {
     display: flex;
     justify-content: space-around;
-    background-color: #d5d5d5;
     padding: 10px;
+    flex-wrap: wrap;
   }
 
-  .boton-agregar {
-    border: 2px solid green;
-    padding: 10px;
-    color: green;
-  }
-
-  .boton-comprar {
+  .boton {
     border: none;
+    border-radius: 5px;
     padding: 10px;
     color: white;
-    background-color: green;
+    width: 90%;
+    margin-top: 5px;
+    background-color: #54e346;
   }
 
-  .boton-comprar a:visited {
-    color: white;
+  .boton-delete {
+    background-color: red;
   }
 
-  .boton-agregar a:visited {
-    color: green;
+  .boton-editar {
+    background-color: #548cff;
   }
 
   .div-descripcion {
@@ -410,6 +624,7 @@ a {
 
   .descripcion {
     font-size: 1.3rem;
+    padding: 5px;
   }
 
   /* footer */

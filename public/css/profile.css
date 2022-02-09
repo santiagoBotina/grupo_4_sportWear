@@ -87,65 +87,64 @@ a {
     display: none;
   }
 
-  /* main section */
+  /* Contenido form */
 
-  h1 {
-    margin: 35px 0;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .flex-container {
+  .profile-head {
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 0 50px;
   }
 
-  .form-create {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  .profile-head h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
   }
 
-  .input-text {
-    border: none;
-    background-color: #dadada;
-    border-radius: 30px;
-    padding: 15px;
-    font-size: 1.3rem;
+  .user-image {
+    width: 30%;
+    align-content: center;
   }
 
-  .crear-button {
-    display: block;
-    width: 100%;
-    border: none;
-    background-color: #54e346;
-    color: white;
-    border-radius: 20px;
-    padding: 10px;
-    font-size: 1.3rem;
-  }
-
-  /*si el item ya existe*/
-  .item-existe {
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 35px;
   }
 
-  .editar-button {
-    display: block;
-    width: 100%;
+  .input-field {
+    width: 50%;
+    margin: 10px 0 10px 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .input-field input {
+    border: none;
+    border-radius: 5px;
+    background-color: #ebebeb;
+    font-size: 1.2rem;
+    padding: 8px;
+    width: 80%;
+  }
+
+  .text-margin-enviar {
+    margin-top: 20px;
+  }
+
+  .text-margin-enviar button {
     border: none;
     background-color: #ff5151;
+    font-size: 1.2rem;
     color: white;
-    border-radius: 15px;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 9px;
+    border-radius: 4px;
+    width: 100%;
   }
 
   /* Footer */
@@ -180,6 +179,7 @@ a {
     margin-top: 20px;
   }
 }
+
 @media only screen and (max-width: 1023px) {
   #check {
     display: none;
@@ -234,64 +234,57 @@ a {
     font-size: 2rem;
   }
 
-  /* main section */
+  /* Contenido form */
 
-  h1 {
-    margin: 25px 0;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .flex-container {
+  .profile-head {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 0 50px;
   }
 
-  .form-create {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  .user-image {
+    width: 50%;
+    overflow: auto;
   }
 
-  .input-text {
-    border: none;
-    background-color: #dadada;
-    border-radius: 30px;
-    padding: 10px;
-  }
-
-  .crear-button {
-    display: block;
-    width: 100%;
-    border: none;
-    background-color: #54e346;
-    color: white;
-    border-radius: 20px;
-    padding: 10px;
-    font-size: 1.3rem;
-  }
-
-  /*si el item ya existe*/
-  .item-existe {
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .editar-button {
-    display: block;
-    width: 100%;
+  .input-field {
+    width: 80%;
+    margin: 10px 0 10px 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .input-field input {
+    border: none;
+    border-radius: 5px;
+    background-color: #ebebeb;
+    font-size: 1.2rem;
+    padding: 8px;
+    width: 80%;
+  }
+
+  .text-margin-enviar {
+    margin-top: 20px;
+  }
+
+  .text-margin-enviar button {
     border: none;
     background-color: #ff5151;
+    font-size: 1.2rem;
     color: white;
-    border-radius: 15px;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 9px;
+    border-radius: 4px;
+    width: 100%;
   }
 
   /* Footer */
@@ -381,64 +374,62 @@ a {
     font-size: 2rem;
   }
 
-  /*main section*/
+  /* Contenido form */
 
-  h1 {
-    margin: 25px 0;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .flex-container {
+  .profile-head {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 0 50px;
   }
 
-  .form-create {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  .profile-head h3 {
+    margin: 20px;
+    font-size: 2rem;
   }
 
-  .input-text {
-    border: none;
-    background-color: #dadada;
-    border-radius: 30px;
-    padding: 10px;
+  .user-image {
+    width: 50%;
+    overflow: auto;
   }
 
-  .crear-button {
-    display: block;
-    width: 100%;
-    border: none;
-    background-color: #54e346;
-    color: white;
-    border-radius: 20px;
-    padding: 10px;
-    font-size: 1.3rem;
-  }
-
-  /*si el item ya existe*/
-  .item-existe {
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .editar-button {
-    display: block;
+  .input-field {
     width: 100%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-field input {
+    border: none;
+    border-radius: 5px;
+    background-color: #ebebeb;
+    font-size: 1.2rem;
+    padding: 2px;
+    width: 80%;
+  }
+
+  .text-margin-enviar {
+    margin-top: 10px;
+  }
+
+  .text-margin-enviar button {
     border: none;
     background-color: #ff5151;
+    font-size: 1.2rem;
     color: white;
-    border-radius: 15px;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 9px;
+    border-radius: 4px;
+    width: 100%;
   }
 
   /* footer */

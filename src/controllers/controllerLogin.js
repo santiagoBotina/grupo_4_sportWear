@@ -33,6 +33,7 @@ const loginController = {
             });
           } else {
             let validation = bcrypt.compareSync(password, user.password);
+            console.log(validation);
             if (bcrypt.compareSync(password, user.password)) {
               usuarioLogged = user;
 

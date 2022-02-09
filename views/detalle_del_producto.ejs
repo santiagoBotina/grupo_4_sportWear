@@ -9,8 +9,7 @@
             <div class="nombre-del-producto">
             <h3 class="nombre-del-producto"><%= products.nombre %> </h3>
             </div>
-
-        <div class="media_wrap">    
+   
             <div class="imagen-producto">
             <img class="ver-producto" src="/images/our_products/<%= products.image %> " alt="product-image">
         </div>
@@ -27,7 +26,7 @@
 
                         <div class="talle">
                             <input type="radio" name="talle" class="opcion-talle" id=${´talle_<% i %>´}  >  
-                            <label for="talle"><%= i %> </label>   <!--antes el for = "talles", se iguala con el id para unificar letras con circulo radio que esta con display none-->
+                            <label for="talle"><%= i %> </label>  
                         </div>
 
                     <% } %>     
@@ -35,33 +34,25 @@
                 </div>
             </form>
 
-            <!-- <div class="truck">
-                <i class="fas fa-shipping-fast"></i>
-                <p class="entrega">Entrega rápida</p>
-            </div>
-
-                       
-            <div class="calendario">
-                <i class="fas fa-calendar-check"></i>
-            </div> -->
-
             <div class="tarjetas"> 
                 <i class="fab fa-cc-visa"></i>
                 <i class="fab fa-cc-mastercard"></i>
                 <i class="fab fa-cc-amex"></i>
                 <i class="fab fa-cc-diners-club"></i>
             </div>
-
-            <div class="buttons">
-                <button type="submit" name="añadir" class="boton-agregar"><a href="#">Añadir al Carrito</a></button>
-                <button type="submit" name="comprar"class="boton-comprar"><a href="#">Comprar Producto</a></button>
-                <form action="/products/editar/<%= products.idproducto %>" method="GET">
-                    <button type="submit" name="editar" class="boton-agregar">Editar este producto</button>
-                </form>
-                <form action="/products/borrar/<%= products.idproducto %>?_method=DELETE" method="POST">
-                <button type="submit" name="editar" class="boton-agregar">Borrar este producto</button>
-                </form>
+            <div class="buttons-container">
+                <div class="buttons">
+                    <button type="submit" name="añadir" class="boton boton-verde">Añadir al Carrito</button>
+                    <button type="submit" name="comprar"class="boton boton-verde">Comprar Producto</button>
+                    <form action="/products/editar/<%= products.idproducto %>" method="GET">
+                        <button type="submit" name="editar" class="boton boton-editar">Editar este producto</button>
+                    </form>
+                    <form action="/products/borrar/<%= products.idproducto %>?_method=DELETE" method="POST">
+                    <button type="submit" name="editar" class="boton boton-delete">Borrar este producto</button>
+                    </form>
+                </div>
             </div>
+            
 
             
 

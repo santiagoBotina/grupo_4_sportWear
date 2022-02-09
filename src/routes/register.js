@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 const { body, check } = require("express-validator");
+const isLoggedMiddleware = require("../middlewares/loggedMiddleware");
 
 //**Configuración de Multer */
 
@@ -34,7 +35,7 @@ let registerValidator = [
 ];
 
 //**Rutas */
-router.get("/", registerController.registerView);
+router.get("/", isLoggedMiddleware, registerController.registerView);
 router.post(
   "/",
   fileUpload.single("profileImage"),
