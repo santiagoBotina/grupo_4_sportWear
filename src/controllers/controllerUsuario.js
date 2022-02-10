@@ -5,10 +5,14 @@ const bcrypt = require("bcryptjs");
 let usuariosController = {
   mostrar: (req, res) => {
     let usuarioLogged = req.session.usuarioLogged;
-    db.Usuario.findByPk(usuarioLogged.idusuario).then((usuario) => {
-      // console.log(usuario);
-      res.render("usuario.ejs", { usuario });
-    });
+    if (!usuarioLogged) {
+      res.render("login");
+    } else {
+      db.Usuario.findByPk(usuarioLogged.idusuario).then((usuario) => {
+        // console.log(usuario);
+        res.render("usuario.ejs", { usuario });
+      });
+    }
   },
   editarUsuario: (req, res) => {
     let errores = validationResult(req);
