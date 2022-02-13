@@ -1,11 +1,12 @@
 <%- include('partials/head.ejs') %>
 <head>
-  <link rel="stylesheet" href="/css/formProduct.css" />
+  <link rel="stylesheet" href="/css/editProduct.css" />
 </head>
 <body>
   <%- include('partials/header.ejs') %>
   <main>
-    <h1>EDITANDO <%= products.nombre %></h1>
+    <h1>EDITANDO el producto: </h1>
+    <div class="productoAeditar"><%= products.nombre %></div>
     <form
       action="/products/editar/<%= products.idproducto %>?_method=PUT"
       method="post"
@@ -13,7 +14,7 @@
       enctype="multipart/form-data"
     >
       <br />
-      <input type="text" placeholder="name" name="name" class="input-text" />
+      <input type="text" placeholder="Nombre de producto" name="name" class="input-text" />
       <br />
       <input
         type="text"
@@ -23,13 +24,13 @@
       />
       <br />
 
-      <label for="productImage">Imágen de producto</label>
-      <input type="file" name="productImage" id="productImage" />
+      <label for="productImage" class="imagen-producto">Subir imágen de producto</label>
+      <input type="file" name="productImage" id="productImage" class="sube-archivo" />
 
       <br />
 
-      <label for="calzado">Tipo Calzado</label>
-      <select name="calzado" id="calzado">
+      <label for="calzado" class="label-selector">Tipo Calzado</label>
+      <select name="calzado" id="calzado" class="selectores">
         <% for (let i = 0; i < tipoCalzado.length; i++) { %>
         <option value="<%= tipoCalzado[i].idtipo_calzado %> ">
           <%= tipoCalzado[i].tipo_de_calzado %>
@@ -37,8 +38,8 @@
         <% } %>
       </select>
 
-      <label for="color">Color</label>
-      <select name="color" id="color">
+      <label for="color" class="label-selector">Color</label>
+      <select name="color" id="color" class="selectores">
         <option value="Azul">Azul</option>
         <option value="Verde">Verde</option>
         <option value="Blanco">Blanco</option>
@@ -47,19 +48,19 @@
         <option value="Rojo">Rojo</option>
       </select>
 
-      <label for="marca">Marca</label>
-      <select name="marca" id="marca">
+      <label for="marca" class="label-selector">Marca</label>
+      <select name="marca" id="marca" class="selectores">
         <option value="9">Adidas</option>
         <option value="10">Nike</option>
       </select>
 
       <br />
 
-      <label for="precio">Precio</label>
-      <input type="number" name="precio" id="precio" class="input-text" />
+      <label for="precio"></label>
+      <input type="number" placeholder="Precio en pesos" name="precio" id="precio" class="input-text" />
       <br />
 
-      <input type="submit" value="Crear" />
+      <input type="submit" value="Editar" class="crear-button" />
       <br />
     </form>
   </main>
