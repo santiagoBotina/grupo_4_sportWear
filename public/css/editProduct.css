@@ -5,8 +5,8 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-  list-style: none;
-}
+  list-style: none; 
+  }
 
 header {
   padding: 2% 15%;
@@ -103,6 +103,7 @@ a {
     width: 100%;
     padding: 0 50px;
     font-size: 1.5rem;
+    
   }
 
   .flex-container {
@@ -112,6 +113,7 @@ a {
     align-items: center;
     width: 100%;
     padding: 20px 50px;
+    
   }
 
   .form-create {
@@ -224,7 +226,9 @@ a {
     margin-top: 20px;
   }
 }
-@media only screen and (max-width: 1023px) {
+
+
+@media only screen and (max-width: 1024px) {
   #check {
     display: none;
   }
@@ -280,6 +284,11 @@ a {
 
   /* main section */
 
+  main {
+  
+  text-align: center;
+}
+
   h1 {
     margin: 35px 0;
     text-align: center;
@@ -301,9 +310,12 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    /*width: 100%;*/
+   
     padding: 20px 50px;
+    
   }
+
 
   .form-create {
     display: flex;
@@ -365,6 +377,7 @@ a {
   }
 
   /*si el item ya existe*/
+  
   .item-existe {
     display: flex;
     flex-direction: column;
@@ -496,13 +509,13 @@ a {
     width: 100%;
     padding: 20px 50px;
   }
-
+/*
   .form-create {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
-
+*/
   .input-text {
     border: solid 3px RGB(52, 152, 219);
     background-color: #dadada;
@@ -557,6 +570,7 @@ a {
   }
 
   /*si el item ya existe*/
+  
   .item-existe {
     display: flex;
     flex-direction: column;
