@@ -204,6 +204,8 @@ a {
 }
 
 @media only screen and (max-width: 1023px) {
+  /*Navbar*/
+
   #check {
     display: none;
   }
@@ -220,16 +222,16 @@ a {
     align-items: center;
     position: fixed;
     left: -100%;
-    top: 90px;
+    top: 160px;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background: linear-gradient(black, #232429);
     transition: all 0.5s;
   }
   ul li {
     display: block;
     font-size: 2rem;
-    margin: 2% 0;
+    margin: 2%;
   }
 
   .checked {
@@ -238,31 +240,38 @@ a {
 
   .mobile-nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
   }
 
+  .logo-home {
+    width: 100%;
+  }
+
   .tope-page {
-    width: 40%;
+    width: 100%;
   }
 
   .busqueda-producto {
-    width: 40%;
+    width: 80%;
   }
 
   .mobile-nav input {
     border: none;
-    padding: 3%;
+    padding: 15px;
     background-color: white;
     border-radius: 20px;
-    width: 70%;
-    margin-right: 10px;
+    width: 85%;
   }
 
   .fa-bars {
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
+    position: absolute;
+    left: 80%;
+    top: 37%;
   }
 
   /* Contenido register */
@@ -429,7 +438,7 @@ a {
   }
 
   .busqueda-producto {
-    width: 40%;
+    width: 80%;
   }
 
   .mobile-nav input {
@@ -437,13 +446,15 @@ a {
     padding: 3%;
     background-color: white;
     border-radius: 20px;
-    width: 70%;
-    margin-right: 10px;
+    width: 85%;
   }
 
   .fa-bars {
     color: white;
     font-size: 2rem;
+    position: absolute;
+    left: 80%;
+    top: 19%;
   }
 
   /* Contenido register */

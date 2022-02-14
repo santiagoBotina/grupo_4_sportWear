@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const recordameMiddleware = require("./src/middlewares/recordameCookieMiddleware");
+const querystring = require("querystring");
 
 const app = express();
 
