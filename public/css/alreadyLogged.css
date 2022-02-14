@@ -9,7 +9,6 @@
 }
 
 header {
-  padding: 2% 15%;
   background-color: black;
 }
 
@@ -32,39 +31,39 @@ a {
     display: none;
   }
 
-  header nav {
-    padding: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  header {
+    background-color: black;
+    padding: 0 2%;
   }
 
   .mobile-nav {
-    width: 50%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 30px;
+    justify-content: space-between;
+  }
+
+  .busqueda-producto {
+    border-radius: 30%;
+    width: 30%;
   }
 
   .mobile-nav input {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%;
     border: none;
     padding: 15px;
     border-radius: 30px;
   }
 
-  .mobile-nav ul {
-    position: absolute;
-    top: 170px;
-    right: 20%;
-    left: 15%;
+  .opciones-nav {
     display: flex;
-    width: 1024px;
-    justify-content: center;
-    font-size: 1.5rem;
+    margin-top: 3%;
+  }
+
+  a {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .mobile-nav ul li {
@@ -79,8 +78,13 @@ a {
     text-decoration: underline;
   }
 
+  .tope-page {
+    width: 20%;
+    margin-top: 20px;
+  }
+
   .logo-home {
-    width: 50%;
+    width: 100%;
   }
 
   .fa-bars {
@@ -159,6 +163,10 @@ a {
     display: none;
   }
 
+  a {
+    color: white;
+  }
+
   ul {
     font-weight: bold;
     display: flex;
@@ -167,9 +175,9 @@ a {
     align-items: center;
     position: fixed;
     left: -100%;
-    top: 250px;
+    top: 90px;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background: linear-gradient(black, #232429);
     transition: all 0.5s;
   }
@@ -179,35 +187,38 @@ a {
     margin: 2% 0;
   }
 
-  #check:checked ~ ul {
+  .checked {
     left: 0;
   }
 
   .mobile-nav {
-    justify-content: center;
-    align-items: center;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
   }
+
+  .tope-page {
+    width: 40%;
+  }
+
+  .busqueda-producto {
+    width: 40%;
+  }
+
   .mobile-nav input {
     border: none;
-    padding: 2%;
+    padding: 3%;
     background-color: white;
     border-radius: 20px;
     width: 70%;
     margin-right: 10px;
   }
 
-  .mobile-nav button {
-    background-color: black;
-    border: none;
-    margin-left: 10px;
-  }
   .fa-bars {
     color: white;
     font-size: 2rem;
   }
-
   /* Contenido mensaje */
 
   main {
@@ -282,6 +293,10 @@ a {
     display: none;
   }
 
+  a {
+    color: white;
+  }
+
   ul {
     font-weight: bold;
     display: flex;
@@ -290,40 +305,51 @@ a {
     align-items: center;
     position: fixed;
     left: -100%;
-    top: 120px;
+    top: 160px;
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     background: linear-gradient(black, #232429);
     transition: all 0.5s;
-    z-index: 1;
   }
   ul li {
     display: block;
     font-size: 2rem;
-    margin: 2% 0;
+    margin: 2%;
   }
 
-  #check:checked ~ ul {
+  .checked {
     left: 0;
   }
 
   .mobile-nav {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: flex;
+    width: 100%;
   }
+
+  .logo-home {
+    width: 100%;
+  }
+
+  .tope-page {
+    width: 100%;
+  }
+
+  .busqueda-producto {
+    width: 40%;
+  }
+
   .mobile-nav input {
     border: none;
     padding: 3%;
     background-color: white;
     border-radius: 20px;
+    width: 70%;
+    margin-right: 10px;
   }
 
-  .mobile-nav button {
-    background-color: black;
-    border: none;
-    margin-left: 10px;
-  }
   .fa-bars {
     color: white;
     font-size: 2rem;
