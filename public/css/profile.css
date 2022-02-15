@@ -247,12 +247,15 @@ a {
     width: 85%;
   }
 
+  .search-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+
   .fa-bars {
     color: white;
     font-size: 3rem;
-    position: absolute;
-    left: 80%;
-    top: 37%;
   }
 
   /* Contenido form */
@@ -404,12 +407,15 @@ a {
     width: 85%;
   }
 
+  .search-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+
   .fa-bars {
     color: white;
     font-size: 2rem;
-    position: absolute;
-    left: 80%;
-    top: 19%;
   }
 
   /* Contenido form */
