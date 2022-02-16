@@ -25,3 +25,28 @@ Sport Wear es un sitio de venta de indumentaria deportiva especializada en las m
 3. Continuar haciendo: Seguir dedicandole tiempo periódicamente al proyecto
 4. Hacer menos: Enfocarse menos en lo estético por ahora y meterle más a la funcionalidad
 5. Dejar de hacer: Añadir cosas innecesarias al proyecto
+
+13/01/2022 Sprint 5
+
+1. Comenzar a hacer: aplicar nuevos métodos PUT y DELETE
+2. Hacer más: dedicarle mas tiempo al estudio y prueba de los temas de métodos HTTP, rutas y manejo de datos enviados por formularios.
+3. Continuar haciendo: se giguió con validaciones, cookies, session.
+4. Hacer menos: Enfocarse menos en lo estético por ahora y meterle más a la funcionalidad. Lo estetico se dejó para sprints posteriores.
+5. Dejar de hacer: Añadir cosas innecesarias al proyecto
+
+
+15/02/2022 Sprint 6
+
+1. Comenzar a hacer: estamos listos para empezar el sprint 7, luego de la entrega del 6. 
+2. Hacer más: Hay que mejorar algunas vistas
+3. Continuar haciendo: Seguir dedicandole tiempo periódicamente al proyecto. Mejorar algunas vistas, y coordinar mejor las reuniones ya que a veces se chocan los formatos
+4. Hacer menos: no vemos menos para hacer sino mas.
+5. Dejar de hacer: Añadir cosas innecesarias al proyecto
+
+15/02/2022 Sprint 7
+
+1. Comenzar a hacer: comenzar a realizar la API del proyecto. 
+2. Hacer más: agregar funcionalidad de agregar productos al carrito. Agregar CSS a las vistas sobre todo al carrito.
+3. Continuar haciendo: Seguir dedicandole tiempo periódicamente al proyecto. Mejorar algunas vistas, y coordinar mejor las reuniones ya que a veces se chocan los formatos
+4. Hacer menos: no vemos menos para hacer sino mas.
+5. Dejar de hacer: Añadir cosas innecesarias al proyecto

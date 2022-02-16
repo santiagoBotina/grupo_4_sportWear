@@ -21,3 +21,11 @@ Se implementó el EJS en las vistas, se crearon las views de crear y editar prod
 Entender los métodos HTTP PUT y DELETE, el manejo de los formularios y el envio de la información.
 ● Qué va a hacer esta semana.
 Finalizar los métodos PUT y DELETE, junto a las rutas de las nuevas vistas.
+
+13/02/2022
+● Qué se hizo la semana pasada:
+Se implementó la base de datos con workbench, y se aplicaron las funcionalidades para que apliquen a la base de datos de crear usuario y productos, y editar productos.
+● Si se encontró con algún impedimento.
+Algunos inconvenientes para coordinar la aplicaion de efectos a las vistas
+● Qué va a hacer esta semana.
+Desarrollar el sprint 7 rápido para tener tiempo a mejorar algunos pendientes.
