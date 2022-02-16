@@ -6,13 +6,6 @@
     
 <%- include('partials/header.ejs') %>
 
-    <!--
-    <main>
-        <section class="home-carousel">
-        <div class="carousel">Carousel</div>
-      </section>
-    </main>
-    -->
     
     <section class="section-products">
       <h2>NUESTROS PRODUCTOS</h2>
@@ -20,11 +13,9 @@
         
         <% for (let i = 0; i < products.length; i++) { %>
           <a href="/products/detail/<%= products[i].idproducto %>">
-             <article class="product">
+          <article class="product">
             <img src="/images/our_products/<%= products[i].image %> " alt="producto1"  >
-            <form action="/products/detail/<%= products[i].idproducto %>" method="GET">
-              <button type="submit"> IR A VERLO<i class="fas fa-arrow-right"></i></a></button>
-            </form>
+            <button class="button"> IR A VERLO<i class="fas fa-arrow-right"></i></a></button>
           </article>
         </a>
         <% } %>

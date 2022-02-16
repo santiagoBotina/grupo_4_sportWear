@@ -117,7 +117,7 @@ a {
 
   .product {
     width: 20%;
-    height: 280px;
+    height: 100%;
     background-color: none;
     margin: 10px;
     text-align: center;
@@ -129,32 +129,26 @@ a {
 
   .product img {
     width: 100%;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
 
   .product img:hover {
     transform: scale(1.1);
   }
 
-  .fa-arrow-right {
-    position: absolute;
-    margin-left: 10px;
-  }
-
   .product button {
-    color: white;
     background-color: black;
     border: 1px solid white;
     font-size: 1.2rem;
     padding: 10px;
     width: 100%;
     margin-top: 30px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
 
-  .product button:hover {
+  .product button :hover {
     background-color: white;
-    color: black;
+    color: black !important;
   }
 
   /*Promo message*/
@@ -404,11 +398,6 @@ a {
     transform: scale(1.1);
   }
 
-  .fa-arrow-right {
-    position: relative;
-    left: 20px;
-  }
-
   .product button {
     color: white;
     background-color: black;
@@ -418,58 +407,6 @@ a {
     width: 300px;
     margin-top: 30px;
     transition: all 0.3s ease;
-  }
-
-  .promo-message {
-    text-align: center;
-    width: 100%;
-    height: 35vh;
-    background-image: url("../images/images-home/home-promo-background.jpg");
-    background-position: center;
-    background-size: 100%;
-    color: white;
-    padding: 5%;
-  }
-
-  .promo-message h3 {
-    font-size: 2rem;
-    font-weight: 900;
-    text-decoration: underline;
-    margin-bottom: 10px;
-  }
-
-  .promo-message p {
-    font-size: 1.5rem;
-  }
-
-  .text-info {
-    background-color: black;
-    color: white;
-    padding: 7%;
-  }
-
-  .more-info-left,
-  .more-info-right {
-    display: flex;
-    justify-content: center;
-    margin: 50px;
-  }
-
-  .more-info-left img,
-  .more-info-right img {
-    width: 50%;
-    height: 50%;
-  }
-
-  .more-info-left p,
-  .more-info-right p {
-    width: 50%;
-    font-size: 1.8rem;
-  }
-
-  .more-info-left p,
-  .more-info-right p {
-    text-align: center;
   }
 
   /* Footer */

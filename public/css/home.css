@@ -86,11 +86,21 @@ header {
     background-color: black;
   }
 
-  .carousel {
-    width: 100%;
-    height: 65vh;
-    background-color: #d5d5d5;
-    text-align: center;
+  .video-intro {
+    display: flex;
+  }
+
+  .video-intro video {
+    position: relative;
+    z-index: 1;
+  }
+
+  .titulo-intro {
+    font-size: 10rem;
+    color: white;
+    position: relative;
+    left: -90%;
+    z-index: 2;
   }
 
   .section-products {
@@ -145,7 +155,7 @@ header {
     padding: 10px;
     width: 100%;
     margin-top: 30px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
 
   .product button:hover {
@@ -179,58 +189,61 @@ header {
   .text-info {
     background-color: black;
     color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10% 10% 0%;
   }
 
   .more-info-left {
-    background-color: white;
+    background-color: black;
     width: 100%;
-    height: 80vh;
-    color: black;
+    height: 50vh;
+    color: white;
     display: flex;
     justify-content: center;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .more-info-left p {
-    width: 30%;
+    width: 100%;
     margin: 20px;
-    position: relative;
-    right: 3%;
-    top: 10%;
   }
 
-  .more-info-left img {
-    position: relative;
-    right: 8%;
-    bottom: 2.5%;
-    margin: 1% 1% 1%;
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image img {
+    width: 100%;
   }
 
   .more-info-right {
-    background-color: white;
+    background-color: black;
     width: 100%;
-    height: 80vh;
-    color: black;
+    height: 70vh;
+    color: white;
     display: flex;
     justify-content: center;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .more-info-right p {
-    width: 30%;
-    margin: 20px;
-    position: relative;
-    left: 100px;
-    top: 70px;
+    width: 100%;
+    margin: 20px 5px;
   }
 
-  .more-info-right img {
-    position: relative;
-    left: 140px;
-    bottom: 20px;
-    margin-right: 20px;
+  /* .image {
+    width: 120%;
+    height: 120%;
+  } */
+
+  .image img {
+    width: 100%;
   }
 
   /* Footer */
@@ -285,11 +298,12 @@ header {
     align-items: center;
     position: fixed;
     left: -100%;
-    top: 160px;
+    top: 165px;
     width: 100%;
     height: 80vh;
     background: linear-gradient(black, #232429);
     transition: all 0.5s;
+    z-index: 1;
   }
   ul li {
     display: block;
@@ -310,11 +324,12 @@ header {
   }
 
   .logo-home {
-    width: 100%;
+    width: 50%;
   }
 
   .tope-page {
     width: 100%;
+    text-align: center;
   }
 
   .busqueda-producto {
@@ -339,6 +354,42 @@ header {
     color: white;
     font-size: 3rem;
   }
+
+  /* Video section */
+
+  .video-intro {
+    display: flex;
+  }
+
+  .video-intro video {
+    position: relative;
+    z-index: 1;
+  }
+
+  .titulo-intro {
+    font-size: 10rem;
+    color: white;
+    position: relative;
+    left: -90%;
+    z-index: 2;
+  }
+
+  /* Video section */
+
+  .video-intro {
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-intro video {
+    width: 100%;
+    z-index: 0;
+  }
+
+  .titulo-intro {
+    display: none;
+  }
+
   /*Product section*/
 
   main {
@@ -441,31 +492,61 @@ header {
   .text-info {
     background-color: black;
     color: white;
-    padding: 7%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10% 10% 0%;
   }
 
-  .more-info-left,
-  .more-info-right {
+  .more-info-left {
+    background-color: black;
+    width: 100%;
+    height: 50vh;
+    color: white;
     display: flex;
     justify-content: center;
-    margin: 50px;
+    font-weight: bold;
+    font-size: 2.5rem;
   }
 
-  .more-info-left img,
-  .more-info-right img {
-    width: 50%;
-    height: 50%;
+  .more-info-left p {
+    width: 100%;
+    margin: 20px;
   }
 
-  .more-info-left p,
+  .image {
+    width: 120%;
+    height: 120%;
+  }
+
+  .image img {
+    width: 100%;
+  }
+
+  .more-info-right {
+    background-color: black;
+    width: 100%;
+    height: 50vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
   .more-info-right p {
-    width: 50%;
-    font-size: 1.8rem;
+    width: 100%;
+    margin: 10px;
   }
 
-  .more-info-left p,
-  .more-info-right p {
-    text-align: center;
+  .image {
+    width: 120%;
+    height: 120%;
+  }
+
+  .image img {
+    width: 100%;
   }
 
   /* Footer */
@@ -525,6 +606,7 @@ header {
     height: 80vh;
     background: linear-gradient(black, #232429);
     transition: all 0.5s;
+    z-index: 1;
   }
   ul li {
     display: block;
@@ -575,11 +657,27 @@ header {
     font-size: 2rem;
   }
 
+  /* Video section */
+
+  .video-intro {
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-intro video {
+    width: 100%;
+    z-index: 0;
+  }
+
+  .titulo-intro {
+    display: none;
+  }
+
   /*Products section*/
 
   main {
     background-color: black;
-    padding: 5% 0 0;
+    padding: 5%;
   }
 
   .carousel {
@@ -674,37 +772,57 @@ header {
     font-size: 1.5rem;
   }
 
-  .text-info img {
-    width: 100%;
-    padding: 5%;
-  }
-
   .text-info {
     background-color: black;
     color: white;
-    padding: 2%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5%;
   }
 
-  .more-info-left,
-  .more-info-right {
+  .more-info-left {
+    background-color: black;
+    width: 100%;
+    height: 80vh;
+    color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
   }
 
-  .more-info-left p,
-  .more-info-right p {
-    text-align: center;
+  .more-info-left p {
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .image img {
     width: 100%;
   }
 
   .more-info-right {
+    background-color: black;
     display: flex;
     flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 80vh;
   }
 
+  .more-info-right p {
+    width: 100%;
+  }
   /* footer */
 
   footer {
