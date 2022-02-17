@@ -17,9 +17,15 @@ const formProductController = {
   },
 
   crearProducto: (req, res) => {
-    tipoCalzado.findAll().then((tipoCalzado) => {
-      return res.render("formProduct", { tipoCalzado: tipoCalzado });
-    });
+    let userLogged = req.session.usuarioLogged;
+
+    if (userLogged.tipo_usuario == 1 && userLogged) {
+      tipoCalzado.findAll().then((tipoCalzado) => {
+        return res.render("formProduct", { tipoCalzado: tipoCalzado });
+      });
+    } else {
+      res.render("noAdmin");
+    }
   },
   procesaCrearFormulario: (req, res) => {
     products

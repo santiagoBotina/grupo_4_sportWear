@@ -15,6 +15,21 @@ header {
   width: 100%;
 }
 
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+main {
+  animation: transitionIn 1s;
+}
+
 @media only screen and (min-width: 1024px) {
   #check {
     display: none;
@@ -99,8 +114,11 @@ header {
     font-size: 10rem;
     color: white;
     position: relative;
-    left: -90%;
+    left: -60%;
     z-index: 2;
+    text-decoration: underline;
+    font-weight: bolder;
+    text-align: right;
   }
 
   .section-products {

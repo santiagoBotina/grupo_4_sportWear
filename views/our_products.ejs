@@ -6,8 +6,19 @@
     
 <%- include('partials/header.ejs') %>
 
-    
-    <section class="section-products">
+<main>
+  
+    <section class="video-intro">
+      <video width="25%"  autoplay muted loop>
+        <source src="/video/mujeres-bulgara-v.mp4" type="video/mp4">
+      </video>
+      <div class="intro-text">
+        <h1>Tenemos productos para <span>todas</span> las personas, echales un ojo acá abajo👇👇</h1>
+        <a href="#productos" class="ver-productos">Ir a ver</a>
+      </div>
+    </section>
+
+    <section class="section-products" id="productos">
       <h2>NUESTROS PRODUCTOS</h2>
       <div class="our-products">
         
@@ -27,6 +38,7 @@
       </div>
     </section>
     
+</main>
     
 
 <%- include('partials/footer') %>
