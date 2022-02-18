@@ -221,7 +221,7 @@ CREATE TABLE `usuario` (
   `nombre` varchar(45) NOT NULL,
   `apellido` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
+  `password` varchar(70) NOT NULL,
   `profile_image` varchar(100) DEFAULT NULL,
   `tipo_usuario` varchar(10) NOT NULL,
   PRIMARY KEY (`idusuario`)
