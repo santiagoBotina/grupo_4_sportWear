@@ -19,18 +19,37 @@ let multerDiskStorage = multer.diskStorage({
   },
 });
 
-const fileUpload = multer({ storage: multerDiskStorage });
+const fileUpload = multer({
+  storage: multerDiskStorage,
+  fileFilter: (req, file, callback) => {
+    if (
+      file.mimetype == "image/png" ||
+      file.mimetype == "image/jpg" ||
+      file.mimetype == "image/jpeg" ||
+      file.mimetype == "image/gif"
+    ) {
+      callback(null, true);
+    } else {
+      callback(null, false);
+      return callback();
+    }
+  },
+});
 
 //**Validaciones */
 
 let registerValidator = [
-  body("nombre").notEmpty().withMessage("Debes llenar el campo de 'nombre'"),
+  body("nombre")
+    .notEmpty()
+    .isLength({ min: 2 })
+    .withMessage("Debes llenar el campo de 'nombre'"),
   body("apellido")
     .notEmpty()
+    .isLength({ min: 2 })
     .withMessage("Debes llenar el campo de 'apellido'"),
-  body("email").notEmpty().withMessage("Debes usar un email válido"),
+  body("email").notEmpty().isEmail().withMessage("Debes usar un email válido"),
   body("password")
-    .isLength({ min: 6 })
+    .isLength({ min: 8 })
     .withMessage("Debes crear una contraseña con mínimo 6 caractéres"),
 ];
 

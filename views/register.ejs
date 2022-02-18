@@ -62,6 +62,12 @@
               <div class="input-field">
                 <label for="profileImage">Profile image</label>
                 <input type="file" name="profileImage" id="profileImage">
+                <% if (locals.errors && errors.profileImage) { %>
+                  <p class="text-danger">
+                    <%= errors.profileImage.msg %> 
+                  </p>
+                 
+                <% } %>
              
             </div>
 

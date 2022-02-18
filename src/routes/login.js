@@ -5,7 +5,7 @@ const { body } = require("express-validator");
 const isLoggedMiddleware = require("../middlewares/loggedMiddleware");
 
 let loginValidator = [
-  body("email").notEmpty().withMessage("Debes llenar este campo"),
+  body("email").notEmpty().isEmail().withMessage("Debes llenar este campo"),
   body("password").notEmpty().withMessage("Debes llenar este campo"),
 ];
 

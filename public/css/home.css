@@ -114,11 +114,11 @@ main {
     font-size: 10rem;
     color: white;
     position: relative;
-    left: -60%;
+    left: -95%;
     z-index: 2;
     text-decoration: underline;
     font-weight: bolder;
-    text-align: right;
+    text-align: left;
   }
 
   .section-products {
@@ -128,7 +128,6 @@ main {
   .section-products h2 {
     color: white;
     text-align: center;
-    margin-bottom: 80px;
     font-size: 3rem;
     padding-bottom: 5%;
   }
