@@ -19,6 +19,12 @@
           name="name"
           class="input-text"
         />
+        <% if (locals.errors && errors.name) { %>
+          <p class="text-danger">
+            <%= errors.name.msg %> 
+          </p>
+         
+        <% } %>
         <br />
         <input
           type="text"
@@ -26,10 +32,22 @@
           name="description"
           class="input-text"
         />
+        <% if (locals.errors && errors.description) { %>
+          <p class="text-danger">
+            <%= errors.description.msg %> 
+          </p>
+         
+        <% } %>
         <br />
 
         <label for="productImage">Imágen de producto</label>
         <input type="file" name="productImage" id="productImage" />
+        <% if (locals.errors && errors.productImage) { %>
+          <p class="text-danger">
+            <%= errors.productImage.msg %> 
+          </p>
+         
+        <% } %>
 
         <br />
 
@@ -62,6 +80,12 @@
 
         <label for="precio">Precio</label>
         <input type="number" name="precio" id="precio" class="input-text" />
+        <% if (locals.errors && errors.precio) { %>
+          <p class="text-danger">
+            <%= errors.precio.msg %> 
+          </p>
+         
+        <% } %>
         <br />
 
         <button type="submit" class="crear-button" />Crear</button>

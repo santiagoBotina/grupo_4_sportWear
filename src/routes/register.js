@@ -41,16 +41,22 @@ const fileUpload = multer({
 let registerValidator = [
   body("nombre")
     .notEmpty()
+    .withMessage("Debes llenar el campo de 'nombre'")
     .isLength({ min: 2 })
-    .withMessage("Debes llenar el campo de 'nombre'"),
+    .withMessage("Este campo debe ser de mínimo 2 caractéres"),
   body("apellido")
     .notEmpty()
+    .withMessage("Debes llenar el campo de 'apellido'")
     .isLength({ min: 2 })
-    .withMessage("Debes llenar el campo de 'apellido'"),
-  body("email").notEmpty().isEmail().withMessage("Debes usar un email válido"),
+    .withMessage("Este campo debe ser de mínimo 2 caractéres"),
+  body("email")
+    .notEmpty()
+    .withMessage("Este campo no debe estar vacío")
+    .isEmail()
+    .withMessage("Debes usar un email válido"),
   body("password")
     .isLength({ min: 8 })
-    .withMessage("Debes crear una contraseña con mínimo 6 caractéres"),
+    .withMessage("Debes crear una contraseña con mínimo 8 caractéres"),
 ];
 
 //**Rutas */
