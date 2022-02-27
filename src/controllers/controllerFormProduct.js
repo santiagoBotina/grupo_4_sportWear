@@ -90,22 +90,58 @@ const formProductController = {
   },
 
   editarProducto: (req, res) => {
-    products
-      .update(
-        {
-          nombre: req.body.name,
-          descripcion: req.body.description,
-          color: req.body.color,
-          precio: req.body.precio,
-          image: req.file.filename,
-          tipo_calzado_id: req.body.calzado,
-          marca_id: req.body.marca,
-        },
-        {
-          where: { idproducto: req.params.id },
-        }
-      )
-      .then(res.redirect("/products/"));
+    let errores = validationResult(req);
+    let productImage = req.file;
+
+    const multerCheck = (file) => {
+      if (
+        file.mimetype == "image/png" ||
+        file.mimetype == "image/jpg" ||
+        file.mimetype == "image/jpeg" ||
+        file.mimetype == "image/gif"
+      ) {
+        return true;
+      }
+      return false;
+    };
+
+    if (
+      errores.isEmpty() &&
+      productImage !== undefined &&
+      multerCheck(productImage)
+    ) {
+      products
+        .update(
+          {
+            nombre: req.body.name,
+            descripcion: req.body.description,
+            color: req.body.color,
+            precio: req.body.precio,
+            image: req.file.filename,
+            tipo_calzado_id: req.body.calzado,
+            marca_id: req.body.marca,
+          },
+          {
+            where: { idproducto: req.params.id },
+          }
+        )
+        .then(res.redirect("/products/"));
+    } else {
+      products.findByPk(req.params.id).then((products) => {
+        tipoCalzado.findAll().then((tipoCalzado) => {
+          res.render("editProduct", {
+            products,
+            tipoCalzado: tipoCalzado,
+            errors: {
+              productImage: {
+                msg: "Debes incluir una imágen y solo extensiones .png, .jpg .jpeg y .gif son válidas",
+              },
+              ...errores.mapped(),
+            },
+          });
+        });
+      });
+    }
   },
 
   borrar: (req, res) => {

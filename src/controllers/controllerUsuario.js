@@ -18,11 +18,25 @@ let usuariosController = {
     let errores = validationResult(req);
     let usuarioLogged = req.session.usuarioLogged;
     let profileImage = req.file;
-    console.log(profileImage);
+
+    const multerCheck = (file) => {
+      if (
+        file.mimetype == "image/png" ||
+        file.mimetype == "image/jpg" ||
+        file.mimetype == "image/jpeg" ||
+        file.mimetype == "image/gif"
+      ) {
+        return true;
+      }
+      return false;
+    };
 
     // console.log(usuarioLogged);
-    console.log(errores);
-    if (errores.isEmpty() && profileImage !== undefined) {
+    if (
+      errores.isEmpty() &&
+      profileImage !== undefined &&
+      multerCheck(profileImage)
+    ) {
       db.Usuario.findByPk(usuarioLogged.idusuario).then((usuario) => {
         usuario
           .update(
@@ -46,7 +60,12 @@ let usuariosController = {
       });
     } else {
       return res.render("usuario", {
-        errors: errores.mapped(),
+        errors: {
+          profileImage: {
+            msg: "Debes incluir una imágen y solo extensiones .png, .jpg .jpeg y .gif son válidas",
+          },
+          ...errores.mapped(),
+        },
         usuario: usuarioLogged,
       });
     }

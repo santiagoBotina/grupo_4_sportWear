@@ -21,6 +21,7 @@
                     </p>
                    
                   <% } %>
+                  <p class="errorNombre text-danger"></p>
               </div>
 
               <div class="input-field">
@@ -32,6 +33,7 @@
                   </p>
                  
                 <% } %>
+                <p class="errorApellido text-danger"></p>
             </div>
 
               <div class="input-field">
@@ -43,6 +45,7 @@
                     </p>
                    
                   <% } %>
+                  <p class="errorEmail text-danger"></p>
               </div>
               <div class="input-field">
                   <label for="password">Password</label>
@@ -53,10 +56,12 @@
                     </p>
                    
                   <% } %>
+                  <p class="errorPassword text-danger"></p>
               </div>
               <div class="input-field">
                 <label for="confirmPassword">Confirm password</label>
                 <input type="password" name="confirmPassword" id="confirmPassword">  
+                <p class="errorConfirmPassword text-danger"></p>
                
             </div>
               <div class="input-field">
@@ -94,6 +99,7 @@
           </form>  
         </div>        
       </main>
+      <script src="/js/frontRegistroUsuario.js"></script>
       
       <%- include('partials/footer') %>
       

@@ -66,6 +66,7 @@ router.get("/editar/:id", controllerFormProduct.editar);
 router.put(
   "/editar/:id",
   fileUpload.single("productImage"),
+  productValidator,
   controllerFormProduct.editarProducto
 );
 router.delete("/borrar/:id", controllerFormProduct.borrar);
