@@ -59,7 +59,7 @@ window.addEventListener("load", function () {
   });
 
   email.addEventListener("change", function () {
-    if (this.value.length >= 2) {
+    if (this.value.includes("@") || this.value.indexOf(".") >= -1) {
       email.style.backgroundColor = "#dadada";
       emailError.innerText = "";
     }
