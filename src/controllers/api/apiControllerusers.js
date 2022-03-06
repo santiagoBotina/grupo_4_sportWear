@@ -21,6 +21,30 @@ const apiControllerUsers = {
         res.json(respuesta);
       });
   },
+
+  userDetail: (req, res) => {
+    let userId = req.params.id;
+    users
+      .findOne({
+        where: {
+          idusuario: userId,
+        },
+        attributes: [
+          "idusuario",
+          "nombre",
+          "apellido",
+          "email",
+          "profile_image",
+        ],
+      })
+      .then((user) => {
+        user.setDataValue(
+          "profile_image",
+          `http://localhost:5000/images/profileImages/${user.profile_image}`
+        );
+        res.json(user);
+      });
+  },
 };
 
 module.exports = apiControllerUsers;
