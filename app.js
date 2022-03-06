@@ -8,12 +8,16 @@ const recordameMiddleware = require("./src/middlewares/recordameCookieMiddleware
 
 const app = express();
 
+//ROUTER
 const routerIndex = require("./src/routes/index.js");
 const routerLogin = require("./src/routes/login.js");
 const routerRegister = require("./src/routes/register.js");
 const routerCarrito = require("./src/routes/carrito.js");
 const routerProducts = require("./src/routes/formProduct.js");
 const routerUsers = require("./src/routes/usuario.js");
+
+//API ROUTER
+const routerApiUsers = require("./src/routes/api/apiUsers");
 
 app.use(session({ secret: "secreto" }));
 //MIDDLEWARES
@@ -28,12 +32,16 @@ app.use(recordameMiddleware);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
+//RUTAS
 app.use("/", routerIndex);
-app.use("/login", routerLogin); // VER de cambiar rutas luego de definir los accesos 07/12/2021 sprint 4
+app.use("/login", routerLogin);
 app.use("/register", routerRegister);
 app.use("/cart", routerCarrito);
 app.use("/products", routerProducts);
 app.use("/usuario", routerUsers);
+
+//API RUTAS
+app.use("/api/users", routerApiUsers);
 
 app.listen(5000, () => {
   console.log("Servidor funcionando en local host 5000");

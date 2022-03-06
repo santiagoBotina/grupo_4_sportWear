@@ -70,6 +70,13 @@ let usuariosController = {
       });
     }
   },
+  detalleUsuario: (req, res) => {
+    let userId = req.params.id;
+
+    db.Usuario.findByPk(userId).then((user) => {
+      res.render("usuarioDetail", { usuario: user });
+    });
+  },
 };
 
 module.exports = usuariosController;

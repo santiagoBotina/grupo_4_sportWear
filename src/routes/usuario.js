@@ -56,5 +56,6 @@ router.put(
   registerValidator,
   detalleUsuarioController.editarUsuario
 );
+router.get("/:id", detalleUsuarioController.detalleUsuario);
 
 module.exports = router;
