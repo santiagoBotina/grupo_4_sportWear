@@ -18,6 +18,7 @@ const routerUsers = require("./src/routes/usuario.js");
 
 //API ROUTER
 const routerApiUsers = require("./src/routes/api/apiUsers");
+const routerApiProducts = require("./src/routes/api/apiProducts");
 
 app.use(session({ secret: "secreto" }));
 //MIDDLEWARES
@@ -42,6 +43,7 @@ app.use("/usuario", routerUsers);
 
 //API RUTAS
 app.use("/api/users", routerApiUsers);
+app.use("/api/products", routerApiProducts);
 
 app.listen(5000, () => {
   console.log("Servidor funcionando en local host 5000");
