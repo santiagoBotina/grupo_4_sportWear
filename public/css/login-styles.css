@@ -10,6 +10,7 @@
 
 header {
   background-color: black;
+  padding-bottom: 15px;
 }
 
 a {
@@ -430,6 +431,10 @@ a {
     padding: 5px 10px;
     font-size: 1rem;
     width: 220px;
+  }
+
+  .info label {
+    font-weight: bold;
   }
 
   .boton {
