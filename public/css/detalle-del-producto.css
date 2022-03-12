@@ -184,7 +184,7 @@ a {
     color: white;
     width: auto;
     margin: 10px 10px;
-    background-color: #54e346;
+    background-color: #52BE80;
     font-size: 1.5rem;
   }
 
@@ -193,7 +193,7 @@ a {
   }
 
   .boton-delete {
-    background-color: red;
+    background-color: #2C3E50;
   }
 
   .boton-editar {
@@ -201,15 +201,17 @@ a {
   }
 
   .div-descripcion {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 5px;
     width: 100%;
-    text-align: center;
+    text-align: left;
+    background-color: black;
   }
 
   .descripcion {
     font-size: 1.7rem;
     padding: 5px;
+    color: blanchedalmond;
   }
 
   /* Footer */
@@ -414,7 +416,7 @@ a {
     color: white;
     width: auto;
     margin: 10px 10px;
-    background-color: #54e346;
+    background-color: #52BE80;
   }
 
   .boton-verde {
@@ -422,7 +424,7 @@ a {
   }
 
   .boton-delete {
-    background-color: red;
+    background-color: #2C3E50;
   }
 
   .boton-editar {
@@ -430,7 +432,7 @@ a {
   }
 
   .div-descripcion {
-    margin-top: 20px;
+    
     padding: 5px;
     width: 100%;
     text-align: center;
@@ -569,6 +571,7 @@ a {
     width: 100%;
     height: 80%;
     border-radius: 1%;
+    
   }
 
   .precio {
@@ -642,11 +645,11 @@ a {
     color: white;
     width: 90%;
     margin-top: 5px;
-    background-color: #54e346;
+    background-color: #52BE80  ;
   }
 
   .boton-delete {
-    background-color: red;
+    background-color: #2C3E50;
   }
 
   .boton-editar {
@@ -654,17 +657,23 @@ a {
   }
 
   .div-descripcion {
-    margin-top: 20px;
+    
     padding: 5px;
     width: 100%;
-    text-align: center;
+    text-align: left;
+    background-color: black;
+    color: blanchedalmond;
   }
 
   .descripcion {
     font-size: 1.3rem;
     padding: 5px;
+    
   }
 
+  .descripcion p {
+    padding: 5px;
+  }
   /* footer */
 
   footer {

@@ -9,7 +9,14 @@
             <div class="nombre-del-producto">
             <h3 class="nombre-del-producto"><%= products.nombre %> </h3>
             </div>
-   
+            <div class="div-descripcion">
+                <h3 class="descripcion">
+                    Descripción del producto:  
+                </h3>
+                <p>
+                    <%= products.descripcion %>
+                </p>
+            </div>
             <div class="imagen-producto">
             <img class="ver-producto" src="/images/our_products/<%= products.image %> " alt="product-image">
         </div>
@@ -56,14 +63,7 @@
 
             
 
-            <div class="div-descripcion">
-                <h3 class="descripcion">
-                    Descripción del producto:  
-                </h3>
-                <p>
-                    <%= products.descripcion %>
-                </p>
-            </div>
+           
 
         </div>
 

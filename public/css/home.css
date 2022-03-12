@@ -116,7 +116,7 @@ main {
     position: relative;
     left: -95%;
     z-index: 2;
-    text-decoration: underline;
+    /*text-decoration: underline; */
     font-weight: bolder;
     text-align: left;
   }
@@ -222,8 +222,10 @@ main {
     justify-content: center;
     font-weight: bold;
     font-size: 2.5rem;
+    margin-bottom: 15px;
   }
 
+  
   .more-info-left p {
     width: 100%;
     margin: 20px;
