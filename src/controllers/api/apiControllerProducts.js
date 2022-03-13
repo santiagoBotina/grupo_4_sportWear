@@ -13,6 +13,7 @@ const apiControllerProducts = {
             "detail",
             `http://localhost:5000/products/detail/${product.idproducto}`
           );
+          product.setDataValue("Relaciones", ["Talle"]);
         });
 
         //CONTADOR DEPORTIVO
@@ -54,6 +55,7 @@ const apiControllerProducts = {
         "imageUrl",
         `http://localhost:5000/images/our_products/${product.image}`
       );
+      product.setDataValue("Relaciones", ["Talle"]);
       res.json(product);
     });
   },

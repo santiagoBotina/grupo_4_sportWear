@@ -49,5 +49,27 @@ module.exports = (sequelize, dataTypes) => {
     });
   };
 
+  // const productoTalle = sequelize.define(
+  //   "Productotalle",
+  //   (Cols = {
+  //     idproducto_talle: {
+  //       autoIncrement: true,
+  //       primaryKey: true,
+  //       type: dataTypes.INTEGER,
+  //     },
+  //     producto_id: {
+  //       type: dataTypes.INTEGER,
+  //     },
+  //     talle_id: {
+  //       type: dataTypes.INTEGER,
+  //     },
+  //   }),
+  //   { tableName: "producto_talle", timestamps: false }
+  // );
+
+  Producto.associate = (models) => {
+    Producto.belongsToMany(models.Talle, { through: "producto_talle" });
+  };
+
   return Producto;
 };

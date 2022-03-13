@@ -3,6 +3,7 @@ const db = require("../database/models");
 
 let products = db.Producto;
 let tipoCalzado = db.TipoCalzado;
+let talle = db.Talle;
 
 let tiposCalzado = tipoCalzado.findAll();
 
@@ -54,15 +55,21 @@ const formProductController = {
       multerCheck(productImage)
     ) {
       products
-        .create({
-          nombre: req.body.name,
-          descripcion: req.body.description,
-          color: req.body.color,
-          precio: req.body.precio,
-          image: req.file.filename,
-          tipo_calzado_id: req.body.calzado,
-          marca_id: req.body.marca,
-        })
+        .create(
+          {
+            nombre: req.body.name,
+            descripcion: req.body.description,
+            color: req.body.color,
+            precio: req.body.precio,
+            image: req.file.filename,
+            tipo_calzado_id: req.body.calzado,
+            marca_id: req.body.marca,
+          },
+          { through: { talle_id: 10 } }
+        )
+        // .then((product) => {
+        //   products.addProducto(product, { through: { talle_id: 1 } });
+        // })
         .then(() => {
           res.redirect("/products");
         });
