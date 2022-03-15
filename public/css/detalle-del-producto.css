@@ -185,12 +185,13 @@ a {
     margin: 10px 10px;
     background-color: #52be80;
     font-size: 1.5rem;
+    width: 45%;
   }
 
   .boton-verde {
     width: 45%;
   }
-
+  
   .boton-delete {
     background-color: #2c3e50;
   }
