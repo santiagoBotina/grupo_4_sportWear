@@ -95,7 +95,60 @@ main {
     display: none;
   }
 
+  /*Carrito con productos*/
+
+  .tu-carrito {
+    background-color: #CCD1D1;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .price-buy {
+    background-color: #CCD1D1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    
+  }
+
+  .pay {
+    background-color: #52BE80;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    
+  }
+  .dentro-boton {
+    color: #2C3E50;
+    
+  }
+
+  .productos {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+     
+ 
+  }
+
+  .img-producto {
+     width: 17%;
+     border-radius: 10px;
+  }
+
   
+  .summary {
+    background-color: #CCD1D1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 25px;
+  }
+
+
+
   /* Footer */
 
   footer {
