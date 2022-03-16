@@ -18,7 +18,7 @@ window.onload = function () {
                   </form>
                   <div class="img-cart"><img src=${producto.imagen} alt=""> </div>
                   <div class="descripcion-cart">${producto.tituloProd}</div>
-                  <div class="precio-cart">$ ${toThousand(producto.precio)}</div>
+            
               </article>
               <article class="cant-cart">
                   <form action="#" method="GET">
@@ -57,12 +57,15 @@ window.onload = function () {
   
   
   
-  let botonBorrar = document.querySelector("#botonBorrar");
+  /*let botonBorrar = document.querySelector("#botonBorrar");
   botonBorrar.addEventListener('click', function(e) {
     e.preventDefault();
     localStorage.clear();
     alert('has vaciado el carrito');
     location.reload();
-  })
+   
+  }
   
-  
+  )
+  */
+ 
