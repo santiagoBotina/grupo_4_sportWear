@@ -104,7 +104,7 @@ main {
   main {
     background-color: black;
   }
-
+  
   .video-intro {
     display: flex;
     padding: 2% 10%;
@@ -122,7 +122,9 @@ main {
   .intro-text span {
     color: #ff00e4;
   }
+  
 
+  
   .ver-productos {
     transition: all 0.2s ease;
     margin-top: 20px;
