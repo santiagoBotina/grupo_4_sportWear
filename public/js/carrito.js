@@ -18,6 +18,7 @@ window.onload = function () {
                   </form>
                   <div class="img-cart"><img src=${producto.imagen} alt=""> </div>
                   <div class="descripcion-cart">${producto.tituloProd}</div>
+                  <div class="precio-cart">$ ${producto.precio}</div>
             
               </article>
               <article class="cant-cart">
@@ -32,7 +33,7 @@ window.onload = function () {
       }
     }
   
-    let h3 = document.querySelector("#precioTotal")
+    let h3 = document.querySelector("precioTotal")
     let totalCarrito = localStorage.totalCarrito
     if(typeof localStorage.totalCarrito == 'undefined'){
       let contenido2 = `0`
@@ -57,7 +58,7 @@ window.onload = function () {
   
   
   
-  /*let botonBorrar = document.querySelector("#botonBorrar");
+  let botonBorrar = document.querySelector("#botonBorrar");
   botonBorrar.addEventListener('click', function(e) {
     e.preventDefault();
     localStorage.clear();
@@ -65,7 +66,6 @@ window.onload = function () {
     location.reload();
    
   }
-  
   )
-  */
+  
  

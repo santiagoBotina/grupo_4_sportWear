@@ -11,16 +11,15 @@ window.onload = function() {
         let imagen = document.querySelector('.ver-producto').getAttribute("src")
         let tituloProd = document.querySelector('.nombre-del-producto').innerText
         let precio = document.querySelector('.precio').innerText
-        //let descuento = document.querySelector('.descuento').innerText
-        //let inputCantidad = document.querySelector('#count').value
+        let inputCantidad = document.querySelector('#count').value
 
         let producto = {
             idProducto: id, 
             imagen,
             tituloProd,
-            precio:parseFloat(precio),
-        //    descuento: parseFloat(descuento),
-        //    inputCantidad: parseFloat(inputCantidad)
+            precio: parseFloat(precio),
+            
+            inputCantidad: parseInt(inputCantidad)
         } 
         console.log(producto)
         
