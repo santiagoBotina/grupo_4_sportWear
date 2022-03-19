@@ -169,7 +169,7 @@ a {
     display: block;
     width: 27%;
     border: none;
-    background-color: #54e346;
+    background-color: #52be80;
     color: white;
     border-radius: 30px;
     padding: 10px;
@@ -350,7 +350,7 @@ a {
   .imagen-producto {
     background-color: #faf4f4;
     padding: 5px;
-    width: 25%;
+    width: 50%;
     font-size: 0, 5rem;
     text-align: center;
   }
@@ -358,7 +358,7 @@ a {
     border: solid 2px RGB(52, 152, 219);
     background-color: #dfd7d7;
     padding: 5px;
-    width: 40%;
+    width: 60%;
     font-size: 1rem;
   }
 
@@ -366,14 +366,14 @@ a {
     border: solid 3px RGB(52, 152, 219);
     background-color: #dfd7d7;
     padding: 5px;
-    width: 15%;
+    width: 40%;
     font-size: 1rem;
     text-align: center;
   }
 
   .selectores {
     background-color: #faf6f6;
-    width: 15%;
+    width: 40%;
     font-size: 1rem;
     padding: 5px;
     margin-bottom: 25px;
@@ -384,7 +384,7 @@ a {
     display: block;
     width: 27%;
     border: none;
-    background-color: #54e346;
+    background-color: #52be80;
     color: white;
     border-radius: 30px;
     padding: 10px;
@@ -562,7 +562,7 @@ a {
   .imagen-producto {
     background-color: #faf4f4;
     padding: 5px;
-    width: 25%;
+    width: 60%;
     font-size: 0, 5rem;
     text-align: center;
   }
@@ -570,7 +570,7 @@ a {
     border: solid 2px RGB(52, 152, 219);
     background-color: #dfd7d7;
     padding: 5px;
-    width: 40%;
+    width: 98%;
     font-size: 1rem;
   }
 
@@ -578,14 +578,14 @@ a {
     border: solid 3px RGB(52, 152, 219);
     background-color: #dfd7d7;
     padding: 5px;
-    width: 15%;
+    width: 50%;
     font-size: 1rem;
     text-align: center;
   }
 
   .selectores {
     background-color: #faf6f6;
-    width: 15%;
+    width: 50%;
     font-size: 1rem;
     padding: 5px;
     margin-bottom: 25px;
@@ -594,9 +594,9 @@ a {
 
   .crear-button {
     display: block;
-    width: 27%;
+    width: 50%;
     border: none;
-    background-color: #54e346;
+    background-color: #52be80;
     color: white;
     border-radius: 30px;
     padding: 10px;

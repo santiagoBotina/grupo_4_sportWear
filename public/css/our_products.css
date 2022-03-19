@@ -104,13 +104,13 @@ main {
   main {
     background-color: black;
   }
-  
+  /*
   .video-intro {
     display: flex;
     padding: 2% 10%;
     justify-content: center;
   }
-
+  
   .intro-text {
     color: white;
     font-size: 2.5rem;
@@ -122,6 +122,7 @@ main {
   .intro-text span {
     color: #ff00e4;
   }
+  */
   
 
   
@@ -566,6 +567,12 @@ main {
     background-color: #d5d5d5;
     text-align: center;
   }
+  /*
+  .fondo {
+    width: 100%;
+    
+  }
+*/
 
   .section-products {
     background-color: black;

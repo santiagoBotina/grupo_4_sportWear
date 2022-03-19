@@ -526,13 +526,16 @@ main {
     justify-content: center;
     font-weight: bold;
     font-size: 2.5rem;
+    margin-top: 5px
   }
 
+  
   .more-info-left p {
     width: 100%;
     margin: 20px;
   }
 
+  
   .image {
     width: 120%;
     height: 120%;
@@ -556,6 +559,7 @@ main {
   .more-info-right p {
     width: 100%;
     margin: 10px;
+    padding-bottom: 60x;
   }
 
   .image {

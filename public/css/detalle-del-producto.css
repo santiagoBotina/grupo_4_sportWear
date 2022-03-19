@@ -614,6 +614,13 @@ a {
     display: none;
   }
 
+  .cantidad {
+    text-align: center;
+    padding: 3px;
+    font-weight: bold;
+    display: block
+  }
+
   .tarjetas {
     font-size: 35px;
     color: DodgerBlue;

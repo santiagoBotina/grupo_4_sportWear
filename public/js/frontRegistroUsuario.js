@@ -20,7 +20,7 @@ window.addEventListener("load", function () {
   //Campo NOMBRE
   nombre.addEventListener("blur", function () {
     if (this.value.length < 2) {
-      nombre.style.backgroundColor = "#ff5151";
+      nombre.style.backgroundColor = "#F1948A";
       nombreError.innerText = "El campo debe tener min 2 caractéres";
       //   errores.push("El campo debe tener min 2 caractéres");
     }
@@ -36,7 +36,7 @@ window.addEventListener("load", function () {
   //Campo APELLIDO
   apellido.addEventListener("blur", function () {
     if (this.value.length < 2) {
-      apellido.style.backgroundColor = "#ff5151";
+      apellido.style.backgroundColor = "#F1948A";
       apellidoError.innerText = "El campo debe tener min 2 caractéres";
       //   errores.push("El campo debe tener min 2 caractéres");
     }
@@ -52,7 +52,7 @@ window.addEventListener("load", function () {
   //Email
   email.addEventListener("blur", function () {
     if (!this.value.includes("@") || this.value.indexOf(".") == -1) {
-      email.style.backgroundColor = "#ff5151";
+      email.style.backgroundColor = "#F1948A";
       emailError.innerText = "Debes incluir un email válido";
       //   errores.push("El campo debe tener min 2 caractéres");
     }
@@ -68,7 +68,7 @@ window.addEventListener("load", function () {
   //Campo CONTRASEÑA
   password.addEventListener("blur", function () {
     if (this.value.length < 8) {
-      password.style.backgroundColor = "#ff5151";
+      password.style.backgroundColor = "#F1948A";
       passwordError.innerText = "La contraseña debe tener min 8 caractéres";
       //   errores.push("El campo debe tener min 2 caractéres");
     }
@@ -83,7 +83,7 @@ window.addEventListener("load", function () {
 
   confirmPassword.addEventListener("blur", function () {
     if (this.value !== password.value) {
-      confirmPassword.style.backgroundColor = "#ff5151";
+      confirmPassword.style.backgroundColor = "#F1948A";
       confirmPasswordError.innerText = "Las contraseñas deben ser iguales";
       //   errores.push("El campo debe tener min 2 caractéres");
     }

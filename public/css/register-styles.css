@@ -134,7 +134,7 @@ a {
 
   .form-register button {
     border: none;
-    background-color: #ff5151;
+    background-color: #548cff;
     font-size: 1.5rem;
     color: white;
     padding: 3px;
@@ -145,7 +145,7 @@ a {
   }
 
   .form-register button:hover {
-    background-color: #fc2323;
+    background-color: #548cff;
     cursor: pointer;
   }
 
@@ -320,7 +320,7 @@ a {
 
   .form-register button {
     border: none;
-    background-color: #ff5151;
+    background-color: #548cff;
     font-size: 1.5rem;
     color: white;
     padding: 3px;
@@ -331,7 +331,7 @@ a {
   }
 
   .form-register button:hover {
-    background-color: #fc2323;
+    background-color: #548cff;
     cursor: pointer;
   }
 
@@ -507,7 +507,7 @@ a {
 
   .form-register button {
     border: none;
-    background-color: #ff5151;
+    background-color: #548cff;
     font-size: 1.5rem;
     color: white;
     padding: 3px;
@@ -518,7 +518,7 @@ a {
   }
 
   .form-register button:hover {
-    background-color: #fc2323;
+    background-color: #548cff;
     cursor: pointer;
   }
 
@@ -540,7 +540,7 @@ a {
   }
 
   .login-redirect button:hover {
-    background-color: #17e7c8;
+    background-color: #52be80;
     cursor: pointer;
   }
 
