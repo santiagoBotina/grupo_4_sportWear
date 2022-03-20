@@ -7,10 +7,7 @@ const apiControllerUsers = {
       .findAll({ attributes: ["idusuario", "nombre", "email"] })
       .then((users) => {
         users.map((user) => {
-          user.setDataValue(
-            "detail",
-            "http://localhost:5000/usuario/" + user.idusuario
-          );
+          user.setDataValue("detail", "/usuario/" + user.idusuario);
         });
 
         let respuesta = {
@@ -40,7 +37,7 @@ const apiControllerUsers = {
       .then((user) => {
         user.setDataValue(
           "profile_image",
-          `http://localhost:5000/images/profileImages/${user.profile_image}`
+          `/images/profileImages/${user.profile_image}`
         );
         res.json(user);
       });

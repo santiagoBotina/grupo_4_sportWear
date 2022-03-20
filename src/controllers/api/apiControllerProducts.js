@@ -11,7 +11,7 @@ const apiControllerProducts = {
         products.map((product) => {
           product.setDataValue(
             "detail",
-            `http://localhost:5000/products/detail/${product.idproducto}`
+            `/products/detail/${product.idproducto}`
           );
           product.setDataValue("Relaciones", ["Talle"]);
         });
@@ -51,10 +51,7 @@ const apiControllerProducts = {
   productDetail: (req, res) => {
     let productId = req.params.id;
     products.findByPk(productId).then((product) => {
-      product.setDataValue(
-        "imageUrl",
-        `http://localhost:5000/images/our_products/${product.image}`
-      );
+      product.setDataValue("imageUrl", `/images/our_products/${product.image}`);
       product.setDataValue("Relaciones", ["Talle"]);
       res.json(product);
     });
