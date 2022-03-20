@@ -139,7 +139,7 @@ main {
   }
 
   .borrar-boton {
-    background-color: rgb(236, 62, 62);
+    background-color: #ff5151;
     border: none;
     border-radius: 5px;
     padding: 2px;
@@ -158,7 +158,7 @@ main {
   }
 
   #botonBorrar {
-    background-color: rgb(236, 62, 62);
+    background-color: #ff5151;
     border: none;
     border-radius: 5px;
     padding: 2px;
@@ -372,7 +372,7 @@ main {
   }
 
   .borrar-boton {
-    background-color: rgb(236, 62, 62);
+    background-color: #ff5151;
     border: none;
     border-radius: 5px;
     padding: 2px;
@@ -391,7 +391,7 @@ main {
   }
 
   #botonBorrar {
-    background-color: rgb(236, 62, 62);
+    background-color: #ff5151;
     border: none;
     border-radius: 5px;
     padding: 2px;
@@ -551,7 +551,7 @@ main {
   }
 
   .borrar-boton {
-    background-color: rgb(236, 62, 62);
+    background-color: #ff5151;
     border: none;
     border-radius: 5px;
     padding: 2px;
@@ -570,7 +570,7 @@ main {
   }
 
   #botonBorrar {
-    background-color: rgb(236, 62, 62);
+    background-color: #ff5151;
     border: none;
     border-radius: 5px;
     padding: 2px;

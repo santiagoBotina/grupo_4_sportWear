@@ -35,7 +35,7 @@ window.onload = function () {
     }
   }
 
-  let h3 = document.querySelector("precioTotal");
+  let h3 = document.querySelector("#precioTotal");
   let totalCarrito = localStorage.totalCarrito;
   if (typeof localStorage.totalCarrito == "undefined") {
     let contenido2 = `0`;

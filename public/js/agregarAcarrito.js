@@ -18,8 +18,7 @@ window.onload = function() {
             imagen,
             tituloProd,
             precio: parseFloat(precio),
-            
-            inputCantidad: parseInt(inputCantidad)
+            inputCantidad: parseFloat(inputCantidad)
         } 
         console.log(producto)
         
@@ -28,7 +27,8 @@ window.onload = function() {
             carrito.push(producto)
             localStorage.setItem("carrito", JSON.stringify(carrito))
             localStorage.setItem("totalCarrito", producto.precio * producto.inputCantidad)
-        } else {
+            } 
+        else {
             let carrito = JSON.parse(localStorage.carrito)
             let arrayProductos = carrito.filter(function(producto){
                 return producto.idProducto == id
@@ -50,7 +50,11 @@ window.onload = function() {
                totalCarrito += carro 
             }
             localStorage.setItem("totalCarrito", totalCarrito)
+
+            console.log(totalCarrito);
         }
+        
+
         alert('Agregaste' + " " + tituloProd + " al carrito")
     
 
