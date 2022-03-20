@@ -107,8 +107,12 @@ a {
   }
 
   .user-image {
-    width: 30%;
-    align-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .user-image img {
+    width: 20%;
   }
 
   form {
@@ -268,8 +272,12 @@ a {
   }
 
   .user-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .user-image img {
     width: 50%;
-    overflow: auto;
   }
 
   form {
@@ -433,8 +441,12 @@ a {
   }
 
   .user-image {
-    width: 50%;
-    overflow: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .user-image img {
+    width: 200px;
   }
 
   form {

@@ -4,10 +4,15 @@ let users = db.Usuario;
 const apiControllerUsers = {
   show: (req, res) => {
     users
-      .findAll({ attributes: ["idusuario", "nombre", "email"] })
+      .findAll({
+        attributes: ["idusuario", "nombre", "email", "profile_Image"],
+      })
       .then((users) => {
         users.map((user) => {
-          user.setDataValue("detail", "/usuario/" + user.idusuario);
+          user.setDataValue(
+            "detail",
+            `http://localhost:5000/usuario/${user.idusuario}`
+          );
         });
 
         let respuesta = {
@@ -38,6 +43,10 @@ const apiControllerUsers = {
         user.setDataValue(
           "profile_image",
           `/images/profileImages/${user.profile_image}`
+        );
+        user.setDataValue(
+          "detail",
+          `http://localhost:5000/usuario/${user.idusuario}`
         );
         res.json(user);
       });

@@ -42,6 +42,7 @@ const apiControllerProducts = {
             casual: casualCount.length,
             trekking: trekkingCount.length,
             futbol: futbolCount.length,
+            totalCategories: 4,
           },
           products: products,
         };
