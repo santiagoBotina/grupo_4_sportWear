@@ -5,7 +5,13 @@ const apiControllerProducts = {
   show: (req, res) => {
     products
       .findAll({
-        attributes: ["idproducto", "nombre", "descripcion", "tipo_calzado_id"],
+        attributes: [
+          "idproducto",
+          "nombre",
+          "descripcion",
+          "tipo_calzado_id",
+          "image",
+        ],
       })
       .then((products) => {
         products.map((product) => {
