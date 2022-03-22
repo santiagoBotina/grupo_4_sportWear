@@ -345,8 +345,9 @@ main {
   .vacio {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; 
     width: 100%;
+    
   }
 
   .checkout-cart {

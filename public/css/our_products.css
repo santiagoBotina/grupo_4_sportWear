@@ -147,10 +147,16 @@ main {
     padding-bottom: 5%;
   }
 
+  .fondo-our-products {
+    width: 100%;
+      
+  }
+
   .our-products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 20px;
   }
 
   .product {
@@ -383,11 +389,10 @@ main {
     border: none;
   }
 
-  .carousel {
+  .fondo-our-products {
     width: 100%;
-    height: 52vh;
-    background-color: white;
-    text-align: center;
+    
+    
   }
 
   .section-products {
@@ -420,7 +425,6 @@ main {
 
   .product {
     width: 45%;
-    height: 140px;
     background-color: none;
     margin: 10px;
     text-align: center;
