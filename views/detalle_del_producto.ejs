@@ -23,7 +23,8 @@
         <div>
             <article class="precio"> <%=  products.precio %></article>
         </div>
-    
+        
+        <!--
             <form method="POST" action="/">
                 
                 <label for="talles" class="titulo_talles">Selecciona el Talle</label>
@@ -40,6 +41,39 @@
 
                 </div>
             </form>
+            -->
+            
+            <form method="POST" action="/">
+                <div class="talle-nuevo">    
+                <label for="talle-nuevo" >Talles</label>
+                <select id="talle-nuevo">
+                    <option value="38">38   </option>                    
+                    <option value="39">39   </option>
+                    <option value="40">40   </option>
+                    <option value="41">41   </option>
+                    <option value="42">42   </option>
+                    <option value="43">43   </option>
+                    <option value="44">44   </option>
+                </select>
+                </div>
+
+
+                <!--
+                <div class="cantidad-input">
+                    <% for(let i = 0; i<=10; i++) { %> 
+
+                        <div class="talle">
+                            <input type=text name="talle" class="opcion-talle" id=${´talle_<% i %>´}  >  
+                            <label for="talle"><%= i %> </label>  
+                        </div>
+                        
+
+                    <% } %>     
+                
+                </div>
+                -->
+            </form>
+
 
             <form method="POST" action="/">
                 <div class="cantidad">    

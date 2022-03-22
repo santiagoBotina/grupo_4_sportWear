@@ -23,9 +23,15 @@ window.onload = function () {
                   <div class="precio-cart">$ ${producto.precio}</div>
             
               </article>
+              <article class="talle-cart">
+                  <form action="#" method="GET">
+                      <label for="talle-nuevo">Talle</label>
+                      <input id="talle-nuevo" value=${producto.inputTalle} type="text" class="countProducto">
+                  </form>
+              </article>
               <article class="cant-cart">
                   <form action="#" method="GET">
-                      <label for="cantidad"></label>
+                      <label for="cantidad">Cantidad</label>
                       <input id="count" value=${producto.inputCantidad} type="text" class="countProducto">
                   </form>
               </article>

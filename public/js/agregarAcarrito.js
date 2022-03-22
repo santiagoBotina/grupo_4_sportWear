@@ -12,13 +12,15 @@ window.onload = function() {
         let tituloProd = document.querySelector('.nombre-del-producto').innerText
         let precio = document.querySelector('.precio').innerText
         let inputCantidad = document.querySelector('#count').value
+        let inputTalle = document.querySelector('#talle-nuevo').value
 
         let producto = {
             idProducto: id, 
             imagen,
             tituloProd,
             precio: parseFloat(precio),
-            inputCantidad: parseFloat(inputCantidad)
+            inputCantidad: parseFloat(inputCantidad),
+            inputTalle: parseFloat(inputTalle)
         } 
         console.log(producto)
         

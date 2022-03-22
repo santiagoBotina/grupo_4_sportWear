@@ -613,12 +613,20 @@ a {
   .opcion-talle {
     display: none;
   }
+  .talle-nuevo {
+    text-align: center;
+    padding: 3px;
+    font-weight: bold;
+    display: block;
+    font-size: 1.5rem;
+  }
 
   .cantidad {
     text-align: center;
     padding: 3px;
     font-weight: bold;
-    display: block
+    display: block;
+    font-size: 1.5rem;
   }
 
   .tarjetas {
