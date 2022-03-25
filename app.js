@@ -45,10 +45,7 @@ app.use("/usuario", routerUsers);
 app.use("/api/users", routerApiUsers);
 app.use("/api/products", routerApiProducts);
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 5000;
-}
+let port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log(`Servidor funcionando en el puerto ${port}`);
